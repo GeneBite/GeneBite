@@ -1,0 +1,2158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Data Analysis | GeneBite</title>
+
+  <meta
+    name="description"
+    content="A practical workflow for biological data analysis: from research question and experimental design to statistical testing, visualization and interpretation."
+  >
+
+    <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ================= MAIN ================= -->
+
+  <main>
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="page-hero">
+
+      <div class="page-hero-glow"></div>
+
+      <div class="container page-hero-content">
+
+        <span
+          class="page-hero-label"
+          data-en="DATA ANALYSIS"
+          data-fa="تحلیل داده"
+        >
+          DATA ANALYSIS
+        </span>
+
+
+        <h1
+          data-en="Turn experimental data into evidence you can interpret."
+          data-fa="داده‌های آزمایش را به شواهدی قابل‌تفسیر تبدیل کن."
+        >
+          Turn experimental data into evidence you can interpret.
+        </h1>
+
+
+        <p
+          data-en="Choose an analysis based on your research question, study design, variables and assumptions — then report the result without overclaiming."
+          data-fa="تحلیل را بر اساس سؤال پژوهش، طراحی مطالعه، متغیرها و فرض‌ها انتخاب کن؛ سپس نتیجه را بدون تفسیر بیش‌ازحد گزارش کن."
+        >
+          Choose an analysis based on your research question, study design,
+          variables and assumptions — then report the result without
+          overclaiming.
+        </p>
+
+
+        <div class="hero-actions">
+
+          <a
+            href="#workflow"
+            class="primary-button"
+            data-en="Explore the workflow"
+            data-fa="مشاهده Workflow"
+          >
+            Explore the workflow
+          </a>
+
+
+          <a
+            href="#research-output"
+            class="secondary-button"
+            data-en="Research output"
+            data-fa="خروجی پژوهش"
+          >
+            Research output
+          </a>
+
+        </div>
+
+
+        <!-- PROCESS -->
+
+        <div class="workflow-flow">
+
+          <div class="flow-container">
+
+            <div class="flow-node">
+              <span>01</span>
+              <strong
+                data-en="Question"
+                data-fa="سؤال"
+              >
+                Question
+              </strong>
+            </div>
+
+
+            <div class="flow-arrow">→</div>
+
+
+            <div class="flow-node">
+              <span>02</span>
+              <strong
+                data-en="Data"
+                data-fa="داده"
+              >
+                Data
+              </strong>
+            </div>
+
+
+            <div class="flow-arrow">→</div>
+
+
+            <div class="flow-node">
+              <span>03</span>
+              <strong
+                data-en="Test"
+                data-fa="آزمون"
+              >
+                Test
+              </strong>
+            </div>
+
+
+            <div class="flow-arrow">→</div>
+
+
+            <div class="flow-node">
+              <span>04</span>
+              <strong
+                data-en="Effect"
+                data-fa="اثر"
+              >
+                Effect
+              </strong>
+            </div>
+
+
+            <div class="flow-arrow">→</div>
+
+
+            <div class="flow-node">
+              <span>05</span>
+              <strong
+                data-en="Interpret"
+                data-fa="تفسیر"
+              >
+                Interpret
+              </strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= CORE IDEA ================= -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            data-en="CORE IDEA"
+            data-fa="ایده اصلی"
+          >
+            CORE IDEA
+          </span>
+
+
+          <h2
+            data-en="The statistical test comes after the research question."
+            data-fa="آزمون آماری بعد از سؤال پژوهش انتخاب می‌شود."
+          >
+            The statistical test comes after the research question.
+          </h2>
+
+
+          <p
+            data-en="The number of groups is only one part of the decision. Think about the outcome, predictor, dependence between observations, study design and assumptions before choosing a test."
+            data-fa="تعداد گروه‌ها فقط یکی از عوامل تصمیم‌گیری است. قبل از انتخاب آزمون، Outcome، Predictor، وابستگی بین مشاهدات، طراحی مطالعه و فرض‌های آماری را بررسی کن."
+          >
+            The number of groups is only one part of the decision. Think about
+            the outcome, predictor, dependence between observations, study
+            design and assumptions before choosing a test.
+          </p>
+
+        </div>
+
+
+        <div class="decision-grid">
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              Q
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Research question"
+                data-fa="سؤال پژوهش"
+              >
+                Research question
+              </strong>
+
+              <small
+                data-en="What biological relationship, difference or prediction are you trying to investigate?"
+                data-fa="دقیقاً چه تفاوت، رابطه یا پیش‌بینی زیستی را می‌خواهی بررسی کنی؟"
+              >
+                What biological relationship, difference or prediction are you
+                trying to investigate?
+              </small>
+
+            </div>
+
+          </article>
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              D
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Data structure"
+                data-fa="ساختار داده"
+              >
+                Data structure
+              </strong>
+
+              <small
+                data-en="Identify variables, groups, repeated measurements, paired observations and missing data."
+                data-fa="متغیرها، گروه‌ها، اندازه‌گیری‌های تکراری، داده‌های جفت‌شده و داده‌های گمشده را مشخص کن."
+              >
+                Identify variables, groups, repeated measurements, paired
+                observations and missing data.
+              </small>
+
+            </div>
+
+          </article>
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              A
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Assumptions"
+                data-fa="فرض‌ها"
+              >
+                Assumptions
+              </strong>
+
+              <small
+                data-en="Check whether the selected model or test is appropriate for your data and design."
+                data-fa="بررسی کن که مدل یا آزمون انتخاب‌شده برای داده و طراحی مطالعه مناسب است یا نه."
+              >
+                Check whether the selected model or test is appropriate for
+                your data and design.
+              </small>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= WORKFLOW ================= -->
+
+    <section
+      class="section section-soft"
+      id="workflow"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            data-en="ANALYSIS WORKFLOW"
+            data-fa="Workflow تحلیل"
+          >
+            ANALYSIS WORKFLOW
+          </span>
+
+
+          <h2
+            data-en="A practical route from raw data to interpretation."
+            data-fa="یک مسیر عملی از داده خام تا تفسیر."
+          >
+            A practical route from raw data to interpretation.
+          </h2>
+
+
+          <p
+            data-en="Use this sequence to structure your analysis before opening statistical software."
+            data-fa="قبل از باز کردن نرم‌افزار آماری، تحلیل خودت را با این ترتیب ساختاربندی کن."
+          >
+            Use this sequence to structure your analysis before opening
+            statistical software.
+          </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+          <!-- STEP 1 -->
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              STEP 01
+            </span>
+
+            <h3
+              data-en="Define the biological question"
+              data-fa="سؤال زیستی را مشخص کن"
+            >
+              Define the biological question
+            </h3>
+
+            <p
+              data-en="Translate the scientific question into a measurable outcome and, when relevant, a predictor or comparison."
+              data-fa="سؤال علمی را به یک Outcome قابل‌اندازه‌گیری و در صورت نیاز یک Predictor یا Comparison تبدیل کن."
+            >
+              Translate the scientific question into a measurable outcome and,
+              when relevant, a predictor or comparison.
+            </p>
+
+            <div class="tool-badge">
+              Question → Variable
+            </div>
+
+          </article>
+
+
+
+          <!-- STEP 2 -->
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              STEP 02
+            </span>
+
+            <h3
+              data-en="Understand the data structure"
+              data-fa="ساختار داده را بشناس"
+            >
+              Understand the data structure
+            </h3>
+
+            <p
+              data-en="Identify variable types, independent experimental units, groups, paired observations, repeated measurements and missing values."
+              data-fa="نوع متغیرها، واحدهای مستقل آزمایشی، گروه‌ها، مشاهدات جفت‌شده، اندازه‌گیری‌های تکراری و داده‌های گمشده را مشخص کن."
+            >
+              Identify variable types, independent experimental units, groups,
+              paired observations, repeated measurements and missing values.
+            </p>
+
+            <div class="tool-badge">
+              Data structure
+            </div>
+
+          </article>
+
+
+
+          <!-- STEP 3 -->
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              STEP 03
+            </span>
+
+            <h3
+              data-en="Explore before testing"
+              data-fa="قبل از آزمون، داده را بررسی کن"
+            >
+              Explore before testing
+            </h3>
+
+            <p
+              data-en="Use descriptive statistics and plots to understand distributions, spread, outliers and possible patterns."
+              data-fa="با آمار توصیفی و نمودارها Distribution، پراکندگی، Outlierها و الگوهای احتمالی را بررسی کن."
+            >
+              Use descriptive statistics and plots to understand distributions,
+              spread, outliers and possible patterns.
+            </p>
+
+            <div class="tool-badge">
+              Descriptive analysis
+            </div>
+
+          </article>
+
+
+
+          <!-- STEP 4 -->
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              STEP 04
+            </span>
+
+            <h3
+              data-en="Choose the analytical model"
+              data-fa="مدل یا آزمون مناسب را انتخاب کن"
+            >
+              Choose the analytical model
+            </h3>
+
+            <p
+              data-en="Match the question and data structure to an appropriate statistical test or model."
+              data-fa="سؤال و ساختار داده را با یک آزمون یا مدل آماری مناسب تطبیق بده."
+            >
+              Match the question and data structure to an appropriate
+              statistical test or model.
+            </p>
+
+            <div class="tool-badge">
+              Test selection
+            </div>
+
+          </article>
+
+
+
+          <!-- STEP 5 -->
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              STEP 05
+            </span>
+
+            <h3
+              data-en="Check assumptions"
+              data-fa="فرض‌ها را بررسی کن"
+            >
+              Check assumptions
+            </h3>
+
+            <p
+              data-en="Consider independence, distributional assumptions, variance structure and other requirements of the chosen analysis."
+              data-fa="استقلال مشاهدات، فرض‌های توزیعی، ساختار واریانس و سایر الزامات تحلیل را بررسی کن."
+            >
+              Consider independence, distributional assumptions, variance
+              structure and other requirements of the chosen analysis.
+            </p>
+
+            <div class="tool-badge">
+              Quality control
+            </div>
+
+          </article>
+
+
+
+          <!-- STEP 6 -->
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              STEP 06
+            </span>
+
+            <h3
+              data-en="Report effect and uncertainty"
+              data-fa="اثر و عدم‌قطعیت را گزارش کن"
+            >
+              Report effect and uncertainty
+            </h3>
+
+            <p
+              data-en="Do not reduce the result to a p-value. Consider effect size, confidence intervals and the scientific magnitude of the result."
+              data-fa="نتیجه را فقط به p-value محدود نکن. Effect Size، Confidence Interval و اهمیت علمی اندازه اثر را هم بررسی کن."
+            >
+              Do not reduce the result to a p-value. Consider effect size,
+              confidence intervals and the scientific magnitude of the result.
+            </p>
+
+            <div class="tool-badge">
+              Interpretation
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= TEST SELECTION ================= -->
+
+    <section
+      class="section"
+      id="test-selection"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            data-en="TEST SELECTION"
+            data-fa="انتخاب آزمون"
+          >
+            TEST SELECTION
+          </span>
+
+
+          <h2
+            data-en="Choose the analysis from the design, not just the group count."
+            data-fa="آزمون را بر اساس طراحی مطالعه انتخاب کن، نه فقط تعداد گروه‌ها."
+          >
+            Choose the analysis from the design, not just the group count.
+          </h2>
+
+
+          <p
+            data-en="The following are common starting points. Real analyses may require additional checks or more appropriate models."
+            data-fa="موارد زیر فقط نقطه شروع‌های رایج هستند. تحلیل واقعی ممکن است به بررسی‌های بیشتر یا مدل‌های مناسب‌تری نیاز داشته باشد."
+          >
+            The following are common starting points. Real analyses may require
+            additional checks or more appropriate models.
+          </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              TWO GROUPS
+            </span>
+
+            <h3
+              data-en="t-test"
+              data-fa="t-test"
+            >
+              t-test
+            </h3>
+
+            <p
+              data-en="A common framework for comparing means of two groups, with the exact form depending on whether observations are independent or paired and on assumptions."
+              data-fa="چارچوبی رایج برای مقایسه میانگین دو گروه؛ نوع دقیق آزمون به مستقل یا جفت‌شده بودن مشاهدات و فرض‌ها بستگی دارد."
+            >
+              A common framework for comparing means of two groups, with the
+              exact form depending on whether observations are independent or
+              paired and on assumptions.
+            </p>
+
+            <span class="status-badge">
+              Compare
+            </span>
+
+          </article>
+
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              MULTIPLE GROUPS
+            </span>
+
+            <h3
+              data-en="ANOVA"
+              data-fa="ANOVA"
+            >
+              ANOVA
+            </h3>
+
+            <p
+              data-en="Used to model differences in means across multiple groups. Significant omnibus results do not by themselves identify which groups differ."
+              data-fa="برای مدل‌کردن تفاوت میانگین‌ها بین چند گروه استفاده می‌شود. نتیجه کلی معنادار به‌تنهایی مشخص نمی‌کند کدام گروه‌ها با هم تفاوت دارند."
+            >
+              Used to model differences in means across multiple groups.
+              Significant omnibus results do not by themselves identify which
+              groups differ.
+            </p>
+
+            <span class="status-badge">
+              Compare
+            </span>
+
+          </article>
+
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              RELATIONSHIP
+            </span>
+
+            <h3
+              data-en="Correlation"
+              data-fa="Correlation"
+            >
+              Correlation
+            </h3>
+
+            <p
+              data-en="Quantifies association between variables. Association does not by itself establish causation."
+              data-fa="میزان ارتباط بین متغیرها را توصیف می‌کند؛ اما ارتباط به‌تنهایی علیت را ثابت نمی‌کند."
+            >
+              Quantifies association between variables. Association does not
+              by itself establish causation.
+            </p>
+
+            <span class="status-badge">
+              Relationship
+            </span>
+
+          </article>
+
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              PREDICTION
+            </span>
+
+            <h3
+              data-en="Regression"
+              data-fa="Regression"
+            >
+              Regression
+            </h3>
+
+            <p
+              data-en="Models an outcome as a function of one or more predictors and can estimate associations while accounting for included variables."
+              data-fa="رابطه یک Outcome با یک یا چند Predictor را مدل می‌کند و می‌تواند ارتباط‌ها را با درنظرگرفتن متغیرهای واردشده بررسی کند."
+            >
+              Models an outcome as a function of one or more predictors and can
+              estimate associations while accounting for included variables.
+            </p>
+
+            <span class="status-badge">
+              Model
+            </span>
+
+          </article>
+
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              NON-PARAMETRIC
+            </span>
+
+            <h3
+              data-en="Rank-based methods"
+              data-fa="روش‌های مبتنی بر رتبه"
+            >
+              Rank-based methods
+            </h3>
+
+            <p
+              data-en="Methods such as Mann–Whitney or Wilcoxon can be useful for particular designs and data structures; they are not simply automatic replacements for parametric tests."
+              data-fa="روش‌هایی مثل Mann–Whitney یا Wilcoxon برای برخی طراحی‌ها و ساختارهای داده مناسب‌اند؛ اما صرفاً جایگزین خودکار آزمون‌های پارامتری نیستند."
+            >
+              Methods such as Mann–Whitney or Wilcoxon can be useful for
+              particular designs and data structures; they are not simply
+              automatic replacements for parametric tests.
+            </p>
+
+            <span class="status-badge">
+              Alternative
+            </span>
+
+          </article>
+
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              MULTIVARIATE
+            </span>
+
+            <h3
+              data-en="Multivariate analysis"
+              data-fa="تحلیل چندمتغیره"
+            >
+              Multivariate analysis
+            </h3>
+
+            <p
+              data-en="When several variables are analyzed together, methods such as PCA or multivariable models may help reveal structure that single-variable tests miss."
+              data-fa="وقتی چند متغیر با هم بررسی می‌شوند، روش‌هایی مثل PCA یا مدل‌های چندمتغیره می‌توانند ساختاری را نشان دهند که آزمون‌های تک‌متغیره ممکن است نبینند."
+            >
+              When several variables are analyzed together, methods such as
+              PCA or multivariable models may help reveal structure that
+              single-variable tests miss.
+            </p>
+
+            <span class="status-badge">
+              Explore
+            </span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= DATA BASICS ================= -->
+
+    <section
+      class="section section-soft"
+      id="data-basics"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            data-en="DATA BASICS"
+            data-fa="مبانی داده"
+          >
+            DATA BASICS
+          </span>
+
+
+          <h2
+            data-en="Before statistics, understand what each row actually represents."
+            data-fa="قبل از آمار، مشخص کن هر ردیف داده واقعاً نماینده چیست."
+          >
+            Before statistics, understand what each row actually represents.
+          </h2>
+
+
+          <p
+            data-en="The experimental unit matters. Technical measurements are not automatically independent biological replicates."
+            data-fa="واحد آزمایشی اهمیت دارد. اندازه‌گیری‌های تکنیکی لزوماً Replicateهای بیولوژیک مستقل نیستند."
+          >
+            The experimental unit matters. Technical measurements are not
+            automatically independent biological replicates.
+          </p>
+
+        </div>
+
+
+        <div class="decision-grid">
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              01
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Biological replicates"
+                data-fa="تکرارهای بیولوژیک"
+              >
+                Biological replicates
+              </strong>
+
+              <small
+                data-en="Independent biological units that provide information about biological variability."
+                data-fa="واحدهای زیستی مستقل که اطلاعاتی درباره Biological Variability فراهم می‌کنند."
+              >
+                Independent biological units that provide information about
+                biological variability.
+              </small>
+
+            </div>
+
+          </article>
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              02
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Technical replicates"
+                data-fa="تکرارهای تکنیکی"
+              >
+                Technical replicates
+              </strong>
+
+              <small
+                data-en="Repeated measurements of the same biological unit. They help characterize measurement variability but are not automatically independent samples."
+                data-fa="اندازه‌گیری‌های تکرارشده از یک واحد زیستی. این‌ها برای بررسی Measurement Variability مفیدند، اما لزوماً نمونه‌های مستقل نیستند."
+              >
+                Repeated measurements of the same biological unit. They help
+                characterize measurement variability but are not automatically
+                independent samples.
+              </small>
+
+            </div>
+
+          </article>
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              03
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Repeated measurements"
+                data-fa="اندازه‌گیری‌های تکراری"
+              >
+                Repeated measurements
+              </strong>
+
+              <small
+                data-en="Measurements from the same experimental unit over time or conditions require the dependence structure to be considered."
+                data-fa="اندازه‌گیری‌های یک واحد آزمایشی در زمان‌ها یا شرایط مختلف نیازمند درنظرگرفتن ساختار وابستگی هستند."
+              >
+                Measurements from the same experimental unit over time or
+                conditions require the dependence structure to be considered.
+              </small>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= RELATIONSHIP ANALYSIS ================= -->
+
+    <section
+      class="section"
+      id="relationship-analysis"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            data-en="RELATIONSHIPS"
+            data-fa="روابط بین متغیرها"
+          >
+            RELATIONSHIPS
+          </span>
+
+
+          <h2
+            data-en="When the question is about relationships between variables."
+            data-fa="وقتی سؤال درباره رابطه بین متغیرهاست."
+          >
+            When the question is about relationships between variables.
+          </h2>
+
+
+          <p
+            data-en="Choose the method based on the scientific question, variable types, data structure and assumptions."
+            data-fa="روش را بر اساس سؤال علمی، نوع متغیرها، ساختار داده و فرض‌ها انتخاب کن."
+          >
+            Choose the method based on the scientific question, variable
+            types, data structure and assumptions.
+          </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              ASSOCIATION
+            </span>
+
+            <h3
+              data-en="Correlation"
+              data-fa="Correlation"
+            >
+              Correlation
+            </h3>
+
+            <p
+              data-en="Useful when the focus is the strength and direction of association between variables. The interpretation depends on the correlation measure and data characteristics."
+              data-fa="وقتی تمرکز روی شدت و جهت ارتباط بین متغیرهاست کاربرد دارد. تفسیر به نوع Correlation و ویژگی‌های داده بستگی دارد."
+            >
+              Useful when the focus is the strength and direction of association
+              between variables. The interpretation depends on the correlation
+              measure and data characteristics.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              MODELING
+            </span>
+
+            <h3
+              data-en="Regression"
+              data-fa="Regression"
+            >
+              Regression
+            </h3>
+
+            <p
+              data-en="Useful when an outcome is modeled using one or more predictors. Model assumptions, confounding and the study design remain important."
+              data-fa="وقتی یک Outcome بر اساس یک یا چند Predictor مدل می‌شود کاربرد دارد. فرض‌های مدل، Confounding و طراحی مطالعه همچنان اهمیت دارند."
+            >
+              Useful when an outcome is modeled using one or more predictors.
+              Model assumptions, confounding and the study design remain
+              important.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              CAUSALITY
+            </span>
+
+            <h3
+              data-en="Association ≠ causation"
+              data-fa="Association ≠ Causation"
+            >
+              Association ≠ causation
+            </h3>
+
+            <p
+              data-en="A statistical association does not by itself establish that changing one variable causes a change in another."
+              data-fa="ارتباط آماری به‌تنهایی نشان نمی‌دهد که تغییر یک متغیر باعث تغییر متغیر دیگر شده است."
+            >
+              A statistical association does not by itself establish that
+              changing one variable causes a change in another.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= MODELING ================= -->
+
+    <section
+      class="section section-soft"
+      id="modeling"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            data-en="MODELING"
+            data-fa="مدل‌سازی"
+          >
+            MODELING
+          </span>
+
+
+          <h2
+            data-en="A model is a structured way to ask a quantitative question."
+            data-fa="مدل، روشی ساختاریافته برای پرسیدن یک سؤال کمی است."
+          >
+            A model is a structured way to ask a quantitative question.
+          </h2>
+
+
+          <p
+            data-en="Regression and related models can incorporate multiple predictors, but adding variables does not automatically make a model scientifically better."
+            data-fa="Regression و مدل‌های مرتبط می‌توانند چند Predictor را وارد کنند، اما اضافه‌کردن متغیرها لزوماً مدل را از نظر علمی بهتر نمی‌کند."
+          >
+            Regression and related models can incorporate multiple predictors,
+            but adding variables does not automatically make a model
+            scientifically better.
+          </p>
+
+        </div>
+
+
+        <div class="decision-grid">
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              Y
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Define the outcome"
+                data-fa="Outcome را مشخص کن"
+              >
+                Define the outcome
+              </strong>
+
+              <small
+                data-en="What biological quantity are you trying to explain or predict?"
+                data-fa="کدام کمیت زیستی را می‌خواهی توضیح دهی یا پیش‌بینی کنی؟"
+              >
+                What biological quantity are you trying to explain or predict?
+              </small>
+
+            </div>
+
+          </article>
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              X
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Define predictors"
+                data-fa="Predictorها را مشخص کن"
+              >
+                Define predictors
+              </strong>
+
+              <small
+                data-en="Which variables are scientifically relevant to the question?"
+                data-fa="کدام متغیرها از نظر علمی به سؤال مربوط هستند؟"
+              >
+                Which variables are scientifically relevant to the question?
+              </small>
+
+            </div>
+
+          </article>
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              C
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Consider confounding"
+                data-fa="Confounding را بررسی کن"
+              >
+                Consider confounding
+              </strong>
+
+              <small
+                data-en="A third variable can distort or explain an observed association."
+                data-fa="یک متغیر سوم می‌تواند ارتباط مشاهده‌شده را تغییر دهد یا توضیح دهد."
+              >
+                A third variable can distort or explain an observed association.
+              </small>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= MULTIVARIATE ================= -->
+
+    <section
+      class="section"
+      id="multivariate"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            data-en="MULTIVARIATE"
+            data-fa="چندمتغیره"
+          >
+            MULTIVARIATE
+          </span>
+
+
+          <h2
+            data-en="When one variable is not enough to describe the biology."
+            data-fa="وقتی یک متغیر برای توصیف سیستم زیستی کافی نیست."
+          >
+            When one variable is not enough to describe the biology.
+          </h2>
+
+
+          <p
+            data-en="High-dimensional biological datasets often require methods that consider many variables together."
+            data-fa="داده‌های زیستی High-dimensional اغلب به روش‌هایی نیاز دارند که چندین متغیر را هم‌زمان در نظر بگیرند."
+          >
+            High-dimensional biological datasets often require methods that
+            consider many variables together.
+          </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              PCA
+            </span>
+
+            <h3
+              data-en="Principal Component Analysis"
+              data-fa="Principal Component Analysis"
+            >
+              Principal Component Analysis
+            </h3>
+
+            <p
+              data-en="PCA can summarize major patterns of variation in multivariable data by transforming correlated variables into principal components."
+              data-fa="PCA می‌تواند الگوهای اصلی Variation را در داده‌های چندمتغیره خلاصه کند و متغیرها را به Principal Components تبدیل کند."
+            >
+              PCA can summarize major patterns of variation in multivariable
+              data by transforming correlated variables into principal
+              components.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              OMICS
+            </span>
+
+            <h3
+              data-en="High-dimensional datasets"
+              data-fa="داده‌های High-dimensional"
+            >
+              High-dimensional datasets
+            </h3>
+
+            <p
+              data-en="Transcriptomics, proteomics and other omics datasets may contain many variables relative to the number of biological samples."
+              data-fa="داده‌های Transcriptomics، Proteomics و سایر Omics می‌توانند نسبت به تعداد نمونه‌های بیولوژیک، متغیرهای بسیار زیادی داشته باشند."
+            >
+              Transcriptomics, proteomics and other omics datasets may contain
+              many variables relative to the number of biological samples.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              INTERPRETATION
+            </span>
+
+            <h3
+              data-en="Pattern ≠ mechanism"
+              data-fa="Pattern ≠ Mechanism"
+            >
+              Pattern ≠ mechanism
+            </h3>
+
+            <p
+              data-en="A multivariate pattern can generate a biological hypothesis, but additional evidence may be needed to establish its mechanism."
+              data-fa="یک Pattern چندمتغیره می‌تواند Hypothesis زیستی ایجاد کند، اما برای اثبات Mechanism ممکن است به شواهد بیشتری نیاز باشد."
+            >
+              A multivariate pattern can generate a biological hypothesis, but
+              additional evidence may be needed to establish its mechanism.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= INTERPRETATION ================= -->
+
+    <section
+      class="section section-soft"
+      id="interpretation"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            data-en="INTERPRETATION"
+            data-fa="تفسیر"
+          >
+            INTERPRETATION
+          </span>
+
+
+          <h2
+            data-en="A statistically significant result is not the whole story."
+            data-fa="نتیجه معنادار آماری تمام داستان نیست."
+          >
+            A statistically significant result is not the whole story.
+          </h2>
+
+
+          <p
+            data-en="Interpret statistical evidence together with effect size, uncertainty, biological context and study design."
+            data-fa="شواهد آماری را همراه با Effect Size، عدم‌قطعیت، زمینه زیستی و طراحی مطالعه تفسیر کن."
+          >
+            Interpret statistical evidence together with effect size,
+            uncertainty, biological context and study design.
+          </p>
+
+        </div>
+
+
+        <div class="decision-grid">
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              p
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="p-value"
+                data-fa="p-value"
+              >
+                p-value
+              </strong>
+
+              <small
+                data-en="A quantity defined relative to a null model and test procedure. It is not the probability that the null hypothesis is true."
+                data-fa="کمیتی است که نسبت به مدل صفر و روش آزمون تعریف می‌شود؛ احتمال درست‌بودن فرض صفر نیست."
+              >
+                A quantity defined relative to a null model and test procedure.
+                It is not the probability that the null hypothesis is true.
+              </small>
+
+            </div>
+
+          </article>
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              CI
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Confidence interval"
+                data-fa="Confidence Interval"
+              >
+                Confidence interval
+              </strong>
+
+              <small
+                data-en="Provides an interval estimate under the specified statistical procedure and helps communicate uncertainty around an estimate."
+                data-fa="یک بازه برآوردی تحت روش آماری مشخص ارائه می‌کند و برای بیان عدم‌قطعیت اطراف یک Estimate مفید است."
+              >
+                Provides an interval estimate under the specified statistical
+                procedure and helps communicate uncertainty around an estimate.
+              </small>
+
+            </div>
+
+          </article>
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              Δ
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Effect size"
+                data-fa="Effect Size"
+              >
+                Effect size
+              </strong>
+
+              <small
+                data-en="Describes the magnitude of an observed difference or association and helps move beyond a binary significant/not-significant interpretation."
+                data-fa="اندازه تفاوت یا ارتباط مشاهده‌شده را توصیف می‌کند و از تفسیر صرفاً Significant/Not Significant فراتر می‌رود."
+              >
+                Describes the magnitude of an observed difference or association
+                and helps move beyond a binary significant/not-significant
+                interpretation.
+              </small>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= VISUALIZATION ================= -->
+
+    <section
+      class="section"
+      id="visualization"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            data-en="VISUALIZATION"
+            data-fa="Visualization"
+          >
+            VISUALIZATION
+          </span>
+
+
+          <h2
+            data-en="Plot the data before you tell the story."
+            data-fa="قبل از روایت داستان، داده را ببین."
+          >
+            Plot the data before you tell the story.
+          </h2>
+
+
+          <p
+            data-en="Good visualization can reveal distributions, outliers, variability and patterns that summary statistics alone may hide."
+            data-fa="Visualization مناسب می‌تواند Distribution، Outlier، Variability و Patternهایی را نشان دهد که آمار خلاصه به‌تنهایی پنهان می‌کند."
+          >
+            Good visualization can reveal distributions, outliers, variability
+            and patterns that summary statistics alone may hide.
+          </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              DISTRIBUTION
+            </span>
+
+            <h3
+              data-en="Show the data"
+              data-fa="خود داده را نشان بده"
+            >
+              Show the data
+            </h3>
+
+            <p
+              data-en="Use plots that allow readers to see individual observations when appropriate, rather than relying only on bars and summary values."
+              data-fa="در صورت مناسب‌بودن، نمودارهایی استفاده کن که مشاهدات فردی را نشان دهند، نه فقط Bar و Summary."
+            >
+              Use plots that allow readers to see individual observations when
+              appropriate, rather than relying only on bars and summary values.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              VARIABILITY
+            </span>
+
+            <h3
+              data-en="Show uncertainty"
+              data-fa="عدم‌قطعیت را نشان بده"
+            >
+              Show uncertainty
+            </h3>
+
+            <p
+              data-en="Error bars need clear definitions. State whether they represent SD, SE, confidence intervals or another quantity."
+              data-fa="تعریف Error Bar باید مشخص باشد؛ مثلاً SD، SE، Confidence Interval یا کمیتی دیگر."
+            >
+              Error bars need clear definitions. State whether they represent
+              SD, SE, confidence intervals or another quantity.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              CONTEXT
+            </span>
+
+            <h3
+              data-en="Keep biological context"
+              data-fa="زمینه زیستی را حفظ کن"
+            >
+              Keep biological context
+            </h3>
+
+            <p
+              data-en="A visually striking pattern is not automatically biologically meaningful."
+              data-fa="یک Pattern چشمگیر از نظر بصری، لزوماً از نظر زیستی معنادار نیست."
+            >
+              A visually striking pattern is not automatically biologically
+              meaningful.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= SCIENTIFIC QUALITY ================= -->
+
+    <section class="section section-soft">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            data-en="SCIENTIFIC QUALITY"
+            data-fa="کیفیت علمی"
+          >
+            SCIENTIFIC QUALITY
+          </span>
+
+
+          <h2
+            data-en="Make the analysis reproducible and defensible."
+            data-fa="تحلیل را قابل‌تکرار و قابل‌دفاع کن."
+          >
+            Make the analysis reproducible and defensible.
+          </h2>
+
+        </div>
+
+
+        <div class="decision-grid">
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              01
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Predefine the question"
+                data-fa="سؤال را از قبل مشخص کن"
+              >
+                Predefine the question
+              </strong>
+
+              <small
+                data-en="Know what comparison, association or prediction you are testing before exploring the result."
+                data-fa="قبل از دیدن نتیجه مشخص کن چه Comparison، Association یا Prediction را بررسی می‌کنی."
+              >
+                Know what comparison, association or prediction you are testing
+                before exploring the result.
+              </small>
+
+            </div>
+
+          </article>
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              02
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Document the analysis"
+                data-fa="تحلیل را مستند کن"
+              >
+                Document the analysis
+              </strong>
+
+              <small
+                data-en="Record software, version, preprocessing, statistical method, parameters and relevant decisions."
+                data-fa="Software، Version، Preprocessing، روش آماری، پارامترها و تصمیم‌های مهم را ثبت کن."
+              >
+                Record software, version, preprocessing, statistical method,
+                parameters and relevant decisions.
+              </small>
+
+            </div>
+
+          </article>
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              03
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Report limitations"
+                data-fa="محدودیت‌ها را گزارش کن"
+              >
+                Report limitations
+              </strong>
+
+              <small
+                data-en="Mention sample size, missing data, assumptions, multiple testing and other relevant limitations."
+                data-fa="Sample Size، داده‌های گمشده، فرض‌ها، Multiple Testing و سایر محدودیت‌های مرتبط را ذکر کن."
+              >
+                Mention sample size, missing data, assumptions, multiple
+                testing and other relevant limitations.
+              </small>
+
+            </div>
+
+          </article>
+
+
+          <article class="decision-card">
+
+            <span class="decision-icon">
+              04
+            </span>
+
+            <div class="decision-content">
+
+              <strong
+                data-en="Separate result from interpretation"
+                data-fa="Result را از Interpretation جدا کن"
+              >
+                Separate result from interpretation
+              </strong>
+
+              <small
+                data-en="State what the analysis showed before explaining what you think it means biologically."
+                data-fa="ابتدا بگو تحلیل چه چیزی نشان داده و سپس توضیح بده از نظر زیستی چه معنایی می‌تواند داشته باشد."
+              >
+                State what the analysis showed before explaining what you think
+                it means biologically.
+              </small>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= RESEARCH OUTPUT ================= -->
+
+    <section
+      class="section"
+      id="research-output"
+    >
+
+      <div class="container">
+
+        <div class="research-output">
+
+          <div class="research-output-grid">
+
+
+            <div>
+
+              <span
+                class="section-eyebrow"
+                data-en="RESEARCH OUTPUT"
+                data-fa="خروجی پژوهش"
+              >
+                RESEARCH OUTPUT
+              </span>
+
+
+              <h2
+                data-en="Create a Data Analysis Record."
+                data-fa="یک Data Analysis Record بساز."
+              >
+                Create a Data Analysis Record.
+              </h2>
+
+
+              <p
+                data-en="A useful analysis is more than a screenshot of a p-value. Record the question, data structure, method, assumptions, effect, uncertainty and interpretation."
+                data-fa="یک تحلیل خوب فقط Screenshot از p-value نیست. سؤال، ساختار داده، روش، فرض‌ها، Effect، عدم‌قطعیت و Interpretation را ثبت کن."
+              >
+                A useful analysis is more than a screenshot of a p-value.
+                Record the question, data structure, method, assumptions,
+                effect, uncertainty and interpretation.
+              </p>
+
+
+              <div class="cta-actions">
+
+                <a
+                  href="research-outputs.html"
+                  class="primary-button"
+                  data-en="Explore output templates"
+                  data-fa="مشاهده قالب‌های خروجی"
+                >
+                  Explore output templates
+                </a>
+
+
+                <a
+                  href="workspace.html"
+                  class="secondary-button"
+                  data-en="Open Workspace"
+                  data-fa="باز کردن Workspace"
+                >
+                  Open Workspace
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="research-output-card">
+
+              <span class="status-badge">
+                DATA ANALYSIS RECORD
+              </span>
+
+
+              <h3
+                data-en="Recommended record"
+                data-fa="ساختار پیشنهادی"
+              >
+                Recommended record
+              </h3>
+
+
+              <ul class="interpretation-list">
+
+                <li
+                  data-en="Research question"
+                  data-fa="سؤال پژوهش"
+                >
+                  Research question
+                </li>
+
+                <li
+                  data-en="Experimental unit & sample structure"
+                  data-fa="واحد آزمایشی و ساختار نمونه"
+                >
+                  Experimental unit & sample structure
+                </li>
+
+                <li
+                  data-en="Variables and groups"
+                  data-fa="متغیرها و گروه‌ها"
+                >
+                  Variables and groups
+                </li>
+
+                <li
+                  data-en="Exploratory analysis"
+                  data-fa="تحلیل اکتشافی"
+                >
+                  Exploratory analysis
+                </li>
+
+                <li
+                  data-en="Statistical method"
+                  data-fa="روش آماری"
+                >
+                  Statistical method
+                </li>
+
+                <li
+                  data-en="Assumptions and checks"
+                  data-fa="فرض‌ها و بررسی‌ها"
+                >
+                  Assumptions and checks
+                </li>
+
+                <li
+                  data-en="Effect size & uncertainty"
+                  data-fa="Effect Size و عدم‌قطعیت"
+                >
+                  Effect size & uncertainty
+                </li>
+
+                <li
+                  data-en="Biological interpretation"
+                  data-fa="تفسیر زیستی"
+                >
+                  Biological interpretation
+                </li>
+
+                <li
+                  data-en="Limitations"
+                  data-fa="محدودیت‌ها"
+                >
+                  Limitations
+                </li>
+
+                <li
+                  data-en="Next question"
+                  data-fa="سؤال بعدی"
+                >
+                  Next question
+                </li>
+
+                <li
+                  data-en="References"
+                  data-fa="منابع"
+                >
+                  References
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= RELATED WORKFLOWS ================= -->
+
+    <section class="section section-soft">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            data-en="RELATED WORKFLOWS"
+            data-fa="Workflowهای مرتبط"
+          >
+            RELATED WORKFLOWS
+          </span>
+
+
+          <h2
+            data-en="Data analysis rarely stands alone."
+            data-fa="تحلیل داده معمولاً به‌تنهایی انجام نمی‌شود."
+          >
+            Data analysis rarely stands alone.
+          </h2>
+
+
+          <p
+            data-en="Connect statistical analysis to experimental design, molecular workflows and research literature."
+            data-fa="تحلیل آماری را به Experimental Design، Workflowهای مولکولی و Literature متصل کن."
+          >
+            Connect statistical analysis to experimental design, molecular
+            workflows and research literature.
+          </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              EXPERIMENTAL DESIGN
+            </span>
+
+            <h3
+              data-en="Experimental Design"
+              data-fa="طراحی آزمایش"
+            >
+              Experimental Design
+            </h3>
+
+            <p
+              data-en="Plan controls, replicates, variables and study structure before collecting data."
+              data-fa="قبل از جمع‌آوری داده، Controls، Replicates، Variables و ساختار مطالعه را مشخص کن."
+            >
+              Plan controls, replicates, variables and study structure before
+              collecting data.
+            </p>
+
+            <a
+              href="experimental-design.html"
+              class="decision-link"
+            >
+              Open workflow →
+            </a>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              SEQUENCE
+            </span>
+
+            <h3
+              data-en="Sequence Analysis"
+              data-fa="تحلیل توالی"
+            >
+              Sequence Analysis
+            </h3>
+
+            <p
+              data-en="Connect sequence-level evidence with biological interpretation."
+              data-fa="شواهد سطح توالی را به تفسیر زیستی متصل کن."
+            >
+              Connect sequence-level evidence with biological interpretation.
+            </p>
+
+            <a
+              href="sequence.html"
+              class="decision-link"
+            >
+              Open workflow →
+            </a>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <span class="workflow-tag">
+              RESEARCH SKILLS
+            </span>
+
+            <h3
+              data-en="Research Skills"
+              data-fa="مهارت‌های پژوهشی"
+            >
+              Research Skills
+            </h3>
+
+            <p
+              data-en="Improve how you formulate questions, evaluate evidence and communicate scientific results."
+              data-fa="مهارت طرح سؤال، ارزیابی شواهد و انتقال نتایج علمی را تقویت کن."
+            >
+              Improve how you formulate questions, evaluate evidence and
+              communicate scientific results.
+            </p>
+
+            <a
+              href="research-skills.html"
+              class="decision-link"
+            >
+              Open workflow →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= FINAL CTA ================= -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="cta-card">
+
+          <div>
+
+            <span
+              class="section-eyebrow"
+              data-en="NEXT STEP"
+              data-fa="مرحله بعد"
+            >
+              NEXT STEP
+            </span>
+
+
+            <h2
+              data-en="Good analysis starts before the software."
+              data-fa="تحلیل خوب قبل از نرم‌افزار شروع می‌شود."
+            >
+              Good analysis starts before the software.
+            </h2>
+
+
+            <p
+              data-en="Define the question, understand the data, choose the method, record the evidence and interpret the result in biological context."
+              data-fa="سؤال را مشخص کن، داده را بشناس، روش را انتخاب کن، شواهد را ثبت کن و نتیجه را در زمینه زیستی تفسیر کن."
+            >
+              Define the question, understand the data, choose the method,
+              record the evidence and interpret the result in biological
+              context.
+            </p>
+
+          </div>
+
+
+          <div class="cta-actions">
+
+            <a
+              href="research-decision.html"
+              class="primary-button"
+              data-en="Find your starting workflow"
+              data-fa="Workflow مناسب را پیدا کن"
+            >
+              Find your starting workflow
+            </a>
+
+
+            <a
+              href="tools.html"
+              class="secondary-button"
+              data-en="Explore tools"
+              data-fa="مشاهده ابزارها"
+            >
+              Explore tools
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+
+
+  <!-- ================= GLOBAL JS ================= -->
+
+  
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+
+</html>

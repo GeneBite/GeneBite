@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-title-en="Pre-Docking Preparation | GeneBite" data-title-fa="آماده‌سازی قبل از داکینگ | GeneBite">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to prepare protein, ligand and grid box before molecular docking.">
+  <title>آماده‌سازی قبل از داکینگ | GeneBite</title>
+  <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-glow"></div>
+      <div class="container">
+        <div class="page-hero-content">
+          <div class="page-hero-label" data-en="PRE-DOCKING PREP" data-fa="آماده‌سازی قبل از داکینگ">آماده‌سازی قبل از داکینگ</div>
+          <h1 class="page-hero-title" data-en="Prepare before you dock." data-fa="قبل از داکینگ، آماده‌سازی کن.">قبل از داکینگ، آماده‌سازی کن.</h1>
+          <p class="page-hero-text" data-en="Most docking errors start before the docking run. Fix them first." data-fa="بیشتر خطاهای داکینگ قبل از اجرا شروع می‌شوند. اول آن‌ها را درست کن.">بیشتر خطاهای داکینگ قبل از اجرا شروع می‌شوند. اول آن‌ها را درست کن.</p>
+          <div class="page-hero-actions">
+            <a class="btn btn-primary" href="#workflow" data-en="Start the workflow" data-fa="شروع Workflow">شروع Workflow</a>
+            <a class="btn btn-secondary" href="research-decision.html" data-en="Find another workflow" data-fa="Workflow دیگر">Workflow دیگر</a>
+          </div>
+        </div>
+        <div class="workflow-flow">
+          <div class="flow-container">
+          <div class="flow-node"><span class="flow-node-label">01</span><strong data-en="Target" data-fa="هدف">هدف</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">02</span><strong data-en="Protein prep" data-fa="پروتئین">پروتئین</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">03</span><strong data-en="Ligand prep" data-fa="لیگاند">لیگاند</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">04</span><strong data-en="Grid box" data-fa="جعبه">جعبه</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">05</span><strong data-en="Validate" data-fa="اعتبارسنجی">اعتبارسنجی</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="container narrow">
+        <div class="section-heading">
+        <span class="section-label" data-en="WORKFLOW" data-fa="ورک‌فلو">ورک‌فلو</span>
+        <h2 data-en="Step by step" data-fa="قدم‌به‌قدم">قدم‌به‌قدم</h2>
+        <p data-en="Open each step to see what to do, what to check and what can go wrong." data-fa="هر مرحله را باز کن تا ببینی چه کار باید کرد، چه چیزی را چک کنی و کجا ممکن است اشتباه شود.">هر مرحله را باز کن تا ببینی چه کار باید کرد، چه چیزی را چک کنی و کجا ممکن است اشتباه شود.</p>
+      </div>
+        <div class="workflow-interactive">
+        <button class="workflow-step" type="button" data-step="s1" aria-expanded="true">
+          <span class="workflow-number">01</span>
+          <span class="workflow-step-content">
+            <strong data-en="Choose the structure" data-fa="انتخاب ساختار">انتخاب ساختار</strong>
+            <small data-en="The structure decides the result." data-fa="ساختار نتیجه را تعیین می‌کند.">ساختار نتیجه را تعیین می‌کند.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">−</span>
+        </button>
+        <div class="workflow-panel" id="panel-s1">
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Search RCSB PDB" data-fa="RCSB PDB">RCSB PDB</h3>
+              <p data-en="Prefer a high-resolution structure (ideally ≤ 2.5 Å) with a ligand in your site of interest." data-fa="ساختار با رزولوشن بالا (ترجیحاً ≤ ۲٫۵ آنگستروم) با لیگاند در جایگاه موردنظر را ترجیح بده.">ساختار با رزولوشن بالا (ترجیحاً ≤ ۲٫۵ آنگستروم) با لیگاند در جایگاه موردنظر را ترجیح بده.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Check the entry" data-fa="ورودی را چک کن">ورودی را چک کن</h3>
+              <p data-en="Look at mutations, missing residues, chains and the biological assembly." data-fa="جهش‌ها، residueهای گم‌شده، chainها و assembly زیستی را ببین.">جهش‌ها، residueهای گم‌شده، chainها و assembly زیستی را ببین.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="No structure?" data-fa="ساختار نیست؟">ساختار نیست؟</h3>
+              <p data-en="Use an AlphaFold DB model with care. Check confidence at the binding site." data-fa="از مدل AlphaFold DB با احتیاط استفاده کن. اطمینان در جایگاه اتصال را چک کن.">از مدل AlphaFold DB با احتیاط استفاده کن. اطمینان در جایگاه اتصال را چک کن.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s2" aria-expanded="false">
+          <span class="workflow-number">02</span>
+          <span class="workflow-step-content">
+            <strong data-en="Prepare the protein" data-fa="آماده‌سازی پروتئین">آماده‌سازی پروتئین</strong>
+            <small data-en="Clean, complete, protonate." data-fa="تمیز کن، کامل کن، پروتونه کن.">تمیز کن، کامل کن، پروتونه کن.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s2" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Clean" data-fa="تمیزکردن">تمیزکردن</h3>
+              <p data-en="Remove extra chains, ions and additives. Remove waters unless one is clearly structural." data-fa="chainهای اضافه، یون‌ها و افزودنی‌ها را حذف کن. آب‌ها را حذف کن مگر آبی که ساختاری است.">chainهای اضافه، یون‌ها و افزودنی‌ها را حذف کن. آب‌ها را حذف کن مگر آبی که ساختاری است.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Repair" data-fa="ترمیم">ترمیم</h3>
+              <p data-en="Add missing atoms. Add hydrogens and set protonation states (for example His) at your pH." data-fa="اتم‌های گم‌شده را اضافه کن. هیدروژن اضافه کن و حالت پروتونه (مثلاً His) را برای pH خودت تنظیم کن.">اتم‌های گم‌شده را اضافه کن. هیدروژن اضافه کن و حالت پروتونه (مثلاً His) را برای pH خودت تنظیم کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Tools" data-fa="ابزارها">ابزارها</h3>
+              <p data-en="PyMOL for inspection. AutoDockTools or Open Babel for preparation." data-fa="PyMOL برای بازبینی. AutoDockTools یا Open Babel برای آماده‌سازی.">PyMOL برای بازبینی. AutoDockTools یا Open Babel برای آماده‌سازی.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s3" aria-expanded="false">
+          <span class="workflow-number">03</span>
+          <span class="workflow-step-content">
+            <strong data-en="Prepare the ligand" data-fa="آماده‌سازی لیگاند">آماده‌سازی لیگاند</strong>
+            <small data-en="Get a correct 3D molecule." data-fa="یک مولکول سه‌بعدی درست بگیر.">یک مولکول سه‌بعدی درست بگیر.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s3" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Get the structure" data-fa="گرفتن ساختار">گرفتن ساختار</h3>
+              <p data-en="Download from PubChem or ChEMBL. Check stereochemistry and tautomers." data-fa="از PubChem یا ChEMBL دانلود کن. استریوشیمی و tautomerها را چک کن.">از PubChem یا ChEMBL دانلود کن. استریوشیمی و tautomerها را چک کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Protonate and minimise" data-fa="پروتونه و مینیمایز">پروتونه و مینیمایز</h3>
+              <p data-en="Set the charge state at pH 7.4 and minimise the energy." data-fa="حالت بار را در pH ۷٫۴ تنظیم و انرژی را مینیمایز کن.">حالت بار را در pH ۷٫۴ تنظیم و انرژی را مینیمایز کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Screen first" data-fa="اول غربال کن">اول غربال کن</h3>
+              <p data-en="SwissADME gives a quick drug-likeness check before you spend time docking." data-fa="SwissADME قبل از اتلاف وقت روی داکینگ، یک بررسی سریع drug-likeness می‌دهد.">SwissADME قبل از اتلاف وقت روی داکینگ، یک بررسی سریع drug-likeness می‌دهد.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s4" aria-expanded="false">
+          <span class="workflow-number">04</span>
+          <span class="workflow-step-content">
+            <strong data-en="Define the grid box" data-fa="تعریف جعبه‌ی جست‌وجو">تعریف جعبه‌ی جست‌وجو</strong>
+            <small data-en="Tell the program where to look." data-fa="به برنامه بگو کجا بگردد.">به برنامه بگو کجا بگردد.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s4" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Centre it" data-fa="مرکز">مرکز</h3>
+              <p data-en="Centre the box on the co-crystal ligand or the known site." data-fa="جعبه را روی لیگاند کریستالی یا جایگاه شناخته‌شده مرکز کن.">جعبه را روی لیگاند کریستالی یا جایگاه شناخته‌شده مرکز کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Size it" data-fa="اندازه">اندازه</h3>
+              <p data-en="Cover the site with a small margin. A huge box lowers accuracy." data-fa="جایگاه را با حاشیه‌ی کم بپوشان. جعبه‌ی خیلی بزرگ دقت را کم می‌کند.">جایگاه را با حاشیه‌ی کم بپوشان. جعبه‌ی خیلی بزرگ دقت را کم می‌کند.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Save the settings" data-fa="ذخیره‌ی تنظیمات">ذخیره‌ی تنظیمات</h3>
+              <p data-en="Record centre, size and exhaustiveness." data-fa="مرکز، اندازه و exhaustiveness را ثبت کن.">مرکز، اندازه و exhaustiveness را ثبت کن.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s5" aria-expanded="false">
+          <span class="workflow-number">05</span>
+          <span class="workflow-step-content">
+            <strong data-en="Validate, then dock" data-fa="اعتبارسنجی و بعد داکینگ">اعتبارسنجی و بعد داکینگ</strong>
+            <small data-en="Prove the setup works." data-fa="ثابت کن تنظیمات کار می‌کند.">ثابت کن تنظیمات کار می‌کند.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s5" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Redock" data-fa="Redocking">Redocking</h3>
+              <p data-en="Dock the original ligand back. An RMSD below about 2 Å is a good sign." data-fa="لیگاند اصلی را دوباره داک کن. RMSD زیر حدود ۲ آنگستروم نشانه‌ی خوبی است.">لیگاند اصلی را دوباره داک کن. RMSD زیر حدود ۲ آنگستروم نشانه‌ی خوبی است.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Use controls" data-fa="کنترل بگذار">کنترل بگذار</h3>
+              <p data-en="Include a known active and, if possible, an inactive compound." data-fa="یک ترکیب فعال شناخته‌شده و در صورت امکان یک ترکیب غیرفعال اضافه کن.">یک ترکیب فعال شناخته‌شده و در صورت امکان یک ترکیب غیرفعال اضافه کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Then run AutoDock Vina" data-fa="بعد AutoDock Vina">بعد AutoDock Vina</h3>
+              <p data-en="Dock your compounds and inspect the top poses in PyMOL." data-fa="ترکیب‌هایت را داک کن و بهترین poseها را در PyMOL ببین.">ترکیب‌هایت را داک کن و بهترین poseها را در PyMOL ببین.</p>
+            </article>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+        <span class="section-label" data-en="COMMON MISTAKES" data-fa="اشتباهات رایج">اشتباهات رایج</span>
+        <h2 data-en="Where results go wrong" data-fa="نتیجه معمولاً کجا خراب می‌شود">نتیجه معمولاً کجا خراب می‌شود</h2>
+        
+      </div>
+        <div class="mistakes-grid">
+          <article class="mistake-card">
+            <h3 data-en="Score = affinity" data-fa="امتیاز = میل ترکیبی">امتیاز = میل ترکیبی</h3>
+            <p data-en="A docking score is an estimate, not a measured binding energy." data-fa="امتیاز داکینگ یک برآورد است، نه انرژی اتصال اندازه‌گیری‌شده.">امتیاز داکینگ یک برآورد است، نه انرژی اتصال اندازه‌گیری‌شده.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Wrong protonation" data-fa="پروتونه‌شدن اشتباه">پروتونه‌شدن اشتباه</h3>
+            <p data-en="Wrong His or Asp/Glu states change the pose." data-fa="حالت اشتباه His یا Asp/Glu، pose را عوض می‌کند.">حالت اشتباه His یا Asp/Glu، pose را عوض می‌کند.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="No redocking" data-fa="بدون Redocking">بدون Redocking</h3>
+            <p data-en="Without it, you do not know if the setup works." data-fa="بدون آن نمی‌دانی تنظیمات درست است یا نه.">بدون آن نمی‌دانی تنظیمات درست است یا نه.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Rigid receptor only" data-fa="فقط گیرنده‌ی صلب">فقط گیرنده‌ی صلب</h3>
+            <p data-en="Real proteins move. Treat poses as hypotheses." data-fa="پروتئین واقعی حرکت می‌کند. poseها را فرضیه بدان.">پروتئین واقعی حرکت می‌کند. poseها را فرضیه بدان.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-heading">
+        <span class="section-label" data-en="FINAL OUTPUT" data-fa="خروجی نهایی">خروجی نهایی</span>
+        <h2 data-en="A docking-ready setup" data-fa="یک setup آماده‌ی داکینگ">یک setup آماده‌ی داکینگ</h2>
+        
+      </div>
+        <div class="generic-card">
+          <ul class="interpretation-list">
+            <li><span data-en="PDB ID, chain and why you chose it" data-fa="PDB ID، chain و دلیل انتخابش">PDB ID، chain و دلیل انتخابش</span></li>
+<li><span data-en="Protein and ligand preparation steps" data-fa="مراحل آماده‌سازی پروتئین و لیگاند">مراحل آماده‌سازی پروتئین و لیگاند</span></li>
+<li><span data-en="Grid centre and size" data-fa="مرکز و اندازه‌ی جعبه">مرکز و اندازه‌ی جعبه</span></li>
+<li><span data-en="Redocking RMSD" data-fa="RMSD در redocking">RMSD در redocking</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="cta-card">
+          <h2 data-en="Ready to dock?" data-fa="آماده‌ی داکینگ هستی؟">آماده‌ی داکینگ هستی؟</h2>
+          <p data-en="Log your setup, then check the drug workflow." data-fa="setup را ثبت کن، بعد Workflow دارو را ببین.">setup را ثبت کن، بعد Workflow دارو را ببین.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="drug.html" data-en="Drug research" data-fa="تحقیق روی دارو">تحقیق روی دارو</a>
+            <a class="btn btn-secondary" href="research-outputs.html?template=docking-prep" data-en="Prepare a research output" data-fa="ساخت خروجی پژوهشی">ساخت خروجی پژوهشی</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+</html>

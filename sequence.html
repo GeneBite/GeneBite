@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sequence Analysis | GeneBite</title>
+
+  <meta
+    name="description"
+    content="A practical workflow for biological sequence analysis using BLAST, domains, motifs and interpretation."
+  />
+
+    <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ================= PAGE HERO ================= -->
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+
+        <div class="eyebrow">
+          <span>GeneBite</span>
+          <span>•</span>
+          <span data-en="Research Workflow" data-fa="مسیر پژوهشی">
+            مسیر پژوهشی
+          </span>
+        </div>
+
+        <h1
+          data-en="Sequence Analysis"
+          data-fa="تحلیل توالی"
+        >
+          تحلیل توالی
+        </h1>
+
+        <p
+          class="page-hero-description"
+          data-en="A practical workflow for turning a biological sequence into useful biological information."
+          data-fa="یک مسیر عملی برای تبدیل یک توالی زیستی به اطلاعات قابل تفسیر."
+        >
+          یک مسیر عملی برای تبدیل یک توالی زیستی به اطلاعات قابل تفسیر.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ================= WORKFLOW ================= -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <span
+              class="section-kicker"
+              data-en="WORKFLOW"
+              data-fa="مراحل تحلیل"
+            >
+              مراحل تحلیل
+            </span>
+
+            <h2
+              data-en="From sequence to interpretation"
+              data-fa="از توالی تا تفسیر"
+            >
+              از توالی تا تفسیر
+            </h2>
+          </div>
+
+          <p
+            data-en="Click each step to see what to do, which tool to use, and what the result means."
+            data-fa="روی هر مرحله کلیک کن تا ببینی چه کاری انجام می‌شود، از چه ابزاری استفاده می‌کنی و نتیجه چه معنایی دارد."
+          >
+            روی هر مرحله کلیک کن تا ببینی چه کاری انجام می‌شود، از چه ابزاری استفاده می‌کنی و نتیجه چه معنایی دارد.
+          </p>
+
+        </div>
+
+
+        <!-- ================= WORKFLOW STEPS ================= -->
+
+        <div class="workflow-interactive">
+
+
+          <!-- STEP 1 -->
+
+          <button
+            class="workflow-step"
+            type="button"
+            data-step="sequence"
+            aria-expanded="false"
+          >
+
+            <span class="workflow-number">01</span>
+
+            <span class="workflow-step-content">
+
+              <strong
+                data-en="Sequence"
+                data-fa="توالی"
+              >
+                توالی
+              </strong>
+
+              <small
+                data-en="Start with the sequence you want to analyze."
+                data-fa="تحلیل را با توالی موردنظر شروع کن."
+              >
+                تحلیل را با توالی موردنظر شروع کن.
+              </small>
+
+            </span>
+
+            <span class="workflow-arrow">+</span>
+
+          </button>
+
+
+          <div
+            class="workflow-panel"
+            id="panel-sequence"
+            hidden
+          >
+
+            <div class="workflow-panel-grid">
+
+              <div>
+
+                <span class="panel-label">
+                  STEP 01
+                </span>
+
+                <h3
+                  data-en="Start with the sequence"
+                  data-fa="تحلیل را از توالی شروع کن"
+                >
+                  تحلیل را از توالی شروع کن
+                </h3>
+
+                <p
+                  data-en="Your starting point can be a DNA, RNA or protein sequence. Make sure the sequence is in a usable format such as FASTA."
+                  data-fa="نقطه شروع می‌تواند یک توالی DNA، RNA یا Protein باشد. ابتدا مطمئن شو توالی در قالبی قابل استفاده مثل FASTA قرار دارد."
+                >
+                  نقطه شروع می‌تواند یک توالی DNA، RNA یا Protein باشد. ابتدا مطمئن شو توالی در قالبی قابل استفاده مثل FASTA قرار دارد.
+                </p>
+
+              </div>
+
+              <div class="workflow-info-card">
+
+                <strong
+                  data-en="Input"
+                  data-fa="ورودی"
+                >
+                  ورودی
+                </strong>
+
+                <span
+                  data-en="DNA / RNA / Protein sequence"
+                  data-fa="توالی DNA / RNA / Protein"
+                >
+                  توالی DNA / RNA / Protein
+                </span>
+
+                <strong
+                  data-en="Recommended format"
+                  data-fa="فرمت پیشنهادی"
+                >
+                  فرمت پیشنهادی
+                </strong>
+
+                <span>FASTA</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- STEP 2 -->
+
+          <button
+            class="workflow-step"
+            type="button"
+            data-step="blast"
+            aria-expanded="false"
+          >
+
+            <span class="workflow-number">02</span>
+
+            <span class="workflow-step-content">
+
+              <strong>BLAST</strong>
+
+              <small
+                data-en="Find similar sequences and possible biological relationships."
+                data-fa="توالی‌های مشابه و سرنخ‌هایی درباره ارتباط زیستی پیدا کن."
+              >
+                توالی‌های مشابه و سرنخ‌هایی درباره ارتباط زیستی پیدا کن.
+              </small>
+
+            </span>
+
+            <span class="workflow-arrow">+</span>
+
+          </button>
+
+
+          <div
+            class="workflow-panel"
+            id="panel-blast"
+            hidden
+          >
+
+            <div class="workflow-panel-grid">
+
+              <div>
+
+                <span class="panel-label">
+                  STEP 02
+                </span>
+
+                <h3>BLAST</h3>
+
+                <p
+                  data-en="Compare your sequence against a database of known sequences. Similarity can provide clues about sequence identity, conserved regions and possible function."
+                  data-fa="توالی خودت را با توالی‌های شناخته‌شده در یک Database مقایسه کن. شباهت می‌تواند درباره هویت توالی، نواحی حفاظت‌شده و عملکرد احتمالی سرنخ بدهد."
+                >
+                  توالی خودت را با توالی‌های شناخته‌شده در یک Database مقایسه کن. شباهت می‌تواند درباره هویت توالی، نواحی حفاظت‌شده و عملکرد احتمالی سرنخ بدهد.
+                </p>
+
+                <a
+                  href="https://blast.ncbi.nlm.nih.gov/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="button button-primary"
+                >
+                  Open BLAST
+                </a>
+
+              </div>
+
+              <div class="workflow-info-card">
+
+                <strong
+                  data-en="Look at"
+                  data-fa="چه چیزهایی را بررسی کن؟"
+                >
+                  چه چیزهایی را بررسی کن؟
+                </strong>
+
+                <span>Identity</span>
+                <span>Query Cover</span>
+                <span>E-value</span>
+                <span>Bit Score</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- STEP 3 -->
+
+          <button
+            class="workflow-step"
+            type="button"
+            data-step="domains"
+            aria-expanded="false"
+          >
+
+            <span class="workflow-number">03</span>
+
+            <span class="workflow-step-content">
+
+              <strong
+                data-en="Domains & Motifs"
+                data-fa="Domainها و Motifها"
+              >
+                Domainها و Motifها
+              </strong>
+
+              <small
+                data-en="Identify functional or conserved regions."
+                data-fa="نواحی عملکردی یا حفاظت‌شده را بررسی کن."
+              >
+                نواحی عملکردی یا حفاظت‌شده را بررسی کن.
+              </small>
+
+            </span>
+
+            <span class="workflow-arrow">+</span>
+
+          </button>
+
+
+          <div
+            class="workflow-panel"
+            id="panel-domains"
+            hidden
+          >
+
+            <div class="workflow-panel-grid">
+
+              <div>
+
+                <span class="panel-label">
+                  STEP 03
+                </span>
+
+                <h3
+                  data-en="Domains & Motifs"
+                  data-fa="Domainها و Motifها"
+                >
+                  Domainها و Motifها
+                </h3>
+
+                <p
+                  data-en="After finding sequence similarity, examine conserved domains and motifs. These regions can help connect sequence information to biological function."
+                  data-fa="بعد از بررسی شباهت توالی، Domainها و Motifهای حفاظت‌شده را بررسی کن. این نواحی می‌توانند ارتباط بین توالی و عملکرد زیستی را روشن‌تر کنند."
+                >
+                  بعد از بررسی شباهت توالی، Domainها و Motifهای حفاظت‌شده را بررسی کن. این نواحی می‌توانند ارتباط بین توالی و عملکرد زیستی را روشن‌تر کنند.
+                </p>
+
+                <a
+                  href="https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="button button-secondary"
+                >
+                  Open NCBI CDD
+                </a>
+
+              </div>
+
+              <div class="workflow-info-card">
+
+                <strong
+                  data-en="Useful evidence"
+                  data-fa="شواهد مفید"
+                >
+                  شواهد مفید
+                </strong>
+
+                <span>Conserved domains</span>
+                <span>Functional motifs</span>
+                <span>Domain boundaries</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- STEP 4 -->
+
+          <button
+            class="workflow-step"
+            type="button"
+            data-step="interpretation"
+            aria-expanded="false"
+          >
+
+            <span class="workflow-number">04</span>
+
+            <span class="workflow-step-content">
+
+              <strong
+                data-en="Interpretation"
+                data-fa="تفسیر"
+              >
+                تفسیر
+              </strong>
+
+              <small
+                data-en="Combine the evidence and decide what the sequence suggests."
+                data-fa="شواهد را کنار هم قرار بده و نتیجه زیستی را تفسیر کن."
+              >
+                شواهد را کنار هم قرار بده و نتیجه زیستی را تفسیر کن.
+              </small>
+
+            </span>
+
+            <span class="workflow-arrow">+</span>
+
+          </button>
+
+
+          <div
+            class="workflow-panel"
+            id="panel-interpretation"
+            hidden
+          >
+
+            <div class="workflow-panel-grid">
+
+              <div>
+
+                <span class="panel-label">
+                  STEP 04
+                </span>
+
+                <h3
+                  data-en="Interpret the evidence"
+                  data-fa="شواهد را تفسیر کن"
+                >
+                  شواهد را تفسیر کن
+                </h3>
+
+                <p
+                  data-en="Do not rely on a single result. Combine sequence similarity, conserved domains and other evidence before assigning a biological function."
+                  data-fa="به یک نتیجه منفرد تکیه نکن. Similarity، Domainهای حفاظت‌شده و سایر شواهد را کنار هم قرار بده و سپس درباره عملکرد زیستی نتیجه‌گیری کن."
+                >
+                  به یک نتیجه منفرد تکیه نکن. Similarity، Domainهای حفاظت‌شده و سایر شواهد را کنار هم قرار بده و سپس درباره عملکرد زیستی نتیجه‌گیری کن.
+                </p>
+
+              </div>
+
+              <div class="workflow-info-card">
+
+                <strong
+                  data-en="Final output"
+                  data-fa="خروجی نهایی"
+                >
+                  خروجی نهایی
+                </strong>
+
+                <span
+                  data-en="Evidence-based sequence interpretation"
+                  data-fa="تفسیر توالی بر اساس چند منبع شواهد"
+                >
+                  تفسیر توالی بر اساس چند منبع شواهد
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= QUICK SUMMARY ================= -->
+
+    <section class="section section-soft">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+
+            <span
+              class="section-kicker"
+              data-en="AT A GLANCE"
+              data-fa="خلاصه مسیر"
+            >
+              خلاصه مسیر
+            </span>
+
+            <h2
+              data-en="The complete workflow"
+              data-fa="کل مسیر در یک نگاه"
+            >
+              کل مسیر در یک نگاه
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="process-grid">
+
+          <div class="process-card">
+            <span>01</span>
+            <strong
+              data-en="Sequence"
+              data-fa="توالی"
+            >
+              توالی
+            </strong>
+            <p
+              data-en="Prepare your sequence."
+              data-fa="توالی را آماده کن."
+            >
+              توالی را آماده کن.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span>02</span>
+            <strong>BLAST</strong>
+            <p
+              data-en="Find similar sequences."
+              data-fa="توالی‌های مشابه را پیدا کن."
+            >
+              توالی‌های مشابه را پیدا کن.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span>03</span>
+            <strong
+              data-en="Domains"
+              data-fa="Domainها"
+            >
+              Domainها
+            </strong>
+            <p
+              data-en="Look for conserved functional regions."
+              data-fa="نواحی عملکردی حفاظت‌شده را بررسی کن."
+            >
+              نواحی عملکردی حفاظت‌شده را بررسی کن.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span>04</span>
+            <strong
+              data-en="Interpret"
+              data-fa="تفسیر"
+            >
+              تفسیر
+            </strong>
+            <p
+              data-en="Combine evidence."
+              data-fa="شواهد را کنار هم قرار بده."
+            >
+              شواهد را کنار هم قرار بده.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= NEXT STEP ================= -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="cta-box">
+
+          <div>
+
+            <span
+              class="section-kicker"
+              data-en="NEXT"
+              data-fa="مرحله بعد"
+            >
+              مرحله بعد
+            </span>
+
+            <h2
+              data-en="Want to analyze an unknown sequence?"
+              data-fa="می‌خواهی یک توالی ناشناخته را بررسی کنی؟"
+            >
+              می‌خواهی یک توالی ناشناخته را بررسی کنی؟
+            </h2>
+
+            <p
+              data-en="Use the same workflow as a practical case study."
+              data-fa="همین مسیر را به‌صورت یک Case Study عملی دنبال کن."
+            >
+              همین مسیر را به‌صورت یک Case Study عملی دنبال کن.
+            </p>
+
+          </div>
+
+          <a
+            href="unknown-sequence.html"
+            class="button button-primary"
+            data-en="Open Case Study"
+            data-fa="مشاهده Case Study"
+          >
+            مشاهده Case Study
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+
+  <!-- ================= PAGE SCRIPT ================= -->
+
+  
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-title-en="Gene Research | GeneBite" data-title-fa="تحقیق روی ژن | GeneBite">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A practical, ordered workflow for researching a gene: identity, structure, expression, protein, pathways and disease links, with the right database for each step.">
+  <title>تحقیق روی ژن | GeneBite</title>
+  <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-glow"></div>
+      <div class="container">
+        <div class="page-hero-content">
+          <div class="page-hero-label" data-en="GENE RESEARCH" data-fa="تحقیق روی ژن">تحقیق روی ژن</div>
+          <h1 class="page-hero-title" data-en="You have a gene name. Where do you actually start?" data-fa="یک نام ژن داری. واقعاً از کجا شروع کنی؟">یک نام ژن داری. واقعاً از کجا شروع کنی؟</h1>
+          <p class="page-hero-text" data-en="An ordered path from gene symbol to research picture: identity, structure, expression, protein, pathways, disease — with the right database at each step." data-fa="مسیر مرتب از نماد ژن تا تصویر پژوهشی: هویت، ساختار، بیان، پروتئین، مسیرها و بیماری — با دیتابیس مناسب هر مرحله.">مسیر مرتب از نماد ژن تا تصویر پژوهشی: هویت، ساختار، بیان، پروتئین، مسیرها و بیماری — با دیتابیس مناسب هر مرحله.</p>
+          <div class="page-hero-actions">
+            <a class="btn btn-primary" href="#workflow" data-en="Start the workflow" data-fa="شروع Workflow">شروع Workflow</a>
+            <a class="btn btn-secondary" href="research-decision.html" data-en="Use the Research Finder instead" data-fa="به‌جای آن از Research Finder استفاده کن">به‌جای آن از Research Finder استفاده کن</a>
+          </div>
+        </div>
+        <div class="workflow-flow">
+          <div class="flow-container">
+          <div class="flow-node"><span class="flow-node-label">01</span><strong data-en="Gene" data-fa="ژن">ژن</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">02</span><strong data-en="Structure" data-fa="ساختار">ساختار</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">03</span><strong data-en="Expression" data-fa="بیان">بیان</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">04</span><strong data-en="Protein" data-fa="پروتئین">پروتئین</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">05</span><strong data-en="Pathways" data-fa="مسیرها">مسیرها</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">06</span><strong data-en="Disease" data-fa="بیماری">بیماری</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="container narrow">
+        <div class="section-heading">
+        <span class="section-label" data-en="WORKFLOW" data-fa="ورک‌فلو">ورک‌فلو</span>
+        <h2 data-en="Step by step" data-fa="قدم‌به‌قدم">قدم‌به‌قدم</h2>
+        <p data-en="Open each step to see what to do, what to check and what can go wrong." data-fa="هر مرحله را باز کن تا ببینی چه کار باید کرد، چه چیزی را چک کنی و کجا ممکن است اشتباه شود.">هر مرحله را باز کن تا ببینی چه کار باید کرد، چه چیزی را چک کنی و کجا ممکن است اشتباه شود.</p>
+      </div>
+        <div class="workflow-interactive">
+        <button class="workflow-step" type="button" data-step="s1" aria-expanded="true">
+          <span class="workflow-number">01</span>
+          <span class="workflow-step-content">
+            <strong data-en="Confirm the gene&#x27;s identity" data-fa="تأیید هویت ژن">تأیید هویت ژن</strong>
+            <small data-en="NCBI Gene / Ensembl / HGNC: get the official symbol first." data-fa="NCBI Gene / Ensembl / HGNC: اول نماد رسمی را بگیر.">NCBI Gene / Ensembl / HGNC: اول نماد رسمی را بگیر.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">−</span>
+        </button>
+        <div class="workflow-panel" id="panel-s1">
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Find the official symbol" data-fa="پیدا کردن نماد رسمی">پیدا کردن نماد رسمی</h3>
+              <p data-en="Search NCBI Gene or Ensembl and get the official HGNC symbol. Many genes have older aliases." data-fa="نام ژن را در NCBI Gene یا Ensembl جست‌وجو کن و نماد رسمی HGNC را بگیر. بسیاری از ژن‌ها نام‌های قدیمی دارند.">نام ژن را در NCBI Gene یا Ensembl جست‌وجو کن و نماد رسمی HGNC را بگیر. بسیاری از ژن‌ها نام‌های قدیمی دارند.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Note the basics" data-fa="ثبت اطلاعات پایه">ثبت اطلاعات پایه</h3>
+              <p data-en="Chromosome location, gene type (protein-coding, lncRNA, pseudogene...) and the species you care about — human data does not always transfer to mouse." data-fa="موقعیت کروموزومی، نوع ژن (پروتئین‌کد‌کننده، lncRNA، pseudogene...) و گونه‌ای که برایت مهم است را ثبت کن — داده‌ی انسانی همیشه به موش قابل‌تعمیم نیست.">موقعیت کروموزومی، نوع ژن (پروتئین‌کد‌کننده، lncRNA، pseudogene...) و گونه‌ای که برایت مهم است را ثبت کن — داده‌ی انسانی همیشه به موش قابل‌تعمیم نیست.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Watch for" data-fa="مراقب باش">مراقب باش</h3>
+              <p data-en="Gene symbols get reused across species and sometimes reassigned over time; always confirm the species and the NCBI Gene ID, not just the symbol." data-fa="نمادهای ژن بین گونه‌ها تکرار می‌شوند و گاهی با گذر زمان بازتخصیص داده می‌شوند؛ همیشه گونه و NCBI Gene ID را تأیید کن، نه فقط نماد را.">نمادهای ژن بین گونه‌ها تکرار می‌شوند و گاهی با گذر زمان بازتخصیص داده می‌شوند؛ همیشه گونه و NCBI Gene ID را تأیید کن، نه فقط نماد را.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s2" aria-expanded="false">
+          <span class="workflow-number">02</span>
+          <span class="workflow-step-content">
+            <strong data-en="Look at structure and variation" data-fa="بررسی ساختار و تنوع">بررسی ساختار و تنوع</strong>
+            <small data-en="Ensembl / UCSC Genome Browser for structure, gnomAD and ClinVar for variants." data-fa="Ensembl / UCSC Genome Browser برای ساختار، gnomAD و ClinVar برای واریانت‌ها.">Ensembl / UCSC Genome Browser برای ساختار، gnomAD و ClinVar برای واریانت‌ها.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s2" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="See the gene model" data-fa="دیدن مدل ژن">دیدن مدل ژن</h3>
+              <p data-en="Ensembl or the UCSC Genome Browser show exons, introns, transcript isoforms and regulatory regions around the gene." data-fa="Ensembl یا UCSC Genome Browser اگزون‌ها، اینترون‌ها، ایزوفرم‌های ترنسکریپت و نواحی تنظیمی اطراف ژن را نشان می‌دهند.">Ensembl یا UCSC Genome Browser اگزون‌ها، اینترون‌ها، ایزوفرم‌های ترنسکریپت و نواحی تنظیمی اطراف ژن را نشان می‌دهند.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Check known variants" data-fa="بررسی واریانت‌های شناخته‌شده">بررسی واریانت‌های شناخته‌شده</h3>
+              <p data-en="gnomAD shows how common a variant is in the population; ClinVar shows whether it has been classified as disease-associated." data-fa="gnomAD نشان می‌دهد یک واریانت در جمعیت چقدر رایج است؛ ClinVar نشان می‌دهد آیا به بیماری‌ای نسبت داده شده یا نه.">gnomAD نشان می‌دهد یک واریانت در جمعیت چقدر رایج است؛ ClinVar نشان می‌دهد آیا به بیماری‌ای نسبت داده شده یا نه.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Don&#x27;t confuse the two" data-fa="این دو را قاطی نکن">این دو را قاطی نکن</h3>
+              <p data-en="A common variant in gnomAD is unlikely to be a rare disease cause; a ClinVar &#x27;pathogenic&#x27; label still needs the original evidence checked." data-fa="واریانتی که در gnomAD رایج است بعید است عامل یک بیماری نادر باشد؛ برچسب «pathogenic» در ClinVar هم باید با شواهد اصلی‌اش بررسی شود.">واریانتی که در gnomAD رایج است بعید است عامل یک بیماری نادر باشد؛ برچسب «pathogenic» در ClinVar هم باید با شواهد اصلی‌اش بررسی شود.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s3" aria-expanded="false">
+          <span class="workflow-number">03</span>
+          <span class="workflow-step-content">
+            <strong data-en="Check where it&#x27;s expressed" data-fa="بررسی محل بیان">بررسی محل بیان</strong>
+            <small data-en="GTEx and the Human Protein Atlas: tissue and cell-type expression." data-fa="GTEx و Human Protein Atlas: بیان در بافت و نوع سلول.">GTEx و Human Protein Atlas: بیان در بافت و نوع سلول.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s3" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Tissue-level expression" data-fa="بیان در سطح بافت">بیان در سطح بافت</h3>
+              <p data-en="GTEx shows expression across human tissues from RNA-seq of donor samples — useful for asking &#x27;is this gene even active where I think it matters?&#x27;" data-fa="GTEx بیان را در بافت‌های انسانی از RNA-seq نمونه‌های اهداکننده نشان می‌دهد — برای پرسش «آیا این ژن اصلاً جایی که فکر می‌کنم فعال است؟» مفید است.">GTEx بیان را در بافت‌های انسانی از RNA-seq نمونه‌های اهداکننده نشان می‌دهد — برای پرسش «آیا این ژن اصلاً جایی که فکر می‌کنم فعال است؟» مفید است.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Protein and single-cell level" data-fa="سطح پروتئین و تک‌سلولی">سطح پروتئین و تک‌سلولی</h3>
+              <p data-en="The Human Protein Atlas adds antibody-based protein expression and single-cell RNA-seq data on top of GTEx&#x27;s bulk tissue view." data-fa="Human Protein Atlas داده‌ی بیان پروتئین مبتنی بر آنتی‌بادی و RNA-seq تک‌سلولی را روی دید bulk-tissue در GTEx اضافه می‌کند.">Human Protein Atlas داده‌ی بیان پروتئین مبتنی بر آنتی‌بادی و RNA-seq تک‌سلولی را روی دید bulk-tissue در GTEx اضافه می‌کند.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Read the caveat" data-fa="محدودیت را بخوان">محدودیت را بخوان</h3>
+              <p data-en="mRNA expression is not the same as protein abundance or activity — treat it as one line of evidence, not the final answer." data-fa="بیان mRNA همان فراوانی یا فعالیت پروتئین نیست — آن را یک خط شواهد در نظر بگیر، نه پاسخ نهایی.">بیان mRNA همان فراوانی یا فعالیت پروتئین نیست — آن را یک خط شواهد در نظر بگیر، نه پاسخ نهایی.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s4" aria-expanded="false">
+          <span class="workflow-number">04</span>
+          <span class="workflow-step-content">
+            <strong data-en="Move to the protein product" data-fa="رفتن به سراغ پروتئین">رفتن به سراغ پروتئین</strong>
+            <small data-en="UniProt for function, AlphaFold DB / PDB for structure." data-fa="UniProt برای عملکرد، AlphaFold DB / PDB برای ساختار.">UniProt برای عملکرد، AlphaFold DB / PDB برای ساختار.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s4" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Get the canonical entry" data-fa="پیدا کردن رکورد اصلی">پیدا کردن رکورد اصلی</h3>
+              <p data-en="Follow the gene&#x27;s cross-reference into UniProt to read its reviewed function summary, domains and post-translational modifications." data-fa="از طریق cross-reference ژن وارد UniProt شو تا خلاصه‌ی عملکرد بازبینی‌شده، دامنه‌ها و تغییرات پس‌ترجمه‌ای آن را بخوانی.">از طریق cross-reference ژن وارد UniProt شو تا خلاصه‌ی عملکرد بازبینی‌شده، دامنه‌ها و تغییرات پس‌ترجمه‌ای آن را بخوانی.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Check the structure" data-fa="بررسی ساختار">بررسی ساختار</h3>
+              <p data-en="Look for a solved structure in RCSB PDB first. If none exists, use AlphaFold DB and read the pLDDT score." data-fa="اول ساختار حل‌شده را در RCSB PDB بگرد. اگر نبود از AlphaFold DB استفاده کن و امتیاز pLDDT را بخوان.">اول ساختار حل‌شده را در RCSB PDB بگرد. اگر نبود از AlphaFold DB استفاده کن و امتیاز pLDDT را بخوان.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Follow the protein workflow" data-fa="ادامه با Workflow پروتئین">ادامه با Workflow پروتئین</h3>
+              <p data-en="From here the site&#x27;s Protein Analysis workflow takes over for domains, structure inspection and interpretation." data-fa="از این‌جا Workflow «تحلیل پروتئین» سایت برای دامنه‌ها، بررسی ساختار و تفسیر ادامه‌ی مسیر است.">از این‌جا Workflow «تحلیل پروتئین» سایت برای دامنه‌ها، بررسی ساختار و تفسیر ادامه‌ی مسیر است.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s5" aria-expanded="false">
+          <span class="workflow-number">05</span>
+          <span class="workflow-step-content">
+            <strong data-en="Place it in a pathway network" data-fa="قرارگیری در شبکه‌ی مسیر">قرارگیری در شبکه‌ی مسیر</strong>
+            <small data-en="Reactome / KEGG for pathways, STRING for interactions." data-fa="Reactome / KEGG برای مسیرها، STRING برای برهم‌کنش‌ها.">Reactome / KEGG برای مسیرها، STRING برای برهم‌کنش‌ها.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s5" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Find its pathways" data-fa="پیدا کردن مسیرهایش">پیدا کردن مسیرهایش</h3>
+              <p data-en="Reactome and KEGG map the gene&#x27;s protein onto curated biological pathways — signalling, metabolism, DNA repair and so on." data-fa="Reactome و KEGG پروتئین ژن را روی مسیرهای زیستی curated نگاشت می‌کنند — سیگنالینگ، متابولیسم، ترمیم DNA و غیره.">Reactome و KEGG پروتئین ژن را روی مسیرهای زیستی curated نگاشت می‌کنند — سیگنالینگ، متابولیسم، ترمیم DNA و غیره.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="See its interaction network" data-fa="دیدن شبکه‌ی برهم‌کنش">دیدن شبکه‌ی برهم‌کنش</h3>
+              <p data-en="STRING shows known and predicted protein–protein interactions, scored by evidence type (experimental, co-expression, text-mining)." data-fa="STRING برهم‌کنش‌های شناخته‌شده و پیش‌بینی‌شده‌ی پروتئین-پروتئین را با امتیاز بر اساس نوع شواهد (تجربی، هم‌بیانی، متن‌کاوی) نشان می‌دهد.">STRING برهم‌کنش‌های شناخته‌شده و پیش‌بینی‌شده‌ی پروتئین-پروتئین را با امتیاز بر اساس نوع شواهد (تجربی، هم‌بیانی، متن‌کاوی) نشان می‌دهد.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Weight the evidence" data-fa="وزن‌دهی به شواهد">وزن‌دهی به شواهد</h3>
+              <p data-en="A text-mining-only STRING edge is much weaker evidence than an experimentally validated one — check the evidence channel, not just the score." data-fa="یالی در STRING که فقط بر اساس متن‌کاوی است شواهد بسیار ضعیف‌تری نسبت به یک یال تجربی‌تأییدشده دارد — کانال شواهد را چک کن، نه فقط امتیاز را.">یالی در STRING که فقط بر اساس متن‌کاوی است شواهد بسیار ضعیف‌تری نسبت به یک یال تجربی‌تأییدشده دارد — کانال شواهد را چک کن، نه فقط امتیاز را.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s6" aria-expanded="false">
+          <span class="workflow-number">06</span>
+          <span class="workflow-step-content">
+            <strong data-en="Check disease links and literature" data-fa="بررسی ارتباط با بیماری و ادبیات">بررسی ارتباط با بیماری و ادبیات</strong>
+            <small data-en="OMIM / ClinVar / GWAS Catalog for disease, PubMed for the primary literature." data-fa="OMIM / ClinVar / GWAS Catalog برای بیماری، PubMed برای ادبیات اصلی.">OMIM / ClinVar / GWAS Catalog برای بیماری، PubMed برای ادبیات اصلی.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s6" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Mendelian disease links" data-fa="ارتباط با بیماری‌های مندلی">ارتباط با بیماری‌های مندلی</h3>
+              <p data-en="OMIM catalogues genes with known Mendelian disease associations, including inheritance pattern and clinical description." data-fa="OMIM ژن‌های دارای ارتباط شناخته‌شده با بیماری‌های مندلی را همراه با الگوی وراثت و توصیف بالینی فهرست می‌کند.">OMIM ژن‌های دارای ارتباط شناخته‌شده با بیماری‌های مندلی را همراه با الگوی وراثت و توصیف بالینی فهرست می‌کند.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Complex-trait links" data-fa="ارتباط با صفات پیچیده">ارتباط با صفات پیچیده</h3>
+              <p data-en="The GWAS Catalog lists statistical associations between gene regions and complex traits/diseases from genome-wide association studies." data-fa="GWAS Catalog ارتباط‌های آماری بین نواحی ژنی و صفات/بیماری‌های پیچیده از مطالعات genome-wide association را فهرست می‌کند.">GWAS Catalog ارتباط‌های آماری بین نواحی ژنی و صفات/بیماری‌های پیچیده از مطالعات genome-wide association را فهرست می‌کند.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Read the primary papers" data-fa="خواندن مقالات اصلی">خواندن مقالات اصلی</h3>
+              <p data-en="Search PubMed for the gene symbol plus your phenotype of interest, and prefer functional studies over association-only reports." data-fa="نماد ژن را به‌همراه فنوتیپ موردنظرت در PubMed جست‌وجو کن و مطالعات عملکردی را به گزارش‌های فقط-association ترجیح بده.">نماد ژن را به‌همراه فنوتیپ موردنظرت در PubMed جست‌وجو کن و مطالعات عملکردی را به گزارش‌های فقط-association ترجیح بده.</p>
+            </article>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+        <span class="section-label" data-en="COMMON MISTAKES" data-fa="اشتباهات رایج">اشتباهات رایج</span>
+        <h2 data-en="Where results go wrong" data-fa="نتیجه معمولاً کجا خراب می‌شود">نتیجه معمولاً کجا خراب می‌شود</h2>
+        
+      </div>
+        <div class="mistakes-grid">
+          <article class="mistake-card">
+            <h3 data-en="Trusting one aggregator site" data-fa="اعتماد به یک سایت تجمیع‌کننده">اعتماد به یک سایت تجمیع‌کننده</h3>
+            <p data-en="GeneCards-style summaries are a fast overview, not a citable source — always trace a claim back to its original database or paper." data-fa="خلاصه‌های شبیه GeneCards یک مرور سریع‌اند، نه یک منبع قابل‌استناد — همیشه هر ادعا را تا دیتابیس یا مقاله‌ی اصلی‌اش دنبال کن.">خلاصه‌های شبیه GeneCards یک مرور سریع‌اند، نه یک منبع قابل‌استناد — همیشه هر ادعا را تا دیتابیس یا مقاله‌ی اصلی‌اش دنبال کن.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Species mismatch" data-fa="ناهم‌خوانی گونه">ناهم‌خوانی گونه</h3>
+            <p data-en="Mouse phenotype data (MGI) does not automatically apply to humans — note the species on every piece of evidence you collect." data-fa="داده‌ی فنوتیپ موش (MGI) به‌طور خودکار روی انسان صدق نمی‌کند — گونه را روی هر شاهدی که جمع می‌کنی یادداشت کن.">داده‌ی فنوتیپ موش (MGI) به‌طور خودکار روی انسان صدق نمی‌کند — گونه را روی هر شاهدی که جمع می‌کنی یادداشت کن.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Association mistaken for mechanism" data-fa="اشتباه گرفتن association با مکانیسم">اشتباه گرفتن association با مکانیسم</h3>
+            <p data-en="A GWAS hit near a gene shows statistical association with a trait, not that the gene causes it or how." data-fa="یک نتیجه‌ی GWAS نزدیک یک ژن، ارتباط آماری با یک صفت را نشان می‌دهد، نه اینکه آن ژن عامل آن است یا چگونه.">یک نتیجه‌ی GWAS نزدیک یک ژن، ارتباط آماری با یک صفت را نشان می‌دهد، نه اینکه آن ژن عامل آن است یا چگونه.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Expression without function" data-fa="بیان بدون عملکرد">بیان بدون عملکرد</h3>
+            <p data-en="A gene being expressed in a tissue does not by itself explain what it does there — pair expression data with functional or interaction evidence." data-fa="بیان یک ژن در یک بافت به‌تنهایی توضیح نمی‌دهد آنجا چه می‌کند — داده‌ی بیان را با شواهد عملکردی یا برهم‌کنشی جفت کن.">بیان یک ژن در یک بافت به‌تنهایی توضیح نمی‌دهد آنجا چه می‌کند — داده‌ی بیان را با شواهد عملکردی یا برهم‌کنشی جفت کن.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-heading">
+        <span class="section-label" data-en="FINAL OUTPUT" data-fa="خروجی نهایی">خروجی نهایی</span>
+        <h2 data-en="A gene research brief" data-fa="یک Brief تحقیق ژنی">یک Brief تحقیق ژنی</h2>
+        
+      </div>
+        <div class="generic-card">
+          <ul class="interpretation-list">
+            <li><span data-en="Official symbol, species and NCBI Gene ID" data-fa="نماد رسمی، گونه و NCBI Gene ID">نماد رسمی، گونه و NCBI Gene ID</span></li>
+<li><span data-en="Known variants and their clinical classification (if any)" data-fa="واریانت‌های شناخته‌شده و طبقه‌بندی بالینی‌شان (در صورت وجود)">واریانت‌های شناخته‌شده و طبقه‌بندی بالینی‌شان (در صورت وجود)</span></li>
+<li><span data-en="Tissue/cell expression pattern with its source" data-fa="الگوی بیان بافتی/سلولی همراه با منبعش">الگوی بیان بافتی/سلولی همراه با منبعش</span></li>
+<li><span data-en="Protein function summary and structure status (solved or predicted)" data-fa="خلاصه‌ی عملکرد پروتئین و وضعیت ساختار (حل‌شده یا پیش‌بینی‌شده)">خلاصه‌ی عملکرد پروتئین و وضعیت ساختار (حل‌شده یا پیش‌بینی‌شده)</span></li>
+<li><span data-en="Key pathways and top interaction partners" data-fa="مسیرهای کلیدی و مهم‌ترین شرکای برهم‌کنشی">مسیرهای کلیدی و مهم‌ترین شرکای برهم‌کنشی</span></li>
+<li><span data-en="Disease associations with their evidence level" data-fa="ارتباط‌های بیماری همراه با سطح شواهدشان">ارتباط‌های بیماری همراه با سطح شواهدشان</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="cta-card">
+          <h2 data-en="Continue the analysis" data-fa="ادامه‌ی تحلیل">ادامه‌ی تحلیل</h2>
+          <p data-en="Take the protein onward, or turn this brief into a saved research output." data-fa="پروتئین را جلوتر ببر یا این Brief را به یک خروجی پژوهشی ذخیره‌شده تبدیل کن.">پروتئین را جلوتر ببر یا این Brief را به یک خروجی پژوهشی ذخیره‌شده تبدیل کن.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="protein.html" data-en="Protein Analysis" data-fa="تحلیل پروتئین">تحلیل پروتئین</a>
+            <a class="btn btn-secondary" href="research-outputs.html?template=gene" data-en="Prepare a research output" data-fa="ساخت خروجی پژوهشی">ساخت خروجی پژوهشی</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+</html>

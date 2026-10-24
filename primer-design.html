@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-title-en="Primer Design | GeneBite" data-title-fa="طراحی پرایمر | GeneBite">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to design, check and test PCR and qPCR primers.">
+  <title>طراحی پرایمر | GeneBite</title>
+  <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-glow"></div>
+      <div class="container">
+        <div class="page-hero-content">
+          <div class="page-hero-label" data-en="PRIMER DESIGN" data-fa="طراحی پرایمر">طراحی پرایمر</div>
+          <h1 class="page-hero-title" data-en="Design primers that work the first time." data-fa="پرایمری بساز که بار اول جواب بدهد.">پرایمری بساز که بار اول جواب بدهد.</h1>
+          <p class="page-hero-text" data-en="A short, ordered path: target, template, design, specificity, test." data-fa="یک مسیر کوتاه و مرتب: هدف، template، طراحی، اختصاصیت، آزمون.">یک مسیر کوتاه و مرتب: هدف، template، طراحی، اختصاصیت، آزمون.</p>
+          <div class="page-hero-actions">
+            <a class="btn btn-primary" href="#workflow" data-en="Start the workflow" data-fa="شروع Workflow">شروع Workflow</a>
+            <a class="btn btn-secondary" href="research-decision.html" data-en="Find another workflow" data-fa="Workflow دیگر">Workflow دیگر</a>
+          </div>
+        </div>
+        <div class="workflow-flow">
+          <div class="flow-container">
+          <div class="flow-node"><span class="flow-node-label">01</span><strong data-en="Target" data-fa="هدف">هدف</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">02</span><strong data-en="Template" data-fa="Template">Template</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">03</span><strong data-en="Design" data-fa="طراحی">طراحی</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">04</span><strong data-en="Specificity" data-fa="اختصاصیت">اختصاصیت</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">05</span><strong data-en="Test" data-fa="آزمون">آزمون</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="container narrow">
+        <div class="section-heading">
+        <span class="section-label" data-en="WORKFLOW" data-fa="ورک‌فلو">ورک‌فلو</span>
+        <h2 data-en="Step by step" data-fa="قدم‌به‌قدم">قدم‌به‌قدم</h2>
+        <p data-en="Open each step to see what to do, what to check and what can go wrong." data-fa="هر مرحله را باز کن تا ببینی چه کار باید کرد، چه چیزی را چک کنی و کجا ممکن است اشتباه شود.">هر مرحله را باز کن تا ببینی چه کار باید کرد، چه چیزی را چک کنی و کجا ممکن است اشتباه شود.</p>
+      </div>
+        <div class="workflow-interactive">
+        <button class="workflow-step" type="button" data-step="s1" aria-expanded="true">
+          <span class="workflow-number">01</span>
+          <span class="workflow-step-content">
+            <strong data-en="Define the target" data-fa="تعریف هدف">تعریف هدف</strong>
+            <small data-en="Get the exact reference sequence." data-fa="توالی مرجع دقیق را بگیر.">توالی مرجع دقیق را بگیر.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">−</span>
+        </button>
+        <div class="workflow-panel" id="panel-s1">
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Use a RefSeq record" data-fa="رکورد RefSeq">رکورد RefSeq</h3>
+              <p data-en="Open the gene in NCBI Gene and copy the RefSeq accession for your species (NM_ for mRNA)." data-fa="ژن را در NCBI Gene باز کن و accession RefSeq گونه‌ی خودت را بردار (NM_ برای mRNA).">ژن را در NCBI Gene باز کن و accession RefSeq گونه‌ی خودت را بردار (NM_ برای mRNA).</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Set the goal" data-fa="هدف را مشخص کن">هدف را مشخص کن</h3>
+              <p data-en="Cloning, genotyping, detection or qPCR? The goal sets the amplicon size." data-fa="کلونینگ، ژنوتایپینگ، تشخیص یا qPCR؟ هدف اندازه‌ی amplicon را تعیین می‌کند.">کلونینگ، ژنوتایپینگ، تشخیص یا qPCR؟ هدف اندازه‌ی amplicon را تعیین می‌کند.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Pick the template" data-fa="template را انتخاب کن">template را انتخاب کن</h3>
+              <p data-en="Genomic DNA or cDNA? For cDNA, design across an exon–exon junction." data-fa="DNA ژنومی یا cDNA؟ برای cDNA روی محل اتصال دو اگزون طراحی کن.">DNA ژنومی یا cDNA؟ برای cDNA روی محل اتصال دو اگزون طراحی کن.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s2" aria-expanded="false">
+          <span class="workflow-number">02</span>
+          <span class="workflow-step-content">
+            <strong data-en="Design with a tool" data-fa="طراحی با ابزار">طراحی با ابزار</strong>
+            <small data-en="Primer-BLAST designs and checks in one step." data-fa="Primer-BLAST هم طراحی می‌کند هم بررسی.">Primer-BLAST هم طراحی می‌کند هم بررسی.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s2" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Typical settings" data-fa="تنظیمات معمول">تنظیمات معمول</h3>
+              <p data-en="Length 18–25 nt, Tm about 58–62 °C, GC 40–60%. Keep the two Tm values within 2–3 °C." data-fa="طول ۱۸ تا ۲۵ نوکلئوتید، Tm حدود ۵۸ تا ۶۲ درجه، GC بین ۴۰ تا ۶۰٪. اختلاف Tm دو پرایمر زیر ۲ تا ۳ درجه باشد.">طول ۱۸ تا ۲۵ نوکلئوتید، Tm حدود ۵۸ تا ۶۲ درجه، GC بین ۴۰ تا ۶۰٪. اختلاف Tm دو پرایمر زیر ۲ تا ۳ درجه باشد.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Amplicon size" data-fa="اندازه‌ی amplicon">اندازه‌ی amplicon</h3>
+              <p data-en="PCR: 100–1000 bp. qPCR: 70–200 bp." data-fa="PCR: ۱۰۰ تا ۱۰۰۰ جفت‌باز. qPCR: ۷۰ تا ۲۰۰ جفت‌باز.">PCR: ۱۰۰ تا ۱۰۰۰ جفت‌باز. qPCR: ۷۰ تا ۲۰۰ جفت‌باز.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="3′ end" data-fa="انتهای ۳′">انتهای ۳′</h3>
+              <p data-en="Avoid runs of 4 identical bases. A G or C near the 3′ end helps, but not more than 3 in the last 5." data-fa="از ۴ باز یکسان پشت‌سرهم پرهیز کن. G یا C نزدیک ۳′ کمک می‌کند، ولی در ۵ باز آخر بیش از ۳ تا نباشد.">از ۴ باز یکسان پشت‌سرهم پرهیز کن. G یا C نزدیک ۳′ کمک می‌کند، ولی در ۵ باز آخر بیش از ۳ تا نباشد.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s3" aria-expanded="false">
+          <span class="workflow-number">03</span>
+          <span class="workflow-step-content">
+            <strong data-en="Check specificity" data-fa="بررسی اختصاصیت">بررسی اختصاصیت</strong>
+            <small data-en="A good-looking primer can still bind the wrong place." data-fa="پرایمر خوب‌نما هم ممکن است جای اشتباه بچسبد.">پرایمر خوب‌نما هم ممکن است جای اشتباه بچسبد.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s3" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Run the BLAST check" data-fa="BLAST را اجرا کن">BLAST را اجرا کن</h3>
+              <p data-en="Choose the correct organism and database. Reject pairs with other likely products." data-fa="ارگانیسم و دیتابیس درست را انتخاب کن. جفت‌هایی که محصول احتمالی دیگر دارند رد کن.">ارگانیسم و دیتابیس درست را انتخاب کن. جفت‌هایی که محصول احتمالی دیگر دارند رد کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Check SNPs" data-fa="SNPها را ببین">SNPها را ببین</h3>
+              <p data-en="A SNP under a primer can stop amplification. Check Ensembl or UCSC." data-fa="یک SNP زیر پرایمر می‌تواند تکثیر را متوقف کند. Ensembl یا UCSC را ببین.">یک SNP زیر پرایمر می‌تواند تکثیر را متوقف کند. Ensembl یا UCSC را ببین.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Check structures" data-fa="ساختارها را ببین">ساختارها را ببین</h3>
+              <p data-en="Test for hairpins, self-dimers and primer-dimers (for example IDT OligoAnalyzer)." data-fa="hairpin، self-dimer و primer-dimer را بررسی کن (مثلاً IDT OligoAnalyzer).">hairpin، self-dimer و primer-dimer را بررسی کن (مثلاً IDT OligoAnalyzer).</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s4" aria-expanded="false">
+          <span class="workflow-number">04</span>
+          <span class="workflow-step-content">
+            <strong data-en="Order and test" data-fa="سفارش و آزمون">سفارش و آزمون</strong>
+            <small data-en="Test before you trust." data-fa="قبل از اعتماد، آزمون کن.">قبل از اعتماد، آزمون کن.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s4" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Gradient PCR" data-fa="Gradient PCR">Gradient PCR</h3>
+              <p data-en="Test several annealing temperatures around the Tm. Pick the one with one clean band." data-fa="چند دمای annealing اطراف Tm را آزمون کن و دمایی را بگیر که یک باند تمیز می‌دهد.">چند دمای annealing اطراف Tm را آزمون کن و دمایی را بگیر که یک باند تمیز می‌دهد.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Controls" data-fa="کنترل‌ها">کنترل‌ها</h3>
+              <p data-en="Always run a no-template control (NTC)." data-fa="همیشه کنترل بدون template (NTC) بگذار.">همیشه کنترل بدون template (NTC) بگذار.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="For qPCR" data-fa="برای qPCR">برای qPCR</h3>
+              <p data-en="Check efficiency (90–110%) and a single melt-curve peak." data-fa="کارایی (۹۰ تا ۱۱۰٪) و یک پیک واحد در melt curve را چک کن.">کارایی (۹۰ تا ۱۱۰٪) و یک پیک واحد در melt curve را چک کن.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s5" aria-expanded="false">
+          <span class="workflow-number">05</span>
+          <span class="workflow-step-content">
+            <strong data-en="Record it" data-fa="ثبت نتیجه">ثبت نتیجه</strong>
+            <small data-en="Make the primer set reusable." data-fa="جفت پرایمر را قابل استفاده‌ی دوباره کن.">جفت پرایمر را قابل استفاده‌ی دوباره کن.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s5" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Write it down" data-fa="یادداشت کن">یادداشت کن</h3>
+              <p data-en="Save sequences, Tm, amplicon size, accession, annealing temperature and test result." data-fa="توالی‌ها، Tm، اندازه‌ی amplicon، accession، دمای annealing و نتیجه‌ی آزمون را ذخیره کن.">توالی‌ها، Tm، اندازه‌ی amplicon، accession، دمای annealing و نتیجه‌ی آزمون را ذخیره کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Next step" data-fa="قدم بعدی">قدم بعدی</h3>
+              <p data-en="If it fails, open the PCR or qPCR troubleshooting guide." data-fa="اگر جواب نداد، راهنمای رفع اشکال PCR یا qPCR را باز کن.">اگر جواب نداد، راهنمای رفع اشکال PCR یا qPCR را باز کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Use a template" data-fa="از قالب استفاده کن">از قالب استفاده کن</h3>
+              <p data-en="Fill the General Research Note to log the design." data-fa="برای ثبت طراحی، قالب General Research Note را پر کن.">برای ثبت طراحی، قالب General Research Note را پر کن.</p>
+            </article>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+        <span class="section-label" data-en="COMMON MISTAKES" data-fa="اشتباهات رایج">اشتباهات رایج</span>
+        <h2 data-en="Where results go wrong" data-fa="نتیجه معمولاً کجا خراب می‌شود">نتیجه معمولاً کجا خراب می‌شود</h2>
+        
+      </div>
+        <div class="mistakes-grid">
+          <article class="mistake-card">
+            <h3 data-en="Wrong species or isoform" data-fa="گونه یا ایزوفرم اشتباه">گونه یا ایزوفرم اشتباه</h3>
+            <p data-en="Always confirm the accession and transcript." data-fa="accession و transcript را همیشه تأیید کن.">accession و transcript را همیشه تأیید کن.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Ignoring genomic DNA" data-fa="نادیده گرفتن DNA ژنومی">نادیده گرفتن DNA ژنومی</h3>
+            <p data-en="Without an exon junction, gDNA can give a false band." data-fa="بدون اتصال اگزون، DNA ژنومی می‌تواند باند کاذب بدهد.">بدون اتصال اگزون، DNA ژنومی می‌تواند باند کاذب بدهد.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Trusting one Tm value" data-fa="اعتماد به یک Tm">اعتماد به یک Tm</h3>
+            <p data-en="Calculators differ. Use one method for both primers." data-fa="ماشین‌حساب‌ها فرق دارند. برای هر دو پرایمر یک روش بگیر.">ماشین‌حساب‌ها فرق دارند. برای هر دو پرایمر یک روش بگیر.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="No NTC" data-fa="نبود NTC">نبود NTC</h3>
+            <p data-en="You cannot tell product from contamination." data-fa="محصول واقعی را از آلودگی تشخیص نمی‌دهی.">محصول واقعی را از آلودگی تشخیص نمی‌دهی.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-heading">
+        <span class="section-label" data-en="FINAL OUTPUT" data-fa="خروجی نهایی">خروجی نهایی</span>
+        <h2 data-en="A validated primer set" data-fa="یک جفت پرایمر اعتبارسنجی‌شده">یک جفت پرایمر اعتبارسنجی‌شده</h2>
+        
+      </div>
+        <div class="generic-card">
+          <ul class="interpretation-list">
+            <li><span data-en="Sequences, Tm and amplicon size" data-fa="توالی‌ها، Tm و اندازه‌ی amplicon">توالی‌ها، Tm و اندازه‌ی amplicon</span></li>
+<li><span data-en="Reference accession and species" data-fa="accession مرجع و گونه">accession مرجع و گونه</span></li>
+<li><span data-en="Specificity check result" data-fa="نتیجه‌ی بررسی اختصاصیت">نتیجه‌ی بررسی اختصاصیت</span></li>
+<li><span data-en="Best annealing temperature and gel or melt-curve result" data-fa="بهترین دمای annealing و نتیجه‌ی ژل یا melt curve">بهترین دمای annealing و نتیجه‌ی ژل یا melt curve</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="cta-card">
+          <h2 data-en="Primers ready?" data-fa="پرایمر آماده است؟">پرایمر آماده است؟</h2>
+          <p data-en="Run the reaction or fix a problem." data-fa="واکنش را اجرا کن یا مشکل را رفع کن.">واکنش را اجرا کن یا مشکل را رفع کن.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="molecular-biology-pcr.html" data-en="PCR workflow" data-fa="Workflow پرایمر → PCR">Workflow پرایمر → PCR</a>
+            <a class="btn btn-secondary" href="troubleshooting.html?cat=pcr" data-en="Troubleshooting" data-fa="رفع اشکال">رفع اشکال</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+</html>

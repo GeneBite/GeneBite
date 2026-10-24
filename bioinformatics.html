@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GeneBite | Bioinformatics Workflows</title>
+
+    <meta
+        name="description"
+        content="Practical bioinformatics workflows for sequence analysis, protein annotation, structure prediction, phylogenetics, conserved regions, domains and biological interpretation."
+    >
+
+      <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="page-hero">
+
+        <div class="page-hero-glow"></div>
+
+        <div class="container">
+
+            <div
+                class="page-hero-label"
+                data-en="BIOINFORMATICS"
+                data-fa="بیوانفورماتیک"
+            >
+                BIOINFORMATICS
+            </div>
+
+
+            <h1
+                data-en="Turn biological sequences and data into researchable insights."
+                data-fa="توالی‌ها و داده‌های زیستی را به بینش قابل‌استفاده برای پژوهش تبدیل کن."
+            >
+                Turn biological sequences and data into researchable insights.
+            </h1>
+
+
+            <p
+                data-en="Explore practical workflows for sequence analysis, annotation, structure prediction, evolutionary analysis and biological interpretation."
+                data-fa="Workflowهای کاربردی برای تحلیل توالی، annotation، پیش‌بینی ساختار، تحلیل تکاملی و تفسیر زیستی را دنبال کن."
+            >
+                Explore practical workflows for sequence analysis,
+                annotation, structure prediction, evolutionary analysis
+                and biological interpretation.
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a
+                    href="#bioinformatics-workflows"
+                    class="btn btn-primary"
+                    data-en="Explore workflows"
+                    data-fa="مشاهده Workflowها"
+                >
+                    Explore workflows
+                </a>
+
+
+                <a
+                    href="research-decision.html"
+                    class="btn btn-secondary"
+                    data-en="Find my next step"
+                    data-fa="پیدا کردن قدم بعدی"
+                >
+                    Find my next step
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CORE PRINCIPLE -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="workflow-principle">
+
+                <div class="workflow-principle-content">
+
+                    <span
+                        class="section-label"
+                        data-en="RESEARCH PRINCIPLE"
+                        data-fa="اصل پژوهش"
+                    >
+                        RESEARCH PRINCIPLE
+                    </span>
+
+
+                    <h2
+                        data-en="Don't choose a bioinformatics tool before defining the biological question."
+                        data-fa="قبل از تعریف سؤال زیستی، ابزار بیوانفورماتیک را انتخاب نکن."
+                    >
+                        Don't choose a bioinformatics tool
+                        before defining the biological question.
+                    </h2>
+
+
+                    <p
+                        data-en="Data alone gives no biological answer. A workflow links input to evidence, then to interpretation."
+                        data-fa="یک توالی یا ساختار به‌تنهایی نتیجه زیستی نمی‌دهد. Workflow، ورودی را به شواهد و سپس تفسیر وصل می‌کند."
+                    >یک توالی یا ساختار به‌تنهایی نتیجه زیستی نمی‌دهد. Workflow، ورودی را به شواهد و سپس تفسیر وصل می‌کند.</p>
+
+                </div>
+
+
+                <div class="workflow-principle-visual">
+
+                    <div class="workflow-output-steps">
+
+                        <div class="output-step">
+                            <span>01</span>
+
+                            <strong
+                                data-en="Question"
+                                data-fa="سؤال"
+                            >
+                                Question
+                            </strong>
+                        </div>
+
+
+                        <div class="output-step">
+                            <span>02</span>
+
+                            <strong
+                                data-en="Input"
+                                data-fa="ورودی"
+                            >
+                                Input
+                            </strong>
+                        </div>
+
+
+                        <div class="output-step">
+                            <span>03</span>
+
+                            <strong
+                                data-en="Analysis"
+                                data-fa="تحلیل"
+                            >
+                                Analysis
+                            </strong>
+                        </div>
+
+
+                        <div class="output-step">
+                            <span>04</span>
+
+                            <strong
+                                data-en="Evidence"
+                                data-fa="شواهد"
+                            >
+                                Evidence
+                            </strong>
+                        </div>
+
+
+                        <div class="output-step">
+                            <span>05</span>
+
+                            <strong
+                                data-en="Interpretation"
+                                data-fa="تفسیر"
+                            >
+                                Interpretation
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WORKFLOW LIBRARY -->
+
+    <section
+        class="section"
+        id="bioinformatics-workflows"
+    >
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span
+                    class="section-label"
+                    data-en="BIOINFORMATICS WORKFLOWS"
+                    data-fa="WORKFLOWهای بیوانفورماتیک"
+                >
+                    BIOINFORMATICS WORKFLOWS
+                </span>
+
+
+                <h2
+                    data-en="Start with the type of problem you need to solve."
+                    data-fa="با نوع مسئله‌ای که می‌خواهی حل کنی شروع کن."
+                >
+                    Start with the type of problem
+                    you need to solve.
+                </h2>
+
+
+                <p
+                    data-en="These workflows connect commonly used biological databases and computational tools to practical research questions."
+                    data-fa="این Workflowها پایگاه‌های داده و ابزارهای محاسباتی رایج را به سؤالات واقعی پژوهشی متصل می‌کنند."
+                >
+                    These workflows connect commonly used biological databases
+                    and computational tools to practical research questions.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-library-grid">
+
+
+                <!-- SEQUENCE ANALYSIS -->
+
+                <article class="library-card featured">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            SEQ
+                        </div>
+
+
+                        <div>
+
+                            <span
+                                class="library-meta"
+                                data-en="SEQUENCE"
+                                data-fa="توالی"
+                            >
+                                SEQUENCE
+                            </span>
+
+
+                            <h3
+                                data-en="Sequence Analysis"
+                                data-fa="تحلیل توالی"
+                            >
+                                Sequence Analysis
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Move from a raw sequence to similarity, conserved regions, motifs, domains and biological interpretation."
+                        data-fa="از یک توالی به similarity، نواحی conserved، motifها، domainها و تفسیر زیستی برس."
+                    >
+                        Move from a raw sequence to similarity,
+                        conserved regions, motifs, domains
+                        and biological interpretation.
+                    </p>
+
+
+                    <div class="library-flow">
+                        Sequence → QC → BLAST → MSA → Conservation → Domains → Interpretation
+                    </div>
+
+
+                    <div class="library-tags">
+                        <span>FASTA</span>
+                        <span>BLAST</span>
+                        <span>MSA</span>
+                    </div>
+
+
+                    <a
+                        href="sequence.html"
+                        class="library-button"
+                        data-en="Open sequence workflow"
+                        data-fa="باز کردن Workflow تحلیل توالی"
+                    >
+                        Open sequence workflow
+                    </a>
+
+                </article>
+
+
+                <!-- UNKNOWN SEQUENCE -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            ?
+                        </div>
+
+
+                        <div>
+
+                            <span
+                                class="library-meta"
+                                data-en="UNKNOWN INPUT"
+                                data-fa="ورودی ناشناخته"
+                            >
+                                UNKNOWN INPUT
+                            </span>
+
+
+                            <h3
+                                data-en="Unknown Sequence"
+                                data-fa="توالی ناشناخته"
+                            >
+                                Unknown Sequence
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Investigate an unknown sequence by combining similarity searches, annotation, domains and structure prediction."
+                        data-fa="یک توالی ناشناخته را با ترکیب similarity search، annotation، domainها و پیش‌بینی ساختار بررسی کن."
+                    >
+                        Investigate an unknown sequence by combining
+                        similarity searches, annotation, domains
+                        and structure prediction.
+                    </p>
+
+
+                    <div class="library-flow">
+                        Unknown Sequence → BLAST → Homologs → Domains → Structure → Hypothesis
+                    </div>
+
+
+                    <div class="library-tags">
+                        <span>BLAST</span>
+                        <span>InterPro</span>
+                        <span>AlphaFold</span>
+                    </div>
+
+
+                    <a
+                        href="unknown-sequence.html"
+                        class="library-button"
+                        data-en="Explore unknown sequence"
+                        data-fa="بررسی توالی ناشناخته"
+                    >
+                        Explore unknown sequence
+                    </a>
+
+                </article>
+
+
+                <!-- PROTEIN ANALYSIS -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            PDB
+                        </div>
+
+
+                        <div>
+
+                            <span
+                                class="library-meta"
+                                data-en="STRUCTURE"
+                                data-fa="ساختار"
+                            >
+                                STRUCTURE
+                            </span>
+
+
+                            <h3
+                                data-en="Protein Analysis"
+                                data-fa="تحلیل پروتئین"
+                            >
+                                Protein Analysis
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Connect protein identity and sequence information to experimental structures and structural interpretation."
+                        data-fa="اطلاعات هویتی و توالی پروتئین را به ساختارهای تجربی و تفسیر ساختاری متصل کن."
+                    >
+                        Connect protein identity and sequence information
+                        to experimental structures and structural interpretation.
+                    </p>
+
+
+                    <div class="library-flow">
+                        Protein → UniProt → PDB → Structure → VMD / PyMOL → Interpretation
+                    </div>
+
+
+                    <div class="library-tags">
+                        <span>UniProt</span>
+                        <span>PDB</span>
+                        <span>VMD</span>
+                    </div>
+
+
+                    <a
+                        href="protein.html"
+                        class="library-button"
+                        data-en="Open protein workflow"
+                        data-fa="باز کردن Workflow پروتئین"
+                    >
+                        Open protein workflow
+                    </a>
+
+                </article>
+
+
+                <!-- ALPHAFOLD -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            AF
+                        </div>
+
+
+                        <div>
+
+                            <span
+                                class="library-meta"
+                                data-en="STRUCTURE PREDICTION"
+                                data-fa="پیش‌بینی ساختار"
+                            >
+                                STRUCTURE PREDICTION
+                            </span>
+
+
+                            <h3
+                                data-en="Protein Structure Prediction"
+                                data-fa="پیش‌بینی ساختار پروتئین"
+                            >
+                                Protein Structure Prediction
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Use sequence-based structure prediction to generate a structural model and assess prediction confidence before interpretation."
+                        data-fa="با استفاده از توالی، مدل ساختاری تولید کن و قبل از تفسیر، confidence پیش‌بینی را بررسی کن."
+                    >
+                        Use sequence-based structure prediction
+                        to generate a structural model and assess
+                        prediction confidence before interpretation.
+                    </p>
+
+
+                    <div class="library-flow">
+                        Sequence → AlphaFold → Predicted Structure → Confidence → Structural Question
+                    </div>
+
+
+                    <div class="library-tags">
+                        <span>AlphaFold</span>
+                        <span>Prediction</span>
+                        <span>Confidence</span>
+                    </div>
+
+
+                    <a
+                        href="unknown-sequence.html"
+                        class="library-button"
+                        data-en="Explore structure prediction"
+                        data-fa="بررسی پیش‌بینی ساختار"
+                    >
+                        Explore structure prediction
+                    </a>
+
+                </article>
+
+
+                <!-- CONSERVED REGIONS -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            MSA
+                        </div>
+
+
+                        <div>
+
+                            <span
+                                class="library-meta"
+                                data-en="COMPARATIVE ANALYSIS"
+                                data-fa="تحلیل مقایسه‌ای"
+                            >
+                                COMPARATIVE ANALYSIS
+                            </span>
+
+
+                            <h3
+                                data-en="Conserved Regions"
+                                data-fa="نواحی حفاظت‌شده"
+                            >
+                                Conserved Regions
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Compare homologous sequences to identify conserved positions that may support functional or evolutionary hypotheses."
+                        data-fa="توالی‌های homologous را مقایسه کن تا جایگاه‌های conserved را پیدا کنی و برای فرضیه‌های عملکردی یا تکاملی از آن‌ها استفاده کنی."
+                    >
+                        Compare homologous sequences
+                        to identify conserved positions that may support
+                        functional or evolutionary hypotheses.
+                    </p>
+
+
+                    <div class="library-flow">
+                        Homologs → MSA → Conservation → Candidate Sites → Hypothesis
+                    </div>
+
+
+                    <div class="library-tags">
+                        <span>MSA</span>
+                        <span>Conservation</span>
+                        <span>Homologs</span>
+                    </div>
+
+
+                    <a
+                        href="sequence.html"
+                        class="library-button"
+                        data-en="Explore sequence analysis"
+                        data-fa="مشاهده تحلیل توالی"
+                    >
+                        Explore sequence analysis
+                    </a>
+
+                </article>
+
+
+                <!-- DOMAINS -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            DOM
+                        </div>
+
+
+                        <div>
+
+                            <span
+                                class="library-meta"
+                                data-en="ANNOTATION"
+                                data-fa="Annotation"
+                            >
+                                ANNOTATION
+                            </span>
+
+
+                            <h3
+                                data-en="Domains & Motifs"
+                                data-fa="Domainها و Motifها"
+                            >
+                                Domains & Motifs
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Investigate sequence features that can provide clues about protein families, domains and functional regions."
+                        data-fa="ویژگی‌های توالی را بررسی کن تا سرنخ‌هایی درباره خانواده پروتئینی، domainها و نواحی عملکردی به‌دست بیاوری."
+                    >
+                        Investigate sequence features
+                        that can provide clues about protein families,
+                        domains and functional regions.
+                    </p>
+
+
+                    <div class="library-flow">
+                        Sequence → InterPro / Pfam → Domain → Motif → Functional Hypothesis
+                    </div>
+
+
+                    <div class="library-tags">
+                        <span>InterPro</span>
+                        <span>Pfam</span>
+                        <span>PROSITE</span>
+                    </div>
+
+
+                    <a
+                        href="sequence.html"
+                        class="library-button"
+                        data-en="Explore annotation workflow"
+                        data-fa="مشاهده Workflow annotation"
+                    >
+                        Explore annotation workflow
+                    </a>
+
+                </article>
+
+
+                <!-- PHYLOGENETICS -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            TREE
+                        </div>
+
+
+                        <div>
+
+                            <span
+                                class="library-meta"
+                                data-en="EVOLUTION"
+                                data-fa="تکامل"
+                            >
+                                EVOLUTION
+                            </span>
+
+
+                            <h3
+                                data-en="Phylogenetic Analysis"
+                                data-fa="تحلیل فیلوژنتیک"
+                            >
+                                Phylogenetic Analysis
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Build and evaluate phylogenetic trees to investigate evolutionary relationships among comparable sequences."
+                        data-fa="برای بررسی روابط تکاملی میان توالی‌های قابل‌مقایسه، درخت فیلوژنتیک بساز و پشتیبانی آن را ارزیابی کن."
+                    >
+                        Build and evaluate phylogenetic trees
+                        to investigate evolutionary relationships
+                        among comparable sequences.
+                    </p>
+
+
+                    <div class="library-flow">
+                        Sequences → MSA → Tree → Support → Clades → Interpretation
+                    </div>
+
+
+                    <div class="library-tags">
+                        <span>Alignment</span>
+                        <span>Tree</span>
+                        <span>Bootstrap</span>
+                    </div>
+
+
+                    <a
+                        href="phylogenetics.html"
+                        class="library-button"
+                        data-en="Open phylogenetics workflow"
+                        data-fa="باز کردن Workflow فیلوژنتیک"
+                    >
+                        Open phylogenetics workflow
+                    </a>
+
+                </article>
+
+
+                <!-- STRUCTURAL COMPARISON -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            3D
+                        </div>
+
+
+                        <div>
+
+                            <span
+                                class="library-meta"
+                                data-en="STRUCTURAL BIOINFORMATICS"
+                                data-fa="بیوانفورماتیک ساختاری"
+                            >
+                                STRUCTURAL BIOINFORMATICS
+                            </span>
+
+
+                            <h3
+                                data-en="Structural Comparison"
+                                data-fa="مقایسه ساختاری"
+                            >
+                                Structural Comparison
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Compare protein structures to investigate similarities, differences, domains and candidate functional regions."
+                        data-fa="ساختارهای پروتئینی را مقایسه کن تا شباهت‌ها، تفاوت‌ها، domainها و نواحی عملکردی احتمالی را بررسی کنی."
+                    >
+                        Compare protein structures
+                        to investigate similarities, differences,
+                        domains and candidate functional regions.
+                    </p>
+
+
+                    <div class="library-flow">
+                        Structures → Alignment → Structural Differences → Sites → Interpretation
+                    </div>
+
+
+                    <div class="library-tags">
+                        <span>PDB</span>
+                        <span>PyMOL</span>
+                        <span>VMD</span>
+                    </div>
+
+
+                    <a
+                        href="protein.html"
+                        class="library-button"
+                        data-en="Explore protein analysis"
+                        data-fa="مشاهده تحلیل پروتئین"
+                    >
+                        Explore protein analysis
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INPUT → QUESTION -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span
+                    class="section-label"
+                    data-en="START WITH WHAT YOU HAVE"
+                    data-fa="با چیزی که داری شروع کن"
+                >
+                    START WITH WHAT YOU HAVE
+                </span>
+
+
+                <h2
+                    data-en="Your starting material can determine the next analytical path."
+                    data-fa="چیزی که در اختیار داری می‌تواند مسیر تحلیل بعدی را مشخص کند."
+                >
+                    Your starting material can determine
+                    the next analytical path.
+                </h2>
+
+
+                <p
+                    data-en="Use the input as a starting point, then define the biological question before choosing the analysis."
+                    data-fa="از input به‌عنوان نقطه شروع استفاده کن، اما قبل از انتخاب تحلیل، سؤال زیستی را مشخص کن."
+                >
+                    Use the input as a starting point,
+                    then define the biological question
+                    before choosing the analysis.
+                </p>
+
+            </div>
+
+
+            <div class="how-grid">
+
+
+                <article class="how-card">
+
+                    <span>01</span>
+
+                    <h3
+                        data-en="I have a sequence"
+                        data-fa="یک توالی دارم"
+                    >
+                        I have a sequence
+                    </h3>
+
+                    <p
+                        data-en="Start with sequence validation, similarity search, alignment and annotation."
+                        data-fa="با بررسی فرمت و کیفیت، similarity search، alignment و annotation شروع کن."
+                    >
+                        Start with sequence validation,
+                        similarity search, alignment and annotation.
+                    </p>
+
+                    <a
+                        href="sequence.html"
+                        class="text-link"
+                        data-en="Sequence workflow →"
+                        data-fa="Workflow توالی ←"
+                    >
+                        Sequence workflow →
+                    </a>
+
+                </article>
+
+
+                <article class="how-card">
+
+                    <span>02</span>
+
+                    <h3
+                        data-en="I have a protein"
+                        data-fa="یک پروتئین دارم"
+                    >
+                        I have a protein
+                    </h3>
+
+                    <p
+                        data-en="Identify the protein, inspect its sequence and investigate available experimental structures."
+                        data-fa="پروتئین را شناسایی کن، توالی آن را بررسی کن و ساختارهای تجربی موجود را جستجو کن."
+                    >
+                        Identify the protein,
+                        inspect its sequence and investigate
+                        available experimental structures.
+                    </p>
+
+                    <a
+                        href="protein.html"
+                        class="text-link"
+                        data-en="Protein workflow →"
+                        data-fa="Workflow پروتئین ←"
+                    >
+                        Protein workflow →
+                    </a>
+
+                </article>
+
+
+                <article class="how-card">
+
+                    <span>03</span>
+
+                    <h3
+                        data-en="I have multiple sequences"
+                        data-fa="چند توالی دارم"
+                    >
+                        I have multiple sequences
+                    </h3>
+
+                    <p
+                        data-en="Check comparability, align the sequences and investigate conservation or evolutionary relationships."
+                        data-fa="قابل‌مقایسه بودن توالی‌ها را بررسی کن، alignment بساز و conservation یا روابط تکاملی را مطالعه کن."
+                    >
+                        Check comparability,
+                        align the sequences and investigate
+                        conservation or evolutionary relationships.
+                    </p>
+
+                    <a
+                        href="phylogenetics.html"
+                        class="text-link"
+                        data-en="Phylogenetics →"
+                        data-fa="Phylogenetics ←"
+                    >
+                        Phylogenetics →
+                    </a>
+
+                </article>
+
+
+                <article class="how-card">
+
+                    <span>04</span>
+
+                    <h3
+                        data-en="I have a 3D structure"
+                        data-fa="یک ساختار سه‌بعدی دارم"
+                    >
+                        I have a 3D structure
+                    </h3>
+
+                    <p
+                        data-en="Inspect the structure, identify relevant residues or ligands and formulate a structural question."
+                        data-fa="ساختار را بررسی کن، residueها یا ligandهای مرتبط را پیدا کن و یک سؤال ساختاری مشخص تعریف کن."
+                    >
+                        Inspect the structure,
+                        identify relevant residues or ligands
+                        and formulate a structural question.
+                    </p>
+
+                    <a
+                        href="protein.html"
+                        class="text-link"
+                        data-en="Structure workflow →"
+                        data-fa="Workflow ساختار ←"
+                    >
+                        Structure workflow →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EVIDENCE -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="protein-evidence-note">
+
+                <div class="evidence-badge">
+
+                    <span class="evidence-dot"></span>
+
+                    <span
+                        data-en="EVIDENCE FIRST"
+                        data-fa="اول شواهد"
+                    >
+                        EVIDENCE FIRST
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3
+                        data-en="Prediction, annotation and experimental evidence are not interchangeable."
+                        data-fa="Prediction، annotation و شواهد تجربی یکسان نیستند."
+                    >
+                        Prediction, annotation and experimental evidence
+                        are not interchangeable.
+                    </h3>
+
+
+                    <p
+                        data-en="A database annotation summarizes evidence. A model is a prediction. Experimental data is a different kind of evidence. GeneBite keeps them apart."
+                        data-fa="Annotation یک پایگاه‌داده شواهد را خلاصه می‌کند. مدل محاسباتی فقط پیش‌بینی است. داده‌ی تجربی نوع دیگری از شواهد است. GeneBite این تفاوت را شفاف نگه می‌دارد."
+                    >Annotation یک پایگاه‌داده شواهد را خلاصه می‌کند. مدل محاسباتی فقط پیش‌بینی است. داده‌ی تجربی نوع دیگری از شواهد است. GeneBite این تفاوت را شفاف نگه می‌دارد.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANALYSIS DEPTH -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span
+                    class="section-label"
+                    data-en="ANALYSIS DEPTH"
+                    data-fa="عمق تحلیل"
+                >
+                    ANALYSIS DEPTH
+                </span>
+
+
+                <h2
+                    data-en="The same input can support different levels of analysis."
+                    data-fa="یک input یکسان می‌تواند مبنای سطوح مختلفی از تحلیل باشد."
+                >
+                    The same input can support
+                    different levels of analysis.
+                </h2>
+
+            </div>
+
+
+            <div class="scientific-quality">
+
+
+                <article>
+
+                    <span>01</span>
+
+                    <h3
+                        data-en="Orientation"
+                        data-fa="آشنایی اولیه"
+                    >
+                        Orientation
+                    </h3>
+
+                    <p
+                        data-en="Identify the molecule, sequence or dataset and understand what information is already available."
+                        data-fa="مولکول، توالی یا dataset را شناسایی کن و ببین چه اطلاعاتی از قبل در دسترس است."
+                    >
+                        Identify the molecule, sequence or dataset
+                        and understand what information is already available.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>02</span>
+
+                    <h3
+                        data-en="Practical analysis"
+                        data-fa="تحلیل کاربردی"
+                    >
+                        Practical analysis
+                    </h3>
+
+                    <p
+                        data-en="Run an appropriate computational workflow and inspect the output using relevant metrics and controls."
+                        data-fa="یک Workflow محاسباتی مناسب اجرا کن و خروجی را با معیارها و کنترل‌های مرتبط بررسی کن."
+                    >
+                        Run an appropriate computational workflow
+                        and inspect the output using relevant metrics
+                        and controls.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>03</span>
+
+                    <h3
+                        data-en="Research-level analysis"
+                        data-fa="تحلیل در سطح پژوهش"
+                    >
+                        Research-level analysis
+                    </h3>
+
+                    <p
+                        data-en="Integrate multiple evidence sources, test alternative explanations and document limitations."
+                        data-fa="چند منبع شواهد را با هم ترکیب کن، توضیحات جایگزین را بررسی کن و محدودیت‌ها را ثبت کن."
+                    >
+                        Integrate multiple evidence sources,
+                        test alternative explanations
+                        and document limitations.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>04</span>
+
+                    <h3
+                        data-en="Next question"
+                        data-fa="سؤال بعدی"
+                    >
+                        Next question
+                    </h3>
+
+                    <p
+                        data-en="Use the result to formulate a more focused biological question rather than treating the computational output as the final answer."
+                        data-fa="از نتیجه برای ساختن یک سؤال زیستی دقیق‌تر استفاده کن، نه اینکه خروجی محاسباتی را پاسخ نهایی در نظر بگیری."
+                    >
+                        Use the result to formulate a more focused
+                        biological question rather than treating
+                        the computational output as the final answer.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMMON MISTAKES -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span
+                    class="section-label"
+                    data-en="COMMON BIOINFORMATICS MISTAKES"
+                    data-fa="اشتباهات رایج در بیوانفورماتیک"
+                >
+                    COMMON BIOINFORMATICS MISTAKES
+                </span>
+
+
+                <h2
+                    data-en="A computational result still needs scientific judgment."
+                    data-fa="یک نتیجه محاسباتی همچنان به قضاوت علمی نیاز دارد."
+                >
+                    A computational result still needs
+                    scientific judgment.
+                </h2>
+
+            </div>
+
+
+            <div class="workflow-library-grid">
+
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            01
+                        </div>
+
+                        <div>
+
+                            <h3
+                                data-en="Similarity = function"
+                                data-fa="Similarity = Function"
+                            >
+                                Similarity = function
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Sequence similarity can provide evidence for a functional hypothesis, but similarity alone does not automatically establish experimental function."
+                        data-fa="Sequence similarity می‌تواند برای یک فرضیه عملکردی شواهد فراهم کند، اما به‌تنهایی عملکرد تجربی را اثبات نمی‌کند."
+                    >
+                        Sequence similarity can provide evidence
+                        for a functional hypothesis, but similarity alone
+                        does not automatically establish experimental function.
+                    </p>
+
+                </article>
+
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            02
+                        </div>
+
+                        <div>
+
+                            <h3
+                                data-en="Prediction = experiment"
+                                data-fa="Prediction = Experiment"
+                            >
+                                Prediction = experiment
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="A computational prediction should remain labeled as a prediction and interpreted according to its confidence and validation."
+                        data-fa="یک prediction محاسباتی باید همچنان به‌عنوان prediction شناخته شود و بر اساس confidence و validation آن تفسیر شود."
+                    >
+                        A computational prediction should remain
+                        labeled as a prediction and interpreted according
+                        to its confidence and validation.
+                    </p>
+
+                </article>
+
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            03
+                        </div>
+
+                        <div>
+
+                            <h3
+                                data-en="More tools = better analysis"
+                                data-fa="ابزار بیشتر = تحلیل بهتر"
+                            >
+                                More tools = better analysis
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Adding more tools does not automatically improve an analysis. Each step should answer a defined research question."
+                        data-fa="اضافه کردن ابزارهای بیشتر لزوماً تحلیل را بهتر نمی‌کند. هر مرحله باید به یک سؤال پژوهشی مشخص پاسخ دهد."
+                    >
+                        Adding more tools does not automatically
+                        improve an analysis. Each step should answer
+                        a defined research question.
+                    </p>
+
+                </article>
+
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            04
+                        </div>
+
+                        <div>
+
+                            <h3
+                                data-en="Ignoring input quality"
+                                data-fa="نادیده گرفتن کیفیت ورودی"
+                            >
+                                Ignoring input quality
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Incorrect sequences, poor metadata, inappropriate comparisons or unsuitable datasets can undermine downstream analysis."
+                        data-fa="توالی نادرست، metadata ضعیف، مقایسه نامناسب یا dataset نامتناسب می‌تواند کل تحلیل downstream را تحت تأثیر قرار دهد."
+                    >
+                        Incorrect sequences, poor metadata,
+                        inappropriate comparisons or unsuitable datasets
+                        can undermine downstream analysis.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESEARCH OUTPUT -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="workflow-output-section">
+
+                <div class="section-heading">
+
+                    <span
+                        class="section-label"
+                        data-en="BIOINFORMATICS RESEARCH OUTPUT"
+                        data-fa="خروجی پژوهش بیوانفورماتیک"
+                    >
+                        BIOINFORMATICS RESEARCH OUTPUT
+                    </span>
+
+
+                    <h2
+                        data-en="Turn computational analysis into a reproducible research record."
+                        data-fa="تحلیل محاسباتی را به یک Research Record قابل‌تکرار تبدیل کن."
+                    >
+                        Turn computational analysis
+                        into a reproducible research record.
+                    </h2>
+
+
+                    <p
+                        data-en="Record the input, database or tool used, parameters, observed output, evidence, interpretation and limitations."
+                        data-fa="input، پایگاه داده یا ابزار، پارامترها، خروجی مشاهده‌شده، شواهد، تفسیر و محدودیت‌ها را ثبت کن."
+                    >
+                        Record the input, database or tool used,
+                        parameters, observed output, evidence,
+                        interpretation and limitations.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-output">
+
+                    <div class="workflow-output-content">
+
+                        <div class="output-step">
+                            <span>01</span>
+
+                            <strong
+                                data-en="Input"
+                                data-fa="Input"
+                            >
+                                Input
+                            </strong>
+                        </div>
+
+
+                        <div class="output-step">
+                            <span>02</span>
+
+                            <strong
+                                data-en="Tool / Database"
+                                data-fa="ابزار / پایگاه داده"
+                            >
+                                Tool / Database
+                            </strong>
+                        </div>
+
+
+                        <div class="output-step">
+                            <span>03</span>
+
+                            <strong
+                                data-en="Parameters"
+                                data-fa="پارامترها"
+                            >
+                                Parameters
+                            </strong>
+                        </div>
+
+
+                        <div class="output-step">
+                            <span>04</span>
+
+                            <strong
+                                data-en="Output"
+                                data-fa="خروجی"
+                            >
+                                Output
+                            </strong>
+                        </div>
+
+
+                        <div class="output-step">
+                            <span>05</span>
+
+                            <strong
+                                data-en="Interpretation"
+                                data-fa="تفسیر"
+                            >
+                                Interpretation
+                            </strong>
+                        </div>
+
+
+                        <div class="output-step">
+                            <span>06</span>
+
+                            <strong
+                                data-en="References"
+                                data-fa="منابع"
+                            >
+                                References
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RELATED PATHS -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span
+                    class="section-label"
+                    data-en="RELATED RESEARCH PATHS"
+                    data-fa="مسیرهای پژوهشی مرتبط"
+                >
+                    RELATED RESEARCH PATHS
+                </span>
+
+
+                <h2
+                    data-en="Bioinformatics often connects several research domains."
+                    data-fa="بیوانفورماتیک اغلب چند حوزه پژوهشی را به هم متصل می‌کند."
+                >
+                    Bioinformatics often connects
+                    several research domains.
+                </h2>
+
+            </div>
+
+
+            <div class="workflow-library-grid">
+
+
+                <a
+                    href="protein.html"
+                    class="library-card"
+                >
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            PRO
+                        </div>
+
+
+                        <div>
+
+                            <span
+                                class="library-meta"
+                                data-en="RELATED"
+                                data-fa="مرتبط"
+                            >
+                                RELATED
+                            </span>
+
+
+                            <h3
+                                data-en="Protein & Structure"
+                                data-fa="پروتئین و ساختار"
+                            >
+                                Protein & Structure
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Connect sequence information to experimental structures, predicted models and structural questions."
+                        data-fa="اطلاعات توالی را به ساختارهای تجربی، مدل‌های پیش‌بینی‌شده و سؤالات ساختاری متصل کن."
+                    >
+                        Connect sequence information
+                        to experimental structures,
+                        predicted models and structural questions.
+                    </p>
+
+                </a>
+
+
+                <a
+                    href="drug.html"
+                    class="library-card"
+                >
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            DRUG
+                        </div>
+
+
+                        <div>
+
+                            <span
+                                class="library-meta"
+                                data-en="RELATED"
+                                data-fa="مرتبط"
+                            >
+                                RELATED
+                            </span>
+
+
+                            <h3
+                                data-en="Drug Research"
+                                data-fa="تحقیق روی دارو"
+                            >
+                                Drug Research
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Use biological databases and structural analysis to investigate drug–target relationships."
+                        data-fa="با استفاده از پایگاه‌های داده زیستی و تحلیل ساختاری، روابط drug–target را بررسی کن."
+                    >
+                        Use biological databases
+                        and structural analysis to investigate
+                        drug–target relationships.
+                    </p>
+
+                </a>
+
+
+                <a
+                    href="phylogenetics.html"
+                    class="library-card"
+                >
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            EVO
+                        </div>
+
+
+                        <div>
+
+                            <span
+                                class="library-meta"
+                                data-en="RELATED"
+                                data-fa="مرتبط"
+                            >
+                                RELATED
+                            </span>
+
+
+                            <h3
+                                data-en="Evolution & Phylogenetics"
+                                data-fa="تکامل و فیلوژنتیک"
+                            >
+                                Evolution & Phylogenetics
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        data-en="Compare homologous sequences and investigate evolutionary relationships using phylogenetic methods."
+                        data-fa="توالی‌های homologous را مقایسه کن و با روش‌های فیلوژنتیک روابط تکاملی را بررسی کن."
+                    >
+                        Compare homologous sequences
+                        and investigate evolutionary relationships
+                        using phylogenetic methods.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="cta-card">
+
+                <div>
+
+                    <span
+                        class="section-label"
+                        data-en="NEXT STEP"
+                        data-fa="قدم بعدی"
+                    >
+                        NEXT STEP
+                    </span>
+
+
+                    <h2
+                        data-en="Not sure which analysis fits your question?"
+                        data-fa="نمی‌دانی کدام تحلیل با سؤال تو مناسب است؟"
+                    >
+                        Not sure which analysis
+                        fits your question?
+                    </h2>
+
+
+                    <p
+                        data-en="Use the Research Decision Tool to identify a practical starting point."
+                        data-fa="از Research Decision Tool استفاده کن تا یک نقطه شروع عملی پیدا کنی."
+                    >
+                        Use the Research Decision Tool
+                        to identify a practical starting point.
+                    </p>
+
+                </div>
+
+
+                <div class="cta-actions">
+
+                    <a
+                        href="research-decision.html"
+                        class="btn btn-primary"
+                        data-en="Open Decision Tool"
+                        data-fa="باز کردن Decision Tool"
+                    >
+                        Open Decision Tool
+                    </a>
+
+
+                    <a
+                        href="workflows.html"
+                        class="btn btn-secondary"
+                        data-en="Browse workflows"
+                        data-fa="مشاهده Workflowها"
+                    >
+                        Browse workflows
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+
+
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+</html>

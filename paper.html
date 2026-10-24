@@ -1,0 +1,2616 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="A practical scientific paper reading workflow for researchers: from research question and methods to figures, results, critical evaluation and research takeaways.">
+
+    <meta name="keywords"
+          content="scientific paper reading, research workflow, literature review, figure analysis, methods, results, critical evaluation, GeneBite">
+
+    <title>Scientific Paper Reading | GeneBite</title>
+
+
+      <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="page-hero paper-hero">
+
+    <div class="page-hero-glow"></div>
+
+
+    <div class="container page-hero-content">
+
+
+        <span class="eyebrow"
+              data-en="SCIENTIFIC PAPER READING"
+              data-fa="خواندن مقاله علمی">
+
+            SCIENTIFIC PAPER READING
+
+        </span>
+
+
+        <h1
+            data-en="Read a scientific paper like a researcher, not from page one to the last page."
+            data-fa="یک مقاله علمی را مثل یک پژوهشگر بخوانید، نه از صفحه اول تا آخر.">
+
+            Read a scientific paper like a researcher,
+            not from page one to the last page.
+
+        </h1>
+
+
+        <p
+            data-en="A practical workflow for extracting the research question, experimental logic, evidence, figures, limitations and actionable takeaways from a scientific paper."
+            data-fa="یک مسیر عملی برای استخراج سؤال پژوهش، منطق مطالعه، شواهد، شکل‌ها، محدودیت‌ها و نکات قابل استفاده از یک مقاله علمی.">
+
+            A practical workflow for extracting the research question,
+            experimental logic, evidence, figures, limitations and
+            actionable takeaways from a scientific paper.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+
+            <a href="#workflow"
+               class="button primary-button"
+               data-en="Start reading workflow"
+               data-fa="شروع Workflow مطالعه">
+
+                Start reading workflow
+
+            </a>
+
+
+            <a href="#paper-output"
+               class="button secondary-button"
+               data-en="See research output"
+               data-fa="مشاهده خروجی پژوهش">
+
+                See research output
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CORE PRINCIPLE
+====================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="section-heading center-heading">
+
+
+            <span class="section-label"
+                  data-en="CORE PRINCIPLE"
+                  data-fa="اصل اصلی">
+
+                CORE PRINCIPLE
+
+            </span>
+
+
+            <h2
+                data-en="Don't read every sentence with equal attention."
+                data-fa="هر جمله را با یک میزان توجه نخوانید.">
+
+                Don't read every sentence
+                with equal attention.
+
+            </h2>
+
+
+            <p
+                data-en="The goal is not to memorize a paper. Understand its question, its method, and how well the evidence supports the claims."
+                data-fa="هدف حفظ‌کردن مقاله نیست. بفهم مقاله چه می‌پرسد، چگونه جواب می‌دهد و نتیجه‌ها چقدر با شواهد پشتیبانی می‌شوند.">هدف حفظ‌کردن مقاله نیست. بفهم مقاله چه می‌پرسد، چگونه جواب می‌دهد و نتیجه‌ها چقدر با شواهد پشتیبانی می‌شوند.</p>
+
+        </div>
+
+
+
+        <div class="protein-workflow">
+
+
+            <div class="protein-flow-step">
+
+                <strong>01</strong>
+
+                <span
+                    data-en="Question"
+                    data-fa="سؤال">
+
+                    Question
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-flow-line"></div>
+
+
+            <div class="protein-flow-step">
+
+                <strong>02</strong>
+
+                <span
+                    data-en="Methods"
+                    data-fa="روش‌ها">
+
+                    Methods
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-flow-line"></div>
+
+
+            <div class="protein-flow-step">
+
+                <strong>03</strong>
+
+                <span
+                    data-en="Figures"
+                    data-fa="شکل‌ها">
+
+                    Figures
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-flow-line"></div>
+
+
+            <div class="protein-flow-step">
+
+                <strong>04</strong>
+
+                <span
+                    data-en="Results"
+                    data-fa="نتایج">
+
+                    Results
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-flow-line"></div>
+
+
+            <div class="protein-flow-step">
+
+                <strong>05</strong>
+
+                <span
+                    data-en="Evaluation"
+                    data-fa="ارزیابی">
+
+                    Evaluation
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-flow-line"></div>
+
+
+            <div class="protein-flow-step">
+
+                <strong>06</strong>
+
+                <span
+                    data-en="Takeaways"
+                    data-fa="جمع‌بندی پژوهشی">
+
+                    Takeaways
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EVIDENCE PRINCIPLE
+====================================================== -->
+
+<section class="section">
+
+    <div class="container protein-narrow">
+
+
+        <div class="protein-evidence-note">
+
+
+            <div class="protein-evidence-icon">
+                !
+            </div>
+
+
+            <div>
+
+                <strong
+                    data-en="Researcher's rule:"
+                    data-fa="قانون پژوهشگر:">
+
+                    Researcher's rule:
+
+                </strong>
+
+
+                <p
+                    data-en="Separate what the authors observed, what they inferred and what you can reasonably conclude from the evidence."
+                    data-fa="آنچه نویسندگان مشاهده کرده‌اند، آنچه از داده‌ها استنباط کرده‌اند و آنچه شما می‌توانید به‌طور منطقی از شواهد نتیجه بگیرید را از یکدیگر جدا کنید.">
+
+                    Separate what the authors observed,
+                    what they inferred and what you can reasonably
+                    conclude from the evidence.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WORKFLOW
+====================================================== -->
+
+<section class="section protein-workflow-section"
+         id="workflow">
+
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+
+            <span class="section-label"
+                  data-en="STEP-BY-STEP"
+                  data-fa="مرحله‌به‌مرحله">
+
+                STEP-BY-STEP
+
+            </span>
+
+
+            <h2
+                data-en="Turn a paper into a structured research understanding."
+                data-fa="یک مقاله را به یک درک ساختاریافته پژوهشی تبدیل کنید.">
+
+                Turn a paper into a structured
+                research understanding.
+
+            </h2>
+
+
+            <p
+                data-en="Move through the paper by asking research questions rather than simply following its page order."
+                data-fa="به‌جای اینکه فقط ترتیب صفحات را دنبال کنید، مقاله را با پرسیدن سؤال‌های پژوهشی بررسی کنید.">
+
+                Move through the paper by asking research questions
+                rather than simply following its page order.
+
+            </p>
+
+        </div>
+
+
+
+<!-- =====================================================
+     STEP 1 — QUESTION
+====================================================== -->
+
+<article class="protein-step">
+
+
+    <div class="protein-step-number">
+        01
+    </div>
+
+
+    <div class="protein-step-body">
+
+
+        <div class="protein-step-header">
+
+
+            <span class="protein-step-tag"
+                  data-en="RESEARCH QUESTION"
+                  data-fa="سؤال پژوهش">
+
+                RESEARCH QUESTION
+
+            </span>
+
+
+            <h3
+                data-en="What problem is the paper trying to address?"
+                data-fa="مقاله دقیقاً می‌خواهد به چه مسئله‌ای پاسخ دهد؟">
+
+                What problem is the paper trying to address?
+
+            </h3>
+
+        </div>
+
+
+        <p
+            data-en="Before diving into technical details, identify the central research question and the gap the study is trying to address."
+            data-fa="قبل از ورود به جزئیات فنی، سؤال اصلی پژوهش و شکافی را که مطالعه قصد دارد به آن پاسخ دهد مشخص کنید.">
+
+            Before diving into technical details, identify the central
+            research question and the gap the study is trying to address.
+
+        </p>
+
+
+
+        <div class="protein-info-grid">
+
+
+            <div class="protein-info-card">
+
+
+                <h4
+                    data-en="Find"
+                    data-fa="پیدا کنید">
+
+                    Find
+
+                </h4>
+
+
+                <ul>
+
+                    <li
+                        data-en="Research problem"
+                        data-fa="مسئله پژوهش">
+
+                        Research problem
+
+                    </li>
+
+                    <li
+                        data-en="Knowledge gap"
+                        data-fa="شکاف دانشی">
+
+                        Knowledge gap
+
+                    </li>
+
+                    <li
+                        data-en="Main hypothesis"
+                        data-fa="فرضیه اصلی">
+
+                        Main hypothesis
+
+                    </li>
+
+                    <li
+                        data-en="Primary objective"
+                        data-fa="هدف اصلی">
+
+                        Primary objective
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="protein-info-card">
+
+
+                <h4
+                    data-en="Useful question"
+                    data-fa="سؤال کاربردی">
+
+                    Useful question
+
+                </h4>
+
+
+                <p
+                    data-en="If I had to explain this paper in one sentence without using its title, what would I say?"
+                    data-fa="اگر مجبور بودم این مقاله را بدون استفاده از عنوان آن در یک جمله توضیح دهم، چه می‌گفتم؟">
+
+                    If I had to explain this paper in one sentence
+                    without using its title, what would I say?
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="protein-evidence-badge interpretation"
+             data-en="Research question"
+             data-fa="سؤال پژوهش">
+
+            Research question
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =====================================================
+     STEP 2 — ABSTRACT
+====================================================== -->
+
+<article class="protein-step">
+
+
+    <div class="protein-step-number">
+        02
+    </div>
+
+
+    <div class="protein-step-body">
+
+
+        <div class="protein-step-header">
+
+
+            <span class="protein-step-tag"
+                  data-en="ABSTRACT"
+                  data-fa="چکیده">
+
+                ABSTRACT
+
+            </span>
+
+
+            <h3
+                data-en="Use the abstract as a map, not as the whole paper."
+                data-fa="از چکیده به‌عنوان نقشه استفاده کنید، نه کل مقاله.">
+
+                Use the abstract as a map,
+                not as the whole paper.
+
+            </h3>
+
+        </div>
+
+
+        <p
+            data-en="The abstract gives you the study's compressed logic. Use it to build expectations before reading the detailed evidence."
+            data-fa="چکیده منطق فشرده مطالعه را در اختیار شما می‌گذارد. از آن برای ساختن یک تصویر اولیه قبل از بررسی شواهد جزئی استفاده کنید.">
+
+            The abstract gives you the study's compressed logic.
+            Use it to build expectations before reading
+            the detailed evidence.
+
+        </p>
+
+
+
+        <div class="protein-selection-grid">
+
+
+            <div class="protein-selection-item">
+
+
+                <strong
+                    data-en="Extract"
+                    data-fa="استخراج کنید">
+
+                    Extract
+
+                </strong>
+
+
+                <ul>
+
+                    <li
+                        data-en="Question"
+                        data-fa="سؤال">
+
+                        Question
+
+                    </li>
+
+                    <li
+                        data-en="Approach"
+                        data-fa="رویکرد">
+
+                        Approach
+
+                    </li>
+
+                    <li
+                        data-en="Main finding"
+                        data-fa="یافته اصلی">
+
+                        Main finding
+
+                    </li>
+
+                    <li
+                        data-en="Main conclusion"
+                        data-fa="نتیجه اصلی">
+
+                        Main conclusion
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="protein-selection-item">
+
+
+                <strong
+                    data-en="Then ask"
+                    data-fa="سپس بپرسید">
+
+                    Then ask
+
+                </strong>
+
+
+                <p
+                    data-en="Does the rest of the paper provide enough evidence for the main claim presented in the abstract?"
+                    data-fa="آیا ادامه مقاله شواهد کافی برای ادعای اصلی مطرح‌شده در چکیده ارائه می‌دهد؟">
+
+                    Does the rest of the paper provide enough evidence
+                    for the main claim presented in the abstract?
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =====================================================
+     STEP 3 — INTRODUCTION
+====================================================== -->
+
+<article class="protein-step">
+
+
+    <div class="protein-step-number">
+        03
+    </div>
+
+
+    <div class="protein-step-body">
+
+
+        <div class="protein-step-header">
+
+
+            <span class="protein-step-tag"
+                  data-en="INTRODUCTION"
+                  data-fa="مقدمه">
+
+                INTRODUCTION
+
+            </span>
+
+
+            <h3
+                data-en="Understand why this question matters."
+                data-fa="بفهمید چرا این سؤال اهمیت دارد.">
+
+                Understand why this question matters.
+
+            </h3>
+
+        </div>
+
+
+        <p
+            data-en="The introduction should give you enough biological and scientific context to understand the question, not force you to memorize every citation."
+            data-fa="مقدمه باید به اندازه کافی context علمی و زیستی بدهد تا سؤال پژوهش را بفهمید؛ نه اینکه مجبور شوید تمام citationها را حفظ کنید.">
+
+            The introduction should give you enough biological
+            and scientific context to understand the question,
+            not force you to memorize every citation.
+
+        </p>
+
+
+
+        <div class="protein-info-grid">
+
+
+            <div class="protein-info-card">
+
+
+                <h4
+                    data-en="Track the logic"
+                    data-fa="منطق را دنبال کنید">
+
+                    Track the logic
+
+                </h4>
+
+
+                <div class="protein-analysis-list">
+
+
+                    <div>
+
+                        <strong>01</strong>
+
+                        <span
+                            data-en="What is already known?"
+                            data-fa="چه چیزی از قبل شناخته شده است؟">
+
+                            What is already known?
+
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>02</strong>
+
+                        <span
+                            data-en="What remains unclear?"
+                            data-fa="چه چیزی هنوز مشخص نیست؟">
+
+                            What remains unclear?
+
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>03</strong>
+
+                        <span
+                            data-en="Why does the gap matter?"
+                            data-fa="چرا این شکاف مهم است؟">
+
+                            Why does the gap matter?
+
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>04</strong>
+
+                        <span
+                            data-en="What does this study propose to investigate?"
+                            data-fa="این مطالعه چه چیزی را پیشنهاد می‌کند بررسی کند؟">
+
+                            What does this study propose to investigate?
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="protein-info-card">
+
+
+                <h4
+                    data-en="Don't lose the question"
+                    data-fa="سؤال را گم نکنید">
+
+                    Don't lose the question
+
+                </h4>
+
+
+                <p
+                    data-en="If a paragraph does not help you understand the biological problem, mechanism, hypothesis or rationale, you may not need to study it with the same depth."
+                    data-fa="اگر یک پاراگراف به درک مسئله زیستی، مکانیسم، فرضیه یا منطق مطالعه کمک نمی‌کند، لزوماً نیازی نیست با همان عمق آن را مطالعه کنید.">
+
+                    If a paragraph does not help you understand
+                    the biological problem, mechanism, hypothesis
+                    or rationale, you may not need to study it
+                    with the same depth.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =====================================================
+     STEP 4 — METHODS
+====================================================== -->
+
+<article class="protein-step">
+
+
+    <div class="protein-step-number">
+        04
+    </div>
+
+
+    <div class="protein-step-body">
+
+
+        <div class="protein-step-header">
+
+
+            <span class="protein-step-tag"
+                  data-en="METHODS"
+                  data-fa="روش‌ها">
+
+                METHODS
+
+            </span>
+
+
+            <h3
+                data-en="Can the study design actually address the question?"
+                data-fa="آیا طراحی مطالعه واقعاً می‌تواند به سؤال پژوهش پاسخ دهد؟">
+
+                Can the study design actually
+                address the question?
+
+            </h3>
+
+        </div>
+
+
+        <p
+            data-en="Methods are where you examine the logic connecting the research question to the evidence."
+            data-fa="در بخش Methods منطق اتصال سؤال پژوهش به شواهد را بررسی می‌کنید.">
+
+            Methods are where you examine the logic connecting
+            the research question to the evidence.
+
+        </p>
+
+
+
+        <div class="protein-check-grid">
+
+
+            <div class="protein-check-item">
+
+                <strong
+                    data-en="Model"
+                    data-fa="مدل">
+
+                    Model
+
+                </strong>
+
+                <span
+                    data-en="What biological system was studied?"
+                    data-fa="چه سیستم زیستی بررسی شده است؟">
+
+                    What biological system was studied?
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-check-item">
+
+                <strong
+                    data-en="Samples"
+                    data-fa="نمونه‌ها">
+
+                    Samples
+
+                </strong>
+
+                <span
+                    data-en="What samples or groups were compared?"
+                    data-fa="چه نمونه‌ها یا گروه‌هایی مقایسه شدند؟">
+
+                    What samples or groups were compared?
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-check-item">
+
+                <strong
+                    data-en="Controls"
+                    data-fa="کنترل‌ها">
+
+                    Controls
+
+                </strong>
+
+                <span
+                    data-en="What controls support the interpretation?"
+                    data-fa="چه کنترل‌هایی از تفسیر پشتیبانی می‌کنند؟">
+
+                    What controls support the interpretation?
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-check-item">
+
+                <strong
+                    data-en="Replicates"
+                    data-fa="تکرارها">
+
+                    Replicates
+
+                </strong>
+
+                <span
+                    data-en="How many biological or technical replicates were used?"
+                    data-fa="چند biological یا technical replicate استفاده شده است؟">
+
+                    How many biological or technical replicates
+                    were used?
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-check-item">
+
+                <strong
+                    data-en="Measurement"
+                    data-fa="اندازه‌گیری">
+
+                    Measurement
+
+                </strong>
+
+                <span
+                    data-en="What exactly was measured?"
+                    data-fa="دقیقاً چه چیزی اندازه‌گیری شده است؟">
+
+                    What exactly was measured?
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-check-item">
+
+                <strong
+                    data-en="Statistics"
+                    data-fa="آمار">
+
+                    Statistics
+
+                </strong>
+
+                <span
+                    data-en="Which statistical analysis was used, and why?"
+                    data-fa="از چه تحلیل آماری استفاده شده و چرا؟">
+
+                    Which statistical analysis was used,
+                    and why?
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="protein-important-note">
+
+
+            <strong
+                data-en="A statistically significant result does not automatically establish a biological claim."
+                data-fa="یک نتیجه از نظر آماری معنادار، به‌تنهایی یک ادعای زیستی را اثبات نمی‌کند.">
+
+                A statistically significant result does not automatically
+                establish a biological claim.
+
+            </strong>
+
+
+            <p
+                data-en="Statistical evidence should be interpreted together with effect size, uncertainty, experimental design, controls and biological context."
+                data-fa="شواهد آماری باید همراه با effect size، عدم‌قطعیت، طراحی مطالعه، کنترل‌ها و context زیستی تفسیر شوند.">
+
+                Statistical evidence should be interpreted together
+                with effect size, uncertainty, experimental design,
+                controls and biological context.
+
+            </p>
+
+        </div>
+
+
+        <div class="protein-evidence-badge experimental"
+             data-en="Study design"
+             data-fa="طراحی مطالعه">
+
+            Study design
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =====================================================
+     STEP 5 — FIGURES
+====================================================== -->
+
+<article class="protein-step">
+
+
+    <div class="protein-step-number">
+        05
+    </div>
+
+
+    <div class="protein-step-body">
+
+
+        <div class="protein-step-header">
+
+
+            <span class="protein-step-tag"
+                  data-en="FIGURE READING"
+                  data-fa="خواندن Figure">
+
+                FIGURE READING
+
+            </span>
+
+
+            <h3
+                data-en="Read the figure before reading the authors' interpretation."
+                data-fa="قبل از خواندن تفسیر نویسندگان، خود Figure را بخوانید.">
+
+                Read the figure before reading
+                the authors' interpretation.
+
+            </h3>
+
+        </div>
+
+
+        <p
+            data-en="Figures hold key evidence. First find what was measured and what comparison they show."
+            data-fa="Figureها بخش مهم شواهدند. اول مشخص کن چه چیزی اندازه‌گیری شده و چه مقایسه‌ای را نشان می‌دهد.">Figureها بخش مهم شواهدند. اول مشخص کن چه چیزی اندازه‌گیری شده و چه مقایسه‌ای را نشان می‌دهد.</p>
+
+
+
+        <div class="protein-analysis-list">
+
+
+            <div>
+
+                <strong>01</strong>
+
+                <span
+                    data-en="What are the groups?"
+                    data-fa="گروه‌ها چه هستند؟">
+
+                    What are the groups?
+
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>02</strong>
+
+                <span
+                    data-en="What is the control?"
+                    data-fa="کنترل چیست؟">
+
+                    What is the control?
+
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>03</strong>
+
+                <span
+                    data-en="What is on each axis?"
+                    data-fa="هر محور چه چیزی را نشان می‌دهد؟">
+
+                    What is on each axis?
+
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>04</strong>
+
+                <span
+                    data-en="What does each point or bar represent?"
+                    data-fa="هر نقطه یا ستون چه چیزی را نشان می‌دهد؟">
+
+                    What does each point or bar represent?
+
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>05</strong>
+
+                <span
+                    data-en="What does n represent?"
+                    data-fa="n نشان‌دهنده چیست؟">
+
+                    What does n represent?
+
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>06</strong>
+
+                <span
+                    data-en="What statistical comparison was made?"
+                    data-fa="چه مقایسه آماری انجام شده است؟">
+
+                    What statistical comparison was made?
+
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>07</strong>
+
+                <span
+                    data-en="What can you conclude from this figure alone?"
+                    data-fa="فقط از همین Figure چه نتیجه‌ای می‌توان گرفت؟">
+
+                    What can you conclude from this figure alone?
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="protein-important-note">
+
+
+            <strong
+                data-en="Figure-first rule"
+                data-fa="قانون Figure-first">
+
+                Figure-first rule
+
+            </strong>
+
+
+            <p
+                data-en="Write your own one-sentence interpretation before reading the paragraph that explains the figure."
+                data-fa="قبل از خواندن پاراگراف توضیح‌دهنده Figure، interpretation خودتان را در یک جمله بنویسید.">
+
+                Write your own one-sentence interpretation
+                before reading the paragraph that explains the figure.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =====================================================
+     STEP 6 — RESULTS
+====================================================== -->
+
+<article class="protein-step">
+
+
+    <div class="protein-step-number">
+        06
+    </div>
+
+
+    <div class="protein-step-body">
+
+
+        <div class="protein-step-header">
+
+
+            <span class="protein-step-tag"
+                  data-en="RESULTS"
+                  data-fa="نتایج">
+
+                RESULTS
+
+            </span>
+
+
+            <h3
+                data-en="What do the data actually show?"
+                data-fa="داده‌ها واقعاً چه چیزی نشان می‌دهند؟">
+
+                What do the data actually show?
+
+            </h3>
+
+        </div>
+
+
+        <p
+            data-en="Results should connect observations to the research question without extending beyond what the data support."
+            data-fa="بخش Results باید observations را به سؤال پژوهش متصل کند، بدون اینکه از چیزی که داده‌ها پشتیبانی می‌کنند فراتر برود.">
+
+            Results should connect observations to the research question
+            without extending beyond what the data support.
+
+        </p>
+
+
+
+        <div class="protein-interpretation-framework">
+
+
+            <div class="protein-interpretation-card">
+
+                <span>01</span>
+
+                <strong
+                    data-en="Observation"
+                    data-fa="مشاهده">
+
+                    Observation
+
+                </strong>
+
+                <p
+                    data-en="What changed?"
+                    data-fa="چه چیزی تغییر کرد؟">
+
+                    What changed?
+
+                </p>
+
+            </div>
+
+
+            <div class="protein-interpretation-arrow">
+                →
+            </div>
+
+
+            <div class="protein-interpretation-card">
+
+                <span>02</span>
+
+                <strong
+                    data-en="Comparison"
+                    data-fa="مقایسه">
+
+                    Comparison
+
+                </strong>
+
+                <p
+                    data-en="Compared with what?"
+                    data-fa="در مقایسه با چه چیزی؟">
+
+                    Compared with what?
+
+                </p>
+
+            </div>
+
+
+            <div class="protein-interpretation-arrow">
+                →
+            </div>
+
+
+            <div class="protein-interpretation-card">
+
+                <span>03</span>
+
+                <strong
+                    data-en="Evidence"
+                    data-fa="شواهد">
+
+                    Evidence
+
+                </strong>
+
+                <p
+                    data-en="What supports the observation?"
+                    data-fa="چه چیزی observation را پشتیبانی می‌کند؟">
+
+                    What supports the observation?
+
+                </p>
+
+            </div>
+
+
+            <div class="protein-interpretation-arrow">
+                →
+            </div>
+
+
+            <div class="protein-interpretation-card">
+
+                <span>04</span>
+
+                <strong
+                    data-en="Meaning"
+                    data-fa="معنا">
+
+                    Meaning
+
+                </strong>
+
+                <p
+                    data-en="What biological interpretation is justified?"
+                    data-fa="چه تفسیر زیستی قابل دفاع است؟">
+
+                    What biological interpretation
+                    is justified?
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="protein-evidence-badge experimental"
+             data-en="Observed result"
+             data-fa="نتیجه مشاهده‌شده">
+
+            Observed result
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =====================================================
+     STEP 7 — DISCUSSION
+====================================================== -->
+
+<article class="protein-step">
+
+
+    <div class="protein-step-number">
+        07
+    </div>
+
+
+    <div class="protein-step-body">
+
+
+        <div class="protein-step-header">
+
+
+            <span class="protein-step-tag"
+                  data-en="DISCUSSION"
+                  data-fa="Discussion">
+
+                DISCUSSION
+
+            </span>
+
+
+            <h3
+                data-en="Where do the authors move from evidence to interpretation?"
+                data-fa="نویسندگان کجا از evidence به interpretation می‌روند؟">
+
+                Where do the authors move from evidence
+                to interpretation?
+
+            </h3>
+
+        </div>
+
+
+        <p
+            data-en="In the Discussion, authors give their meaning. Separate supported interpretation from speculation."
+            data-fa="در Discussion نویسندگان معنای نتایج را می‌گویند. تو تفسیر پشتیبانی‌شده را از حدس و ادعای بدون شواهد جدا کن.">در Discussion نویسندگان معنای نتایج را می‌گویند. تو تفسیر پشتیبانی‌شده را از حدس و ادعای بدون شواهد جدا کن.</p>
+
+
+
+        <div class="protein-info-grid">
+
+
+            <div class="protein-info-card">
+
+
+                <span class="protein-evidence-badge experimental"
+                      data-en="Evidence"
+                      data-fa="شواهد">
+
+                    Evidence
+
+                </span>
+
+
+                <h4
+                    data-en="Supported interpretation"
+                    data-fa="تفسیر پشتیبانی‌شده">
+
+                    Supported interpretation
+
+                </h4>
+
+
+                <p
+                    data-en="The interpretation is consistent with the presented data, controls and study design."
+                    data-fa="تفسیر با داده‌های ارائه‌شده، کنترل‌ها و طراحی مطالعه سازگار است.">
+
+                    The interpretation is consistent with
+                    the presented data, controls and study design.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="protein-info-card">
+
+
+                <span class="protein-evidence-badge interpretation"
+                      data-en="Interpretation"
+                      data-fa="تفسیر">
+
+                    Interpretation
+
+                </span>
+
+
+                <h4
+                    data-en="Needs context"
+                    data-fa="نیازمند context">
+
+                    Needs context
+
+                </h4>
+
+
+                <p
+                    data-en="The interpretation may be plausible but depends on assumptions, previous literature or additional evidence."
+                    data-fa="این تفسیر ممکن است قابل قبول باشد، اما به فرضیات، literature قبلی یا شواهد اضافی وابسته است.">
+
+                    The interpretation may be plausible but depends
+                    on assumptions, previous literature or
+                    additional evidence.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =====================================================
+     STEP 8 — CRITICAL EVALUATION
+====================================================== -->
+
+<article class="protein-step">
+
+
+    <div class="protein-step-number">
+        08
+    </div>
+
+
+    <div class="protein-step-body">
+
+
+        <div class="protein-step-header">
+
+
+            <span class="protein-step-tag"
+                  data-en="CRITICAL EVALUATION"
+                  data-fa="ارزیابی انتقادی">
+
+                CRITICAL EVALUATION
+
+            </span>
+
+
+            <h3
+                data-en="What can this paper support — and what remains uncertain?"
+                data-fa="این مقاله از چه چیزی پشتیبانی می‌کند و چه چیزی هنوز نامشخص است؟">
+
+                What can this paper support —
+                and what remains uncertain?
+
+            </h3>
+
+        </div>
+
+
+        <p
+            data-en="A strong paper-reading workflow ends by testing the limits of the evidence rather than simply accepting the authors' conclusion."
+            data-fa="یک Workflow قوی برای مطالعه مقاله با بررسی محدودیت‌های شواهد تمام می‌شود، نه صرفاً با پذیرفتن نتیجه‌گیری نویسندگان.">
+
+            A strong paper-reading workflow ends by testing
+            the limits of the evidence rather than simply
+            accepting the authors' conclusion.
+
+        </p>
+
+
+
+        <div class="protein-check-grid">
+
+
+            <div class="protein-check-item">
+
+                <strong
+                    data-en="Design"
+                    data-fa="طراحی">
+
+                    Design
+
+                </strong>
+
+                <span
+                    data-en="Does the design match the research question?"
+                    data-fa="آیا طراحی با سؤال پژوهش مطابقت دارد؟">
+
+                    Does the design match the research question?
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-check-item">
+
+                <strong
+                    data-en="Controls"
+                    data-fa="کنترل‌ها">
+
+                    Controls
+
+                </strong>
+
+                <span
+                    data-en="Are the controls appropriate for the claim?"
+                    data-fa="آیا کنترل‌ها برای این ادعا مناسب هستند؟">
+
+                    Are the controls appropriate for the claim?
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-check-item">
+
+                <strong
+                    data-en="Sample"
+                    data-fa="نمونه">
+
+                    Sample
+
+                </strong>
+
+                <span
+                    data-en="Is the sample appropriate for the research question?"
+                    data-fa="آیا نمونه برای سؤال پژوهش مناسب است؟">
+
+                    Is the sample appropriate for
+                    the research question?
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-check-item">
+
+                <strong
+                    data-en="Statistics"
+                    data-fa="آمار">
+
+                    Statistics
+
+                </strong>
+
+                <span
+                    data-en="Are the statistical methods appropriate for the data and design?"
+                    data-fa="آیا روش‌های آماری با داده‌ها و طراحی مطالعه سازگار هستند؟">
+
+                    Are the statistical methods appropriate
+                    for the data and design?
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-check-item">
+
+                <strong
+                    data-en="Generalization"
+                    data-fa="تعمیم">
+
+                    Generalization
+
+                </strong>
+
+                <span
+                    data-en="How far can the findings reasonably be generalized?"
+                    data-fa="یافته‌ها تا چه حد و در چه شرایطی قابل تعمیم هستند؟">
+
+                    How far can the findings reasonably
+                    be generalized?
+
+                </span>
+
+            </div>
+
+
+            <div class="protein-check-item">
+
+                <strong
+                    data-en="Limitations"
+                    data-fa="محدودیت‌ها">
+
+                    Limitations
+
+                </strong>
+
+                <span
+                    data-en="What important limitation remains?"
+                    data-fa="چه محدودیت مهمی باقی می‌ماند؟">
+
+                    What important limitation remains?
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="protein-evidence-badge interpretation"
+             data-en="Critical evaluation"
+             data-fa="ارزیابی انتقادی">
+
+            Critical evaluation
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =====================================================
+     STEP 9 — TAKEAWAYS
+====================================================== -->
+
+<article class="protein-step">
+
+
+    <div class="protein-step-number">
+        09
+    </div>
+
+
+    <div class="protein-step-body">
+
+
+        <div class="protein-step-header">
+
+
+            <span class="protein-step-tag"
+                  data-en="RESEARCH TAKEAWAYS"
+                  data-fa="جمع‌بندی پژوهشی">
+
+                RESEARCH TAKEAWAYS
+
+            </span>
+
+
+            <h3
+                data-en="End with what you can actually use."
+                data-fa="با چیزهایی تمام کنید که واقعاً قابل استفاده‌اند.">
+
+                End with what you can actually use.
+
+            </h3>
+
+        </div>
+
+
+        <p
+            data-en="A paper is useful when it changes what you know, what you can do, or what question you should ask next."
+            data-fa="یک مقاله زمانی واقعاً مفید است که چیزی را در دانسته‌های شما، کاری که می‌توانید انجام دهید یا سؤالی که باید بعداً بپرسید تغییر دهد.">
+
+            A paper is useful when it changes what you know,
+            what you can do, or what question you should ask next.
+
+        </p>
+
+
+
+        <div class="protein-interpretation-framework">
+
+
+            <div class="protein-interpretation-card">
+
+                <span>01</span>
+
+                <strong
+                    data-en="Finding"
+                    data-fa="یافته">
+
+                    Finding
+
+                </strong>
+
+                <p
+                    data-en="What did the study discover?"
+                    data-fa="مطالعه چه چیزی پیدا کرد؟">
+
+                    What did the study discover?
+
+                </p>
+
+            </div>
+
+
+            <div class="protein-interpretation-arrow">
+                →
+            </div>
+
+
+            <div class="protein-interpretation-card">
+
+                <span>02</span>
+
+                <strong
+                    data-en="Evidence"
+                    data-fa="شواهد">
+
+                    Evidence
+
+                </strong>
+
+                <p
+                    data-en="What supports the finding?"
+                    data-fa="چه چیزی این یافته را پشتیبانی می‌کند؟">
+
+                    What supports the finding?
+
+                </p>
+
+            </div>
+
+
+            <div class="protein-interpretation-arrow">
+                →
+            </div>
+
+
+            <div class="protein-interpretation-card">
+
+                <span>03</span>
+
+                <strong
+                    data-en="Limitation"
+                    data-fa="محدودیت">
+
+                    Limitation
+
+                </strong>
+
+                <p
+                    data-en="What remains uncertain?"
+                    data-fa="چه چیزی هنوز نامشخص است؟">
+
+                    What remains uncertain?
+
+                </p>
+
+            </div>
+
+
+            <div class="protein-interpretation-arrow">
+                →
+            </div>
+
+
+            <div class="protein-interpretation-card">
+
+                <span>04</span>
+
+                <strong
+                    data-en="Next question"
+                    data-fa="سؤال بعدی">
+
+                    Next question
+
+                </strong>
+
+                <p
+                    data-en="What should be investigated next?"
+                    data-fa="قدم بعدی پژوهش چیست؟">
+
+                    What should be investigated next?
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="protein-evidence-badge interpretation"
+             data-en="Research takeaway"
+             data-fa="جمع‌بندی پژوهشی">
+
+            Research takeaway
+
+        </div>
+
+    </div>
+
+</article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAPER OUTPUT
+====================================================== -->
+
+<section class="section protein-output-section"
+         id="paper-output">
+
+
+    <div class="container">
+
+
+        <div class="section-heading center-heading">
+
+
+            <span class="section-label"
+                  data-en="RESEARCH OUTPUT"
+                  data-fa="خروجی پژوهش">
+
+                RESEARCH OUTPUT
+
+            </span>
+
+
+            <h2
+                data-en="Turn paper reading into a reusable research record."
+                data-fa="مطالعه مقاله را به یک Research Record قابل استفاده تبدیل کنید.">
+
+                Turn paper reading into a reusable
+                research record.
+
+            </h2>
+
+
+            <p
+                data-en="Instead of highlighting everything, record the information you may actually need later."
+                data-fa="به‌جای اینکه همه‌چیز را highlight کنید، اطلاعاتی را ثبت کنید که احتمالاً بعداً واقعاً به آن نیاز خواهید داشت.">
+
+                Instead of highlighting everything,
+                record the information you may actually need later.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="protein-output-card">
+
+
+            <div class="protein-output-header">
+
+
+                <div>
+
+                    <span class="section-label"
+                          data-en="PAPER READING SUMMARY"
+                          data-fa="خلاصه مطالعه مقاله">
+
+                        PAPER READING SUMMARY
+
+                    </span>
+
+
+                    <h3
+                        data-en="Scientific Paper Record"
+                        data-fa="Research Record مقاله">
+
+                        Scientific Paper Record
+
+                    </h3>
+
+                </div>
+
+
+                <span class="protein-output-status"
+                      data-en="Template"
+                      data-fa="قالب">
+
+                    Template
+
+                </span>
+
+            </div>
+
+
+
+            <div class="protein-output-grid">
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="Paper title"
+                        data-fa="عنوان مقاله">
+
+                        Paper title
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="DOI / PMID"
+                        data-fa="DOI / PMID">
+
+                        DOI / PMID
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="Research question"
+                        data-fa="سؤال پژوهش">
+
+                        Research question
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="Main hypothesis"
+                        data-fa="فرضیه اصلی">
+
+                        Main hypothesis
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="Study model"
+                        data-fa="مدل مطالعه">
+
+                        Study model
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="Key methods"
+                        data-fa="روش‌های کلیدی">
+
+                        Key methods
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="Main figure / result"
+                        data-fa="Figure / نتیجه اصلی">
+
+                        Main figure / result
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="Main finding"
+                        data-fa="یافته اصلی">
+
+                        Main finding
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="Evidence"
+                        data-fa="شواهد">
+
+                        Evidence
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="Main limitation"
+                        data-fa="محدودیت اصلی">
+
+                        Main limitation
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="Research takeaway"
+                        data-fa="نکته پژوهشی">
+
+                        Research takeaway
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="Next research question"
+                        data-fa="سؤال پژوهشی بعدی">
+
+                        Next research question
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+
+                <div class="protein-output-field">
+
+                    <span
+                        data-en="References"
+                        data-fa="منابع">
+
+                        References
+
+                    </span>
+
+                    <div class="protein-fake-lines"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMMON READING MISTAKES
+====================================================== -->
+
+<section class="section protein-mistakes-section">
+
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+
+            <span class="section-label"
+                  data-en="COMMON MISTAKES"
+                  data-fa="اشتباهات رایج">
+
+                COMMON MISTAKES
+
+            </span>
+
+
+            <h2
+                data-en="Reading a paper can go wrong in predictable ways."
+                data-fa="مطالعه مقاله می‌تواند به چند شکل قابل پیش‌بینی اشتباه پیش برود.">
+
+                Reading a paper can go wrong
+                in predictable ways.
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="protein-mistakes-grid">
+
+
+            <div class="protein-mistake-card">
+
+                <span>01</span>
+
+
+                <h3
+                    data-en="Reading linearly from page one"
+                    data-fa="خواندن خطی از صفحه اول">
+
+                    Reading linearly from page one
+
+                </h3>
+
+
+                <p
+                    data-en="You may spend too much time on background before understanding what the study is actually testing."
+                    data-fa="ممکن است قبل از اینکه بفهمید مطالعه دقیقاً چه چیزی را آزمایش می‌کند، زمان زیادی روی background صرف کنید.">
+
+                    You may spend too much time on background
+                    before understanding what the study
+                    is actually testing.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="protein-mistake-card">
+
+                <span>02</span>
+
+
+                <h3
+                    data-en="Reading the discussion before the figures"
+                    data-fa="خواندن Discussion قبل از Figureها">
+
+                    Reading the discussion before the figures
+
+                </h3>
+
+
+                <p
+                    data-en="You risk adopting the authors' interpretation before independently examining the evidence."
+                    data-fa="ممکن است قبل از بررسی مستقل شواهد، interpretation نویسندگان را بپذیرید.">
+
+                    You risk adopting the authors' interpretation
+                    before independently examining the evidence.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="protein-mistake-card">
+
+                <span>03</span>
+
+
+                <h3
+                    data-en="Ignoring controls"
+                    data-fa="نادیده گرفتن کنترل‌ها">
+
+                    Ignoring controls
+
+                </h3>
+
+
+                <p
+                    data-en="Without understanding the control, it can be difficult to know what an observed change actually means."
+                    data-fa="بدون درک control، ممکن است مشخص نباشد یک تغییر مشاهده‌شده واقعاً چه معنایی دارد.">
+
+                    Without understanding the control,
+                    it can be difficult to know what
+                    an observed change actually means.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="protein-mistake-card">
+
+                <span>04</span>
+
+
+                <h3
+                    data-en="Confusing correlation with causation"
+                    data-fa="یکی دانستن correlation و causation">
+
+                    Confusing correlation with causation
+
+                </h3>
+
+
+                <p
+                    data-en="An observed association does not automatically establish a causal mechanism."
+                    data-fa="یک association مشاهده‌شده به‌تنهایی مکانیسم causal را اثبات نمی‌کند.">
+
+                    An observed association does not automatically
+                    establish a causal mechanism.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="protein-mistake-card">
+
+                <span>05</span>
+
+
+                <h3
+                    data-en="Ignoring sample size and variability"
+                    data-fa="نادیده گرفتن sample size و variability">
+
+                    Ignoring sample size and variability
+
+                </h3>
+
+
+                <p
+                    data-en="A visually large difference still needs careful interpretation when sample size and variability are considered."
+                    data-fa="یک تفاوت ظاهراً بزرگ، با در نظر گرفتن sample size و variability، همچنان نیازمند تفسیر دقیق است.">
+
+                    A visually large difference still needs
+                    careful interpretation when sample size
+                    and variability are considered.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="protein-mistake-card">
+
+                <span>06</span>
+
+
+                <h3
+                    data-en="Taking the conclusion as established fact"
+                    data-fa="در نظر گرفتن conclusion به‌عنوان حقیقت قطعی">
+
+                    Taking the conclusion as established fact
+
+                </h3>
+
+
+                <p
+                    data-en="A conclusion is an interpretation of the evidence and should be evaluated against the study design, data and limitations."
+                    data-fa="Conclusion یک interpretation از شواهد است و باید در برابر طراحی مطالعه، داده‌ها و محدودیت‌ها ارزیابی شود.">
+
+                    A conclusion is an interpretation of the evidence
+                    and should be evaluated against the study
+                    design, data and limitations.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FUTURE RESEARCH WORKSPACE
+====================================================== -->
+
+<section class="section">
+
+
+    <div class="container">
+
+
+        <div class="protein-next-card">
+
+
+            <div>
+
+
+                <span class="section-label"
+                      data-en="FUTURE RESEARCH WORKSPACE"
+                      data-fa="Research Workspace آینده">
+
+                    FUTURE RESEARCH WORKSPACE
+
+                </span>
+
+
+                <h2
+                    data-en="Turn this workflow into a reusable paper-reading system."
+                    data-fa="این Workflow را به یک سیستم دائمی برای مطالعه مقاله تبدیل کنید.">
+
+                    Turn this workflow into a reusable
+                    paper-reading system.
+
+                </h2>
+
+
+                <p
+                    data-en="Soon: organize Research Records, log findings and link each paper to a research question."
+                    data-fa="در آینده می‌توانی Research Recordها را سازمان بدهی، یافته‌ها را ثبت کنی و هر مقاله را به سؤال پژوهشی وصل کنی.">در آینده می‌توانی Research Recordها را سازمان بدهی، یافته‌ها را ثبت کنی و هر مقاله را به سؤال پژوهشی وصل کنی.</p>
+
+            </div>
+
+
+            <span class="protein-output-status"
+                  data-en="Planned feature"
+                  data-fa="قابلیت آینده">
+
+                Planned feature
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEXT STEP
+====================================================== -->
+
+<section class="section protein-next-section">
+
+
+    <div class="container">
+
+
+        <div class="protein-next-card">
+
+
+            <div>
+
+
+                <span class="section-label"
+                      data-en="WHAT'S NEXT?"
+                      data-fa="قدم بعدی چیست؟">
+
+                    WHAT'S NEXT?
+
+                </span>
+
+
+                <h2
+                    data-en="From one paper to a connected research workflow."
+                    data-fa="از یک مقاله به یک Workflow پژوهشی متصل برسید.">
+
+                    From one paper to a connected
+                    research workflow.
+
+                </h2>
+
+
+                <p
+                    data-en="After understanding the paper, connect its methods, datasets, proteins, sequences or drugs to the appropriate GeneBite workflow."
+                    data-fa="بعد از درک مقاله، methods، datasetها، proteinها، sequenceها یا drugهای آن را به Workflow مناسب GeneBite متصل کنید.">
+
+                    After understanding the paper, connect its methods,
+                    datasets, proteins, sequences or drugs to the
+                    appropriate GeneBite workflow.
+
+                </p>
+
+            </div>
+
+
+            <a href="workflows.html"
+               class="button primary-button"
+               data-en="Explore more workflows"
+               data-fa="مشاهده Workflowهای بیشتر">
+
+                Explore more workflows
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+
+
+
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+
+</html>

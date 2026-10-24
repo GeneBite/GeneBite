@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GeneBite | Molecular Biology Workflows</title>
+
+    <meta
+        name="description"
+        content="Practical molecular biology workflows covering PCR, qPCR, gel electrophoresis, Western blot, ELISA, immunofluorescence, flow cytometry, cloning and CRISPR."
+    >
+
+      <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+<main>
+
+    <!-- PAGE HERO -->
+
+    <section class="page-hero">
+        <div class="page-hero-glow"></div>
+
+        <div class="container">
+
+            <div class="page-hero-label"
+                 data-en="MOLECULAR BIOLOGY"
+                 data-fa="زیست‌شناسی مولکولی">
+                MOLECULAR BIOLOGY
+            </div>
+
+            <h1
+                data-en="Turn molecular biology techniques into practical research workflows."
+                data-fa="تکنیک‌های زیست‌شناسی مولکولی را به Workflowهای واقعی پژوهش تبدیل کن."
+            >
+                Turn molecular biology techniques into practical research workflows.
+            </h1>
+
+            <p
+                data-en="Learn what a technique can answer, what you need before starting, how to interpret the output, and where the evidence comes from."
+                data-fa="یاد بگیر هر تکنیک چه سؤالی را پاسخ می‌دهد، قبل از شروع به چه چیزهایی نیاز داری، خروجی آن را چگونه تفسیر کنی و شواهد از کجا می‌آیند."
+            >
+                Learn what a technique can answer, what you need before starting,
+                how to interpret the output, and where the evidence comes from.
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="#molecular-workflows"
+                    class="btn btn-primary"
+                    data-en="Explore workflows"
+                    data-fa="مشاهده Workflowها"
+                >
+                    Explore workflows
+                </a>
+
+                <a
+                    href="research-decision.html"
+                    class="btn btn-secondary"
+                    data-en="Choose a research path"
+                    data-fa="انتخاب مسیر پژوهش"
+                >
+                    Choose a research path
+                </a>
+
+                <a
+                    href="troubleshooting.html"
+                    class="btn btn-secondary"
+                    data-en="Something not working? Troubleshooting →"
+                    data-fa="چیزی درست کار نمی‌کند؟ رفع اشکال ←"
+                >
+                    Something not working? Troubleshooting →
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CORE PRINCIPLE -->
+
+    <section class="section">
+        <div class="container">
+
+            <div class="workflow-principle">
+
+                <div class="workflow-principle-content">
+
+                    <span
+                        class="section-label"
+                        data-en="RESEARCH PRINCIPLE"
+                        data-fa="اصل پژوهش"
+                    >
+                        RESEARCH PRINCIPLE
+                    </span>
+
+                    <h2
+                        data-en="Don't start with the technique. Start with the biological question."
+                        data-fa="از تکنیک شروع نکن؛ از سؤال زیستی شروع کن."
+                    >
+                        Don't start with the technique.
+                        Start with the biological question.
+                    </h2>
+
+                    <p
+                        data-en="The same biological question can require different methods depending on the molecule, sample, experimental goal, controls, and type of evidence you need."
+                        data-fa="یک سؤال زیستی مشابه می‌تواند بسته به مولکول، نمونه، هدف آزمایش، کنترل‌ها و نوع شواهد موردنیاز به روش‌های متفاوتی نیاز داشته باشد."
+                    >
+                        The same biological question can require different methods
+                        depending on the molecule, sample, experimental goal,
+                        controls, and type of evidence you need.
+                    </p>
+
+                </div>
+
+                <div class="workflow-principle-visual">
+
+                    <div class="workflow-output-steps">
+
+                        <div class="output-step">
+                            <span>01</span>
+                            <strong
+                                data-en="Question"
+                                data-fa="سؤال"
+                            >
+                                Question
+                            </strong>
+                        </div>
+
+                        <div class="output-step">
+                            <span>02</span>
+                            <strong
+                                data-en="Technique"
+                                data-fa="تکنیک"
+                            >
+                                Technique
+                            </strong>
+                        </div>
+
+                        <div class="output-step">
+                            <span>03</span>
+                            <strong
+                                data-en="Evidence"
+                                data-fa="شواهد"
+                            >
+                                Evidence
+                            </strong>
+                        </div>
+
+                        <div class="output-step">
+                            <span>04</span>
+                            <strong
+                                data-en="Interpretation"
+                                data-fa="تفسیر"
+                            >
+                                Interpretation
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- WORKFLOW LIBRARY -->
+
+    <section class="section" id="molecular-workflows">
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span
+                    class="section-label"
+                    data-en="MOLECULAR BIOLOGY WORKFLOWS"
+                    data-fa="WORKFLOWهای زیست‌شناسی مولکولی"
+                >
+                    MOLECULAR BIOLOGY WORKFLOWS
+                </span>
+
+                <h2
+                    data-en="Choose the workflow that matches your research question."
+                    data-fa="Workflow متناسب با سؤال پژوهشی خودت را انتخاب کن."
+                >
+                    Choose the workflow that matches your research question.
+                </h2>
+
+                <p
+                    data-en="Each workflow is designed around a practical research task rather than a textbook definition."
+                    data-fa="هر Workflow بر اساس یک مسئله واقعی پژوهشی طراحی شده، نه صرفاً یک تعریف کتاب درسی."
+                >
+                    Each workflow is designed around a practical research task
+                    rather than a textbook definition.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-library-grid">
+
+
+                <!-- PCR -->
+
+                <article class="library-card featured">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            PCR
+                        </div>
+
+                        <div>
+                            <span
+                                class="library-meta"
+                                data-en="MOLECULAR BIOLOGY"
+                                data-fa="زیست‌شناسی مولکولی"
+                            >
+                                MOLECULAR BIOLOGY
+                            </span>
+
+                            <h3
+                                data-en="PCR"
+                                data-fa="PCR"
+                            >
+                                PCR
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <p
+                        data-en="How to design and interpret a PCR experiment for targeted DNA amplification."
+                        data-fa="چطور یک آزمایش PCR را برای تکثیر هدفمند DNA طراحی و تفسیر کنیم."
+                    >
+                        How to design and interpret a PCR experiment
+                        for targeted DNA amplification.
+                    </p>
+
+                    <div class="library-flow">
+                        Question → Template DNA → Primers → PCR → Product → Verification
+                    </div>
+
+                    <div class="library-tags">
+                        <span>DNA</span>
+                        <span>Amplification</span>
+                        <span>Primers</span>
+                    </div>
+
+                    <a
+                        href="molecular-biology-pcr.html"
+                        class="library-button"
+                        data-en="Explore PCR workflow"
+                        data-fa="مشاهده Workflow PCR"
+                    >
+                        Explore PCR workflow
+                    </a>
+
+                </article>
+
+
+                <!-- qPCR -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            qPCR
+                        </div>
+
+                        <div>
+                            <span
+                                class="library-meta"
+                                data-en="GENE EXPRESSION"
+                                data-fa="بیان ژن"
+                            >
+                                GENE EXPRESSION
+                            </span>
+
+                            <h3
+                                data-en="qPCR"
+                                data-fa="qPCR"
+                            >
+                                qPCR
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <p
+                        data-en="Move from RNA and cDNA to quantitative gene-expression measurements and interpretation."
+                        data-fa="از RNA و cDNA به اندازه‌گیری کمی بیان ژن و تفسیر نتایج برس."
+                    >
+                        Move from RNA and cDNA to quantitative
+                        gene-expression measurements and interpretation.
+                    </p>
+
+                    <div class="library-flow">
+                        RNA → cDNA → qPCR → Ct → ΔCt / ΔΔCt → Interpretation
+                    </div>
+
+                    <div class="library-tags">
+                        <span>RNA</span>
+                        <span>cDNA</span>
+                        <span>Gene Expression</span>
+                    </div>
+
+                    <a
+                        href="molecular-biology-qpcr.html"
+                        class="library-button"
+                        data-en="Explore qPCR workflow"
+                        data-fa="مشاهده Workflow qPCR"
+                    >
+                        Explore qPCR workflow
+                    </a>
+
+                </article>
+
+
+                <!-- GEL -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            GEL
+                        </div>
+
+                        <div>
+                            <span
+                                class="library-meta"
+                                data-en="DATA VERIFICATION"
+                                data-fa="بررسی داده"
+                            >
+                                DATA VERIFICATION
+                            </span>
+
+                            <h3
+                                data-en="Gel Electrophoresis"
+                                data-fa="الکتروفورز ژل"
+                            >
+                                Gel Electrophoresis
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <p
+                        data-en="Understand how DNA fragments are separated and how a gel image should be interpreted."
+                        data-fa="یاد بگیر قطعات DNA چگونه جدا می‌شوند و تصویر ژل را چگونه باید تفسیر کرد."
+                    >
+                        Understand how DNA fragments are separated
+                        and how a gel image should be interpreted.
+                    </p>
+
+                    <div class="library-flow">
+                        Sample → Gel → Electrophoresis → Bands → Size / Pattern → Interpretation
+                    </div>
+
+                    <div class="library-tags">
+                        <span>DNA</span>
+                        <span>Gel</span>
+                        <span>Band Analysis</span>
+                    </div>
+
+                    <a
+                        href="molecular-biology-gel.html"
+                        class="library-button"
+                        data-en="Explore gel workflow"
+                        data-fa="مشاهده Workflow ژل"
+                    >
+                        Explore gel workflow
+                    </a>
+
+                </article>
+
+
+                <!-- WESTERN BLOT -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            WB
+                        </div>
+
+                        <div>
+                            <span
+                                class="library-meta"
+                                data-en="PROTEIN DETECTION"
+                                data-fa="شناسایی پروتئین"
+                            >
+                                PROTEIN DETECTION
+                            </span>
+
+                            <h3
+                                data-en="Western Blot"
+                                data-fa="وسترن بلات"
+                            >
+                                Western Blot
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <p
+                        data-en="Understand the workflow from protein extraction to band detection and interpretation."
+                        data-fa="مسیر استخراج پروتئین تا شناسایی باند و تفسیر نتیجه را بررسی کن."
+                    >
+                        Understand the workflow from protein extraction
+                        to band detection and interpretation.
+                    </p>
+
+                    <div class="library-flow">
+                        Sample → Protein → SDS-PAGE → Transfer → Antibody → Detection → Interpretation
+                    </div>
+
+                    <div class="library-tags">
+                        <span>Protein</span>
+                        <span>Antibody</span>
+                        <span>Detection</span>
+                    </div>
+
+                    <a
+                        href="molecular-biology-western-blot.html"
+                        class="library-button"
+                        data-en="Explore Western blot workflow"
+                        data-fa="مشاهده Workflow وسترن بلات"
+                    >
+                        Explore Western blot workflow
+                    </a>
+
+                </article>
+
+
+                <!-- ELISA -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            ELISA
+                        </div>
+
+                        <div>
+                            <span
+                                class="library-meta"
+                                data-en="PROTEIN QUANTIFICATION"
+                                data-fa="کمی‌سازی پروتئین"
+                            >
+                                PROTEIN QUANTIFICATION
+                            </span>
+
+                            <h3
+                                data-en="ELISA"
+                                data-fa="ELISA"
+                            >
+                                ELISA
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <p
+                        data-en="Understand how antigen–antibody interactions are converted into measurable signals."
+                        data-fa="یاد بگیر برهم‌کنش آنتی‌ژن و آنتی‌بادی چگونه به یک سیگنال قابل اندازه‌گیری تبدیل می‌شود."
+                    >
+                        Understand how antigen–antibody interactions
+                        are converted into measurable signals.
+                    </p>
+
+                    <div class="library-flow">
+                        Sample → Capture / Detection → Signal → Standard Curve → Quantification
+                    </div>
+
+                    <div class="library-tags">
+                        <span>Antibody</span>
+                        <span>Quantification</span>
+                        <span>Signal</span>
+                    </div>
+
+                    <a
+                        href="molecular-biology-elisa.html"
+                        class="library-button"
+                        data-en="Explore ELISA workflow"
+                        data-fa="مشاهده Workflow ELISA"
+                    >
+                        Explore ELISA workflow
+                    </a>
+
+                </article>
+
+
+                <!-- IMMUNOFLUORESCENCE -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            IF
+                        </div>
+
+                        <div>
+                            <span
+                                class="library-meta"
+                                data-en="CELLULAR LOCALIZATION"
+                                data-fa="مکان‌یابی سلولی"
+                            >
+                                CELLULAR LOCALIZATION
+                            </span>
+
+                            <h3
+                                data-en="Immunofluorescence"
+                                data-fa="ایمونوفلورسانس"
+                            >
+                                Immunofluorescence
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <p
+                        data-en="Use antibody-based fluorescence imaging to investigate where a target is located."
+                        data-fa="با تصویربرداری فلورسانس مبتنی بر آنتی‌بادی، محل یک هدف زیستی را بررسی کن."
+                    >
+                        Use antibody-based fluorescence imaging
+                        to investigate where a target is located.
+                    </p>
+
+                    <div class="library-flow">
+                        Sample → Fixation → Antibody → Fluorescence → Imaging → Localization
+                    </div>
+
+                    <div class="library-tags">
+                        <span>Cells</span>
+                        <span>Imaging</span>
+                        <span>Localization</span>
+                    </div>
+
+                    <a
+                        href="molecular-biology-if.html"
+                        class="library-button"
+                        data-en="Explore IF workflow"
+                        data-fa="مشاهده Workflow ایمونوفلورسانس"
+                    >
+                        Explore IF workflow
+                    </a>
+
+                </article>
+
+
+                <!-- FLOW CYTOMETRY -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            FLOW
+                        </div>
+
+                        <div>
+                            <span
+                                class="library-meta"
+                                data-en="SINGLE-CELL ANALYSIS"
+                                data-fa="تحلیل تک‌سلولی"
+                            >
+                                SINGLE-CELL ANALYSIS
+                            </span>
+
+                            <h3
+                                data-en="Flow Cytometry"
+                                data-fa="فلوسایتومتری"
+                            >
+                                Flow Cytometry
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <p
+                        data-en="Understand the path from sample preparation and controls to gating and quantitative interpretation."
+                        data-fa="مسیر آماده‌سازی نمونه و کنترل‌ها تا gating و تفسیر کمی را یاد بگیر."
+                    >
+                        Understand the path from sample preparation
+                        and controls to gating and quantitative interpretation.
+                    </p>
+
+                    <div class="library-flow">
+                        Sample → Controls → Acquisition → Gating → Population → Interpretation
+                    </div>
+
+                    <div class="library-tags">
+                        <span>Cells</span>
+                        <span>Gating</span>
+                        <span>Quantification</span>
+                    </div>
+
+                    <a
+                        href="molecular-biology-flow.html"
+                        class="library-button"
+                        data-en="Explore flow cytometry workflow"
+                        data-fa="مشاهده Workflow فلوسایتومتری"
+                    >
+                        Explore flow cytometry workflow
+                    </a>
+
+                </article>
+
+
+                <!-- CRISPR -->
+
+                <article class="library-card">
+
+                    <div class="library-card-header">
+
+                        <div class="library-icon">
+                            CRISPR
+                        </div>
+
+                        <div>
+                            <span
+                                class="library-meta"
+                                data-en="GENOME EDITING"
+                                data-fa="ویرایش ژنوم"
+                            >
+                                GENOME EDITING
+                            </span>
+
+                            <h3
+                                data-en="CRISPR-Cas"
+                                data-fa="CRISPR-Cas"
+                            >
+                                CRISPR-Cas
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <p
+                        data-en="Understand the conceptual research workflow behind target selection, guide design, editing and validation."
+                        data-fa="Workflow پژوهشی انتخاب هدف، طراحی guide، ویرایش و اعتبارسنجی را به‌صورت مفهومی بررسی کن."
+                    >
+                        Understand the conceptual research workflow
+                        behind target selection, guide design,
+                        editing and validation.
+                    </p>
+
+                    <div class="library-flow">
+                        Target → Guide Design → Editing → Screening → Validation → Interpretation
+                    </div>
+
+                    <div class="library-tags">
+                        <span>Genome Editing</span>
+                        <span>Guide RNA</span>
+                        <span>Validation</span>
+                    </div>
+
+                    <a
+                        href="molecular-biology-crispr.html"
+                        class="library-button"
+                        data-en="Explore CRISPR workflow"
+                        data-fa="مشاهده Workflow CRISPR"
+                    >
+                        Explore CRISPR workflow
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- HOW TO USE -->
+
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span
+                    class="section-label"
+                    data-en="HOW TO USE A TECHNIQUE"
+                    data-fa="چطور یک تکنیک را استفاده کنیم؟"
+                >
+                    HOW TO USE A TECHNIQUE
+                </span>
+
+                <h2
+                    data-en="A technique is only useful when its output answers a research question."
+                    data-fa="یک تکنیک زمانی ارزشمند است که خروجی آن به یک سؤال پژوهشی پاسخ دهد."
+                >
+                    A technique is only useful when its output
+                    answers a research question.
+                </h2>
+
+            </div>
+
+
+            <div class="how-grid">
+
+                <article class="how-card">
+
+                    <span>01</span>
+
+                    <h3
+                        data-en="Define the question"
+                        data-fa="سؤال را مشخص کن"
+                    >
+                        Define the question
+                    </h3>
+
+                    <p
+                        data-en="What biological variable are you trying to measure, detect, compare or localize?"
+                        data-fa="دقیقاً چه متغیر زیستی را می‌خواهی اندازه‌گیری، شناسایی، مقایسه یا مکان‌یابی کنی؟"
+                    >
+                        What biological variable are you trying to measure,
+                        detect, compare or localize?
+                    </p>
+
+                </article>
+
+
+                <article class="how-card">
+
+                    <span>02</span>
+
+                    <h3
+                        data-en="Choose the method"
+                        data-fa="روش را انتخاب کن"
+                    >
+                        Choose the method
+                    </h3>
+
+                    <p
+                        data-en="Match the method to the biological question, sample type, target and required evidence."
+                        data-fa="روش را بر اساس سؤال زیستی، نوع نمونه، target و نوع شواهد موردنیاز انتخاب کن."
+                    >
+                        Match the method to the biological question,
+                        sample type, target and required evidence.
+                    </p>
+
+                </article>
+
+
+                <article class="how-card">
+
+                    <span>03</span>
+
+                    <h3
+                        data-en="Build controls"
+                        data-fa="کنترل‌ها را طراحی کن"
+                    >
+                        Build controls
+                    </h3>
+
+                    <p
+                        data-en="Controls help distinguish a true biological signal from technical failure, contamination or background."
+                        data-fa="کنترل‌ها کمک می‌کنند سیگنال واقعی زیستی را از خطای تکنیکی، آلودگی یا background جدا کنی."
+                    >
+                        Controls help distinguish a true biological signal
+                        from technical failure, contamination or background.
+                    </p>
+
+                </article>
+
+
+                <article class="how-card">
+
+                    <span>04</span>
+
+                    <h3
+                        data-en="Interpret the evidence"
+                        data-fa="شواهد را تفسیر کن"
+                    >
+                        Interpret the evidence
+                    </h3>
+
+                    <p
+                        data-en="Separate what was directly measured from what is inferred from the result."
+                        data-fa="چیزی را که مستقیماً اندازه‌گیری شده از چیزی که از نتیجه استنباط می‌شود جدا کن."
+                    >
+                        Separate what was directly measured
+                        from what is inferred from the result.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- EVIDENCE MODEL -->
+
+    <section class="section">
+        <div class="container">
+
+            <div class="protein-evidence-note">
+
+                <div class="evidence-badge">
+                    <span class="evidence-dot"></span>
+
+                    <span
+                        data-en="EVIDENCE FIRST"
+                        data-fa="اول شواهد"
+                    >
+                        EVIDENCE FIRST
+                    </span>
+                </div>
+
+                <div>
+
+                    <h3
+                        data-en="Experimental result ≠ biological conclusion"
+                        data-fa="نتیجه آزمایش ≠ نتیجه‌گیری زیستی"
+                    >
+                        Experimental result ≠ biological conclusion
+                    </h3>
+
+                    <p
+                        data-en="GeneBite separates observation from interpretation. A band, signal, Ct or cell population is evidence — read it with the design and controls."
+                        data-fa="GeneBite مشاهده را از تفسیر جدا می‌کند. باند، سیگنال، Ct و جمعیت سلولی شواهدند و باید با طراحی آزمایش و کنترل‌ها تفسیر شوند."
+                    >GeneBite مشاهده را از تفسیر جدا می‌کند. باند، سیگنال، Ct و جمعیت سلولی شواهدند و باید با طراحی آزمایش و کنترل‌ها تفسیر شوند.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- RESEARCH OUTPUT -->
+
+    <section class="section">
+        <div class="container">
+
+            <div class="workflow-output-section">
+
+                <div class="section-heading">
+
+                    <span
+                        class="section-label"
+                        data-en="RESEARCH OUTPUT"
+                        data-fa="خروجی پژوهش"
+                    >
+                        RESEARCH OUTPUT
+                    </span>
+
+                    <h2
+                        data-en="Don't finish with a result. Finish with a research record."
+                        data-fa="با یک نتیجه آزمایش تمام نکن؛ با یک Research Record تمام کن."
+                    >
+                        Don't finish with a result.
+                        Finish with a research record.
+                    </h2>
+
+                    <p
+                        data-en="Record what you asked, what you measured, what evidence you obtained, what you can conclude, and what you should investigate next."
+                        data-fa="ثبت کن چه سؤالی داشتی، چه چیزی را اندازه‌گیری کردی، چه شواهدی به‌دست آوردی، چه نتیجه‌ای می‌توانی بگیری و قدم بعدی چیست."
+                    >
+                        Record what you asked, what you measured,
+                        what evidence you obtained, what you can conclude,
+                        and what you should investigate next.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-output">
+
+                    <div class="workflow-output-content">
+
+                        <div class="output-step">
+                            <span>01</span>
+
+                            <strong
+                                data-en="Question"
+                                data-fa="سؤال"
+                            >
+                                Question
+                            </strong>
+                        </div>
+
+                        <div class="output-step">
+                            <span>02</span>
+
+                            <strong
+                                data-en="Method"
+                                data-fa="روش"
+                            >
+                                Method
+                            </strong>
+                        </div>
+
+                        <div class="output-step">
+                            <span>03</span>
+
+                            <strong
+                                data-en="Observation"
+                                data-fa="مشاهده"
+                            >
+                                Observation
+                            </strong>
+                        </div>
+
+                        <div class="output-step">
+                            <span>04</span>
+
+                            <strong
+                                data-en="Evidence"
+                                data-fa="شواهد"
+                            >
+                                Evidence
+                            </strong>
+                        </div>
+
+                        <div class="output-step">
+                            <span>05</span>
+
+                            <strong
+                                data-en="Interpretation"
+                                data-fa="تفسیر"
+                            >
+                                Interpretation
+                            </strong>
+                        </div>
+
+                        <div class="output-step">
+                            <span>06</span>
+
+                            <strong
+                                data-en="Next question"
+                                data-fa="سؤال بعدی"
+                            >
+                                Next question
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SCIENTIFIC RIGOR -->
+
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span
+                    class="section-label"
+                    data-en="SCIENTIFIC RIGOR"
+                    data-fa="اعتبار علمی"
+                >
+                    SCIENTIFIC RIGOR
+                </span>
+
+                <h2
+                    data-en="Every workflow should make its assumptions and limitations visible."
+                    data-fa="هر Workflow باید فرضیات و محدودیت‌های خودش را شفاف کند."
+                >
+                    Every workflow should make its assumptions
+                    and limitations visible.
+                </h2>
+
+            </div>
+
+
+            <div class="scientific-quality">
+
+                <article>
+                    <span>01</span>
+
+                    <h3
+                        data-en="Controls"
+                        data-fa="کنترل‌ها"
+                    >
+                        Controls
+                    </h3>
+
+                    <p
+                        data-en="Know what a control can and cannot rule out."
+                        data-fa="بدان هر کنترل چه چیزی را می‌تواند و چه چیزی را نمی‌تواند رد کند."
+                    >
+                        Know what a control can and cannot rule out.
+                    </p>
+                </article>
+
+
+                <article>
+                    <span>02</span>
+
+                    <h3
+                        data-en="Replicates"
+                        data-fa="تکرارها"
+                    >
+                        Replicates
+                    </h3>
+
+                    <p
+                        data-en="Distinguish biological replication from technical replication."
+                        data-fa="تکرار زیستی را از تکرار تکنیکی متمایز کن."
+                    >
+                        Distinguish biological replication
+                        from technical replication.
+                    </p>
+                </article>
+
+
+                <article>
+                    <span>03</span>
+
+                    <h3
+                        data-en="Interpretation"
+                        data-fa="تفسیر"
+                    >
+                        Interpretation
+                    </h3>
+
+                    <p
+                        data-en="Separate direct measurement from biological inference."
+                        data-fa="اندازه‌گیری مستقیم را از استنباط زیستی جدا کن."
+                    >
+                        Separate direct measurement from biological inference.
+                    </p>
+                </article>
+
+
+                <article>
+                    <span>04</span>
+
+                    <h3
+                        data-en="Reproducibility"
+                        data-fa="تکرارپذیری"
+                    >
+                        Reproducibility
+                    </h3>
+
+                    <p
+                        data-en="Document enough information for another researcher to understand and reproduce the analysis."
+                        data-fa="اطلاعات کافی را ثبت کن تا پژوهشگر دیگری بتواند تحلیل را درک و بازتولید کند."
+                    >
+                        Document enough information for another researcher
+                        to understand and reproduce the analysis.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- RELATED AREAS -->
+
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span
+                    class="section-label"
+                    data-en="RELATED RESEARCH PATHS"
+                    data-fa="مسیرهای پژوهشی مرتبط"
+                >
+                    RELATED RESEARCH PATHS
+                </span>
+
+                <h2
+                    data-en="Molecular biology rarely ends with one technique."
+                    data-fa="پژوهش زیست‌شناسی مولکولی معمولاً به یک تکنیک محدود نمی‌شود."
+                >
+                    Molecular biology rarely ends with one technique.
+                </h2>
+
+            </div>
+
+
+            <div class="workflow-library-grid">
+
+                <a href="sequence.html" class="library-card">
+                    <div class="library-card-header">
+                        <div class="library-icon">SEQ</div>
+
+                        <div>
+                            <span class="library-meta">RELATED</span>
+
+                            <h3
+                                data-en="Sequence Analysis"
+                                data-fa="تحلیل توالی"
+                            >
+                                Sequence Analysis
+                            </h3>
+                        </div>
+                    </div>
+
+                    <p
+                        data-en="Move from a sequence to similarity, domains, conserved regions and functional hypotheses."
+                        data-fa="از توالی به similarity، domainها، نواحی conserved و فرضیه عملکردی برس."
+                    >
+                        Move from a sequence to similarity,
+                        domains, conserved regions and functional hypotheses.
+                    </p>
+                </a>
+
+
+                <a href="data-analysis.html" class="library-card">
+
+                    <div class="library-card-header">
+                        <div class="library-icon">DATA</div>
+
+                        <div>
+                            <span class="library-meta">RELATED</span>
+
+                            <h3
+                                data-en="Data Analysis"
+                                data-fa="تحلیل داده"
+                            >
+                                Data Analysis
+                            </h3>
+                        </div>
+                    </div>
+
+                    <p
+                        data-en="Turn experimental measurements into interpretable quantitative evidence."
+                        data-fa="اندازه‌گیری‌های آزمایشگاهی را به شواهد کمی و قابل تفسیر تبدیل کن."
+                    >
+                        Turn experimental measurements
+                        into interpretable quantitative evidence.
+                    </p>
+
+                </a>
+
+
+                <a href="experimental-design.html" class="library-card">
+
+                    <div class="library-card-header">
+                        <div class="library-icon">DESIGN</div>
+
+                        <div>
+                            <span class="library-meta">RELATED</span>
+
+                            <h3
+                                data-en="Experimental Design"
+                                data-fa="طراحی آزمایش"
+                            >
+                                Experimental Design
+                            </h3>
+                        </div>
+                    </div>
+
+                    <p
+                        data-en="Plan controls, replicates, variables and analysis before collecting data."
+                        data-fa="کنترل‌ها، تکرارها، متغیرها و روش تحلیل را قبل از جمع‌آوری داده طراحی کن."
+                    >
+                        Plan controls, replicates, variables
+                        and analysis before collecting data.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="section">
+        <div class="container">
+
+            <div class="cta-card">
+
+                <div>
+
+                    <span
+                        class="section-label"
+                        data-en="NEXT STEP"
+                        data-fa="قدم بعدی"
+                    >
+                        NEXT STEP
+                    </span>
+
+                    <h2
+                        data-en="Not sure which research workflow to start with?"
+                        data-fa="نمی‌دانی از کدام Workflow شروع کنی؟"
+                    >
+                        Not sure which research workflow
+                        to start with?
+                    </h2>
+
+                    <p
+                        data-en="Use the Research Decision Tool to move from your question to a practical next step."
+                        data-fa="از Research Decision Tool استفاده کن تا از سؤال پژوهشی‌ات به یک قدم عملی برسی."
+                    >
+                        Use the Research Decision Tool to move from your question
+                        to a practical next step.
+                    </p>
+
+                </div>
+
+                <div class="cta-actions">
+
+                    <a
+                        href="research-decision.html"
+                        class="btn btn-primary"
+                        data-en="Open Decision Tool"
+                        data-fa="باز کردن Decision Tool"
+                    >
+                        Open Decision Tool
+                    </a>
+
+                    <a
+                        href="workflows.html"
+                        class="btn btn-secondary"
+                        data-en="Browse all workflows"
+                        data-fa="مشاهده همه Workflowها"
+                    >
+                        Browse all workflows
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+
+
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+</html>

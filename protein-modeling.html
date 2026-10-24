@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-title-en="Protein Modeling | GeneBite" data-title-fa="مدل‌سازی پروتئین | GeneBite">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to model, validate and use a protein structure when none is solved.">
+  <title>مدل‌سازی پروتئین | GeneBite</title>
+  <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-glow"></div>
+      <div class="container">
+        <div class="page-hero-content">
+          <div class="page-hero-label" data-en="PROTEIN MODELING" data-fa="مدل‌سازی پروتئین">مدل‌سازی پروتئین</div>
+          <h1 class="page-hero-title" data-en="Model a protein that has no structure." data-fa="پروتئینی را مدل کن که ساختار ندارد.">پروتئینی را مدل کن که ساختار ندارد.</h1>
+          <p class="page-hero-text" data-en="Check first, choose a method, build, validate, then use it carefully." data-fa="اول چک کن، روش را انتخاب کن، بساز، اعتبارسنجی کن و با احتیاط استفاده کن.">اول چک کن، روش را انتخاب کن، بساز، اعتبارسنجی کن و با احتیاط استفاده کن.</p>
+          <div class="page-hero-actions">
+            <a class="btn btn-primary" href="#workflow" data-en="Start the workflow" data-fa="شروع Workflow">شروع Workflow</a>
+            <a class="btn btn-secondary" href="research-decision.html" data-en="Find another workflow" data-fa="Workflow دیگر">Workflow دیگر</a>
+          </div>
+        </div>
+        <div class="workflow-flow">
+          <div class="flow-container">
+          <div class="flow-node"><span class="flow-node-label">01</span><strong data-en="Check" data-fa="بررسی">بررسی</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">02</span><strong data-en="Method" data-fa="روش">روش</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">03</span><strong data-en="Build" data-fa="ساخت">ساخت</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">04</span><strong data-en="Validate" data-fa="اعتبارسنجی">اعتبارسنجی</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">05</span><strong data-en="Use" data-fa="استفاده">استفاده</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="container narrow">
+        <div class="section-heading">
+        <span class="section-label" data-en="WORKFLOW" data-fa="ورک‌فلو">ورک‌فلو</span>
+        <h2 data-en="Step by step" data-fa="قدم‌به‌قدم">قدم‌به‌قدم</h2>
+        <p data-en="Open each step to see what to do, what to check and what can go wrong." data-fa="هر مرحله را باز کن تا ببینی چه کار باید کرد، چه چیزی را چک کنی و کجا ممکن است اشتباه شود.">هر مرحله را باز کن تا ببینی چه کار باید کرد، چه چیزی را چک کنی و کجا ممکن است اشتباه شود.</p>
+      </div>
+        <div class="workflow-interactive">
+        <button class="workflow-step" type="button" data-step="s1" aria-expanded="true">
+          <span class="workflow-number">01</span>
+          <span class="workflow-step-content">
+            <strong data-en="Check what exists" data-fa="ببین چه چیزی هست">ببین چه چیزی هست</strong>
+            <small data-en="Do not model what is already solved." data-fa="چیزی را که حل شده مدل نکن.">چیزی را که حل شده مدل نکن.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">−</span>
+        </button>
+        <div class="workflow-panel" id="panel-s1">
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Experimental" data-fa="تجربی">تجربی</h3>
+              <p data-en="Search RCSB PDB with the UniProt ID or sequence (BLAST)." data-fa="با UniProt ID یا توالی (BLAST) در RCSB PDB بگرد.">با UniProt ID یا توالی (BLAST) در RCSB PDB بگرد.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Predicted" data-fa="پیش‌بینی‌شده">پیش‌بینی‌شده</h3>
+              <p data-en="Open AlphaFold DB with the UniProt ID. Read pLDDT and PAE." data-fa="AlphaFold DB را با UniProt ID باز کن. pLDDT و PAE را بخوان.">AlphaFold DB را با UniProt ID باز کن. pLDDT و PAE را بخوان.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Decide" data-fa="تصمیم">تصمیم</h3>
+              <p data-en="If a good structure covers your region, you may not need modelling." data-fa="اگر ساختار خوبی ناحیه‌ی تو را می‌پوشاند، شاید مدل‌سازی لازم نباشد.">اگر ساختار خوبی ناحیه‌ی تو را می‌پوشاند، شاید مدل‌سازی لازم نباشد.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s2" aria-expanded="false">
+          <span class="workflow-number">02</span>
+          <span class="workflow-step-content">
+            <strong data-en="Choose a method" data-fa="انتخاب روش">انتخاب روش</strong>
+            <small data-en="Match the method to what you have." data-fa="روش را با داشته‌هایت تطبیق بده.">روش را با داشته‌هایت تطبیق بده.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s2" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Homology modelling" data-fa="مدل‌سازی هومولوژی">مدل‌سازی هومولوژی</h3>
+              <p data-en="Use SWISS-MODEL when a template has enough identity. Above ~50% is good, below ~30% is risky." data-fa="وقتی template شباهت کافی دارد از SWISS-MODEL استفاده کن. بالای ~۵۰٪ خوب، زیر ~۳۰٪ پرخطر است.">وقتی template شباهت کافی دارد از SWISS-MODEL استفاده کن. بالای ~۵۰٪ خوب، زیر ~۳۰٪ پرخطر است.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Deep-learning prediction" data-fa="پیش‌بینی با یادگیری عمیق">پیش‌بینی با یادگیری عمیق</h3>
+              <p data-en="Use AlphaFold or ColabFold when no good template exists." data-fa="وقتی template خوبی نیست از AlphaFold یا ColabFold استفاده کن.">وقتی template خوبی نیست از AlphaFold یا ColabFold استفاده کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Know the limits" data-fa="محدودیت‌ها">محدودیت‌ها</h3>
+              <p data-en="Both predict a single state. Ligands and partners are usually missing." data-fa="هر دو یک حالت را پیش‌بینی می‌کنند. لیگاند و شریک‌ها معمولاً نیستند.">هر دو یک حالت را پیش‌بینی می‌کنند. لیگاند و شریک‌ها معمولاً نیستند.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s3" aria-expanded="false">
+          <span class="workflow-number">03</span>
+          <span class="workflow-step-content">
+            <strong data-en="Build the model" data-fa="ساخت مدل">ساخت مدل</strong>
+            <small data-en="Keep the inputs clean." data-fa="ورودی را تمیز نگه دار.">ورودی را تمیز نگه دار.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s3" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Prepare the sequence" data-fa="آماده‌سازی توالی">آماده‌سازی توالی</h3>
+              <p data-en="Use the correct isoform. Remove signal peptides if they are cleaved." data-fa="ایزوفرم درست را بگیر. signal peptide برش‌خورده را حذف کن.">ایزوفرم درست را بگیر. signal peptide برش‌خورده را حذف کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Pick the template" data-fa="انتخاب template">انتخاب template</h3>
+              <p data-en="Compare coverage, identity and quality scores (GMQE, QMEAN). Coverage matters as much as identity." data-fa="پوشش، شباهت و امتیازهای کیفیت (GMQE، QMEAN) را مقایسه کن. پوشش به اندازه‌ی شباهت مهم است.">پوشش، شباهت و امتیازهای کیفیت (GMQE، QMEAN) را مقایسه کن. پوشش به اندازه‌ی شباهت مهم است.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Run it" data-fa="اجرا">اجرا</h3>
+              <p data-en="Build several models if the tool allows and compare them." data-fa="اگر ابزار اجازه می‌دهد چند مدل بساز و مقایسه کن.">اگر ابزار اجازه می‌دهد چند مدل بساز و مقایسه کن.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s4" aria-expanded="false">
+          <span class="workflow-number">04</span>
+          <span class="workflow-step-content">
+            <strong data-en="Validate" data-fa="اعتبارسنجی">اعتبارسنجی</strong>
+            <small data-en="A model is a hypothesis until checked." data-fa="مدل تا وقتی چک نشود یک فرضیه است.">مدل تا وقتی چک نشود یک فرضیه است.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s4" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="AlphaFold scores" data-fa="امتیازهای AlphaFold">امتیازهای AlphaFold</h3>
+              <p data-en="pLDDT &gt; 90 very high, 70–90 confident, 50–70 low, &lt; 50 very low. PAE shows relative domain placement." data-fa="pLDDT بالای ۹۰ بسیار بالا، ۷۰ تا ۹۰ مطمئن، ۵۰ تا ۷۰ پایین، زیر ۵۰ بسیار پایین. PAE جایگاه نسبی domainها را نشان می‌دهد.">pLDDT بالای ۹۰ بسیار بالا، ۷۰ تا ۹۰ مطمئن، ۵۰ تا ۷۰ پایین، زیر ۵۰ بسیار پایین. PAE جایگاه نسبی domainها را نشان می‌دهد.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Geometry" data-fa="هندسه">هندسه</h3>
+              <p data-en="Run MolProbity: clashscore, Ramachandran outliers, rotamers." data-fa="MolProbity را اجرا کن: clashscore، Ramachandran outlier و rotamer.">MolProbity را اجرا کن: clashscore، Ramachandran outlier و rotamer.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Compare" data-fa="مقایسه">مقایسه</h3>
+              <p data-en="Superimpose on a related experimental structure in PyMOL." data-fa="روی ساختار تجربی مرتبط در PyMOL superimpose کن.">روی ساختار تجربی مرتبط در PyMOL superimpose کن.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s5" aria-expanded="false">
+          <span class="workflow-number">05</span>
+          <span class="workflow-step-content">
+            <strong data-en="Use it carefully" data-fa="با احتیاط استفاده کن">با احتیاط استفاده کن</strong>
+            <small data-en="Match the claim to the model quality." data-fa="ادعا را با کیفیت مدل تطبیق بده.">ادعا را با کیفیت مدل تطبیق بده.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s5" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Safe uses" data-fa="کاربرد مطمئن">کاربرد مطمئن</h3>
+              <p data-en="Fold, domain layout, rough location of active-site residues." data-fa="فولد، چیدمان domainها، محل تقریبی residueهای جایگاه فعال.">فولد، چیدمان domainها، محل تقریبی residueهای جایگاه فعال.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Risky uses" data-fa="کاربرد پرخطر">کاربرد پرخطر</h3>
+              <p data-en="Exact side-chain positions and ligand binding need more evidence." data-fa="موقعیت دقیق زنجیره‌های جانبی و اتصال لیگاند به شواهد بیشتر نیاز دارد.">موقعیت دقیق زنجیره‌های جانبی و اتصال لیگاند به شواهد بیشتر نیاز دارد.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Record it" data-fa="ثبت کن">ثبت کن</h3>
+              <p data-en="Save the tool, version, template, date and scores." data-fa="ابزار، نسخه، template، تاریخ و امتیازها را ذخیره کن.">ابزار، نسخه، template، تاریخ و امتیازها را ذخیره کن.</p>
+            </article>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+        <span class="section-label" data-en="COMMON MISTAKES" data-fa="اشتباهات رایج">اشتباهات رایج</span>
+        <h2 data-en="Where results go wrong" data-fa="نتیجه معمولاً کجا خراب می‌شود">نتیجه معمولاً کجا خراب می‌شود</h2>
+        
+      </div>
+        <div class="mistakes-grid">
+          <article class="mistake-card">
+            <h3 data-en="Model = experiment" data-fa="مدل = آزمایش">مدل = آزمایش</h3>
+            <p data-en="A model is a prediction, not experimental evidence." data-fa="مدل یک پیش‌بینی است، نه شاهد تجربی.">مدل یک پیش‌بینی است، نه شاهد تجربی.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Trusting low-confidence regions" data-fa="اعتماد به ناحیه‌ی کم‌اطمینان">اعتماد به ناحیه‌ی کم‌اطمینان</h3>
+            <p data-en="Low pLDDT regions may be disordered. Do not interpret them." data-fa="نواحی با pLDDT پایین ممکن است disordered باشند. تفسیرشان نکن.">نواحی با pLDDT پایین ممکن است disordered باشند. تفسیرشان نکن.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Best identity, poor coverage" data-fa="شباهت بالا، پوشش کم">شباهت بالا، پوشش کم</h3>
+            <p data-en="A template that covers little of your protein misleads." data-fa="templateای که بخش کمی را می‌پوشاند گمراه می‌کند.">templateای که بخش کمی را می‌پوشاند گمراه می‌کند.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Ignoring partners" data-fa="نادیده‌گرفتن شریک‌ها">نادیده‌گرفتن شریک‌ها</h3>
+            <p data-en="Cofactors, ions and partner proteins change the real structure." data-fa="کوفاکتور، یون و پروتئین شریک ساختار واقعی را تغییر می‌دهند.">کوفاکتور، یون و پروتئین شریک ساختار واقعی را تغییر می‌دهند.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-heading">
+        <span class="section-label" data-en="FINAL OUTPUT" data-fa="خروجی نهایی">خروجی نهایی</span>
+        <h2 data-en="A documented model" data-fa="یک مدل مستندشده">یک مدل مستندشده</h2>
+        
+      </div>
+        <div class="generic-card">
+          <ul class="interpretation-list">
+            <li><span data-en="Method, tool, version and date" data-fa="روش، ابزار، نسخه و تاریخ">روش، ابزار، نسخه و تاریخ</span></li>
+<li><span data-en="Template and sequence identity or AlphaFold ID" data-fa="template و شباهت توالی یا AlphaFold ID">template و شباهت توالی یا AlphaFold ID</span></li>
+<li><span data-en="Quality scores (pLDDT, QMEAN, MolProbity)" data-fa="امتیازهای کیفیت (pLDDT، QMEAN، MolProbity)">امتیازهای کیفیت (pLDDT، QMEAN، MolProbity)</span></li>
+<li><span data-en="What the model can and cannot support" data-fa="آنچه مدل می‌تواند و نمی‌تواند پشتیبانی کند">آنچه مدل می‌تواند و نمی‌تواند پشتیبانی کند</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="cta-card">
+          <h2 data-en="Model built?" data-fa="مدل ساخته شد؟">مدل ساخته شد؟</h2>
+          <p data-en="Inspect it, or prepare it for docking." data-fa="بررسی‌اش کن یا برای داکینگ آماده‌اش کن.">بررسی‌اش کن یا برای داکینگ آماده‌اش کن.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="protein.html" data-en="Protein analysis" data-fa="تحلیل پروتئین">تحلیل پروتئین</a>
+            <a class="btn btn-secondary" href="docking-prep.html" data-en="Pre-docking prep" data-fa="آماده‌سازی داکینگ">آماده‌سازی داکینگ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+</html>

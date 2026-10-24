@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ابزار تصمیم‌گیری پژوهشی | GeneBite</title>
+
+    <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="page-hero">
+    <div class="container narrow">
+
+      <span class="eyebrow">
+        RESEARCH FINDER
+      </span>
+
+      <h1
+        data-en="Bring your problem. GeneBite finds the path."
+        data-fa="مسئله‌ات را بیاور؛ مسیرش را پیدا کن."
+      >
+        مسئله‌ات را بیاور؛ مسیرش را پیدا کن.
+      </h1>
+
+      <p
+        data-en="Answer six short questions and get a full research path: workflow, tools, case studies, common problems and a next step — not just a name."
+        data-fa="به شش سؤال کوتاه جواب بده و یک مسیر کامل پژوهشی بگیر: Workflow، ابزارها، مطالعات موردی، مشکلات رایج و قدم بعدی — نه فقط یک اسم."
+      >
+        به شش سؤال کوتاه جواب بده و یک مسیر کامل پژوهشی بگیر: Workflow، ابزارها، مطالعات موردی، مشکلات رایج و قدم بعدی — نه فقط یک اسم.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- DECISION TOOL -->
+
+  <section class="section decision-section">
+
+    <div class="container">
+
+      <div class="decision-tool" id="decisionTool">
+
+        <!-- TOP -->
+
+        <div class="decision-top">
+
+          <div>
+            <span class="decision-label" id="decisionStepLabel">
+              مرحله ۱ از ۶
+            </span>
+
+            <h2 id="decisionQuestion">
+              چه چیزی در اختیار داری؟
+            </h2>
+
+            <p id="decisionDescription">
+              نزدیک‌ترین گزینه به داده یا سؤال فعلی‌ات را انتخاب کن.
+            </p>
+          </div>
+
+          <div class="decision-progress">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+
+        <!-- STEP 1 — What do you have -->
+
+        <div class="decision-step active" id="decisionStep1">
+          <div class="decision-options">
+            <button class="decision-option" data-have="protein"><strong data-en="A protein" data-fa="یک پروتئین">یک پروتئین</strong><small>Protein</small></button>
+            <button class="decision-option" data-have="primers"><strong data-en="A target to amplify (need primers)" data-fa="هدفی برای تکثیر (پرایمر می‌خواهم)">هدفی برای تکثیر (پرایمر می‌خواهم)</strong><small>Primers</small></button>
+            <button class="decision-option" data-have="docking"><strong data-en="A protein and a ligand to dock" data-fa="یک پروتئین و یک لیگاند برای داکینگ">یک پروتئین و یک لیگاند برای داکینگ</strong><small>Docking</small></button>
+            <button class="decision-option" data-have="no-structure"><strong data-en="A protein with no structure" data-fa="پروتئینی بدون ساختار">پروتئینی بدون ساختار</strong><small>Modeling</small></button>
+            <button class="decision-option" data-have="gene"><strong data-en="A gene name or symbol" data-fa="یک نام یا نماد ژن">یک نام یا نماد ژن</strong><small>Gene</small></button>
+            <button class="decision-option" data-have="sequence"><strong data-en="A DNA/RNA/protein sequence" data-fa="یک توالی DNA/RNA/پروتئین">یک توالی DNA/RNA/پروتئین</strong><small>Sequence</small></button>
+            <button class="decision-option" data-have="unknown"><strong data-en="An unknown sequence" data-fa="یک توالی ناشناخته">یک توالی ناشناخته</strong><small>Unknown sequence</small></button>
+            <button class="decision-option" data-have="drug"><strong data-en="A drug or compound" data-fa="یک دارو یا ترکیب">یک دارو یا ترکیب</strong><small>Drug</small></button>
+            <button class="decision-option" data-have="paper"><strong data-en="A scientific paper" data-fa="یک مقاله‌ی علمی">یک مقاله‌ی علمی</strong><small>Paper</small></button>
+            <button class="decision-option" data-have="experimental"><strong data-en="Experimental data" data-fa="داده‌ی آزمایشگاهی">داده‌ی آزمایشگاهی</strong><small>Experimental data</small></button>
+            <button class="decision-option" data-have="dataset"><strong data-en="Multiple sequences" data-fa="چند توالی">چند توالی</strong><small>Multiple sequences</small></button>
+            <button class="decision-option" data-have="lab-result"><strong data-en="A lab result to interpret" data-fa="یک نتیجه‌ی آزمایشگاهی">یک نتیجه‌ی آزمایشگاهی</strong><small>Lab result</small></button>
+            <button class="decision-option" data-have="other"><strong data-en="Something else / just a question" data-fa="چیز دیگر / فقط یک سؤال">چیز دیگر / فقط یک سؤال</strong><small>Other</small></button>
+          </div>
+        </div>
+
+
+        <!-- STEP 2 — What do you want to find out -->
+
+        <div class="decision-step" id="decisionStep2" hidden>
+          <div class="decision-options">
+            <button class="decision-option" data-goal2="identity"><strong data-en="Its identity" data-fa="هویتش">هویتش</strong><small>Identity</small></button>
+            <button class="decision-option" data-goal2="function"><strong data-en="Its function" data-fa="عملکردش">عملکردش</strong><small>Function</small></button>
+            <button class="decision-option" data-goal2="structure"><strong data-en="Its structure" data-fa="ساختارش">ساختارش</strong><small>Structure</small></button>
+            <button class="decision-option" data-goal2="relationship"><strong data-en="Its evolutionary relationships" data-fa="روابط تکاملی‌اش">روابط تکاملی‌اش</strong><small>Relationship</small></button>
+            <button class="decision-option" data-goal2="evidence"><strong data-en="The strength of its evidence" data-fa="قوت شواهدش">قوت شواهدش</strong><small>Evidence</small></button>
+            <button class="decision-option" data-goal2="target"><strong data-en="Its target / mechanism" data-fa="Target یا مکانیسمش">Target یا مکانیسمش</strong><small>Target</small></button>
+            <button class="decision-option" data-goal2="interpret-data"><strong data-en="What my data actually shows" data-fa="اینکه داده‌ام واقعاً چه می‌گوید">اینکه داده‌ام واقعاً چه می‌گوید</strong><small>Interpretation</small></button>
+            <button class="decision-option" data-goal2="troubleshoot"><strong data-en="Why something isn't working" data-fa="چرا چیزی درست کار نمی‌کند">چرا چیزی درست کار نمی‌کند</strong><small>Troubleshoot</small></button>
+          </div>
+        </div>
+
+
+        <!-- STEP 3 — What stage are you at -->
+
+        <div class="decision-step" id="decisionStep3" hidden>
+          <div class="decision-options">
+            <button class="decision-option" data-stage="starting"><strong data-en="Just starting" data-fa="تازه شروع کرده‌ام">تازه شروع کرده‌ام</strong></button>
+            <button class="decision-option" data-stage="has-results"><strong data-en="I have some results" data-fa="نتایجی به‌دست آورده‌ام">نتایجی به‌دست آورده‌ام</strong></button>
+            <button class="decision-option" data-stage="has-problem"><strong data-en="I have a problem" data-fa="با یک مشکل مواجه‌ام">با یک مشکل مواجه‌ام</strong></button>
+            <button class="decision-option" data-stage="needs-interpretation"><strong data-en="I need interpretation" data-fa="به تفسیر نیاز دارم">به تفسیر نیاز دارم</strong></button>
+            <button class="decision-option" data-stage="needs-output"><strong data-en="I need a research output" data-fa="به یک خروجی پژوهشی نیاز دارم">به یک خروجی پژوهشی نیاز دارم</strong></button>
+          </div>
+        </div>
+
+
+        <!-- STEP 4 — What evidence do you have -->
+
+        <div class="decision-step" id="decisionStep4" hidden>
+          <div class="decision-options">
+            <button class="decision-option" data-evidence="sequence"><strong data-en="A sequence" data-fa="یک توالی">یک توالی</strong></button>
+            <button class="decision-option" data-evidence="structure"><strong data-en="A structure" data-fa="یک ساختار">یک ساختار</strong></button>
+            <button class="decision-option" data-evidence="experimental"><strong data-en="An experimental result" data-fa="یک نتیجه‌ی آزمایشگاهی">یک نتیجه‌ی آزمایشگاهی</strong></button>
+            <button class="decision-option" data-evidence="literature"><strong data-en="Literature / a paper" data-fa="ادبیات / یک مقاله">ادبیات / یک مقاله</strong></button>
+            <button class="decision-option" data-evidence="dataset"><strong data-en="A dataset" data-fa="یک Dataset">یک Dataset</strong></button>
+            <button class="decision-option" data-evidence="question-only"><strong data-en="Only a research question" data-fa="فقط یک سؤال پژوهشی">فقط یک سؤال پژوهشی</strong></button>
+          </div>
+        </div>
+
+
+        <!-- STEP 5 — What's your goal -->
+
+        <div class="decision-step" id="decisionStep5" hidden>
+          <div class="decision-options">
+            <button class="decision-option" data-purpose="learn"><strong data-en="Learn" data-fa="یاد بگیرم">یاد بگیرم</strong></button>
+            <button class="decision-option" data-purpose="analyze"><strong data-en="Analyze" data-fa="تحلیل کنم">تحلیل کنم</strong></button>
+            <button class="decision-option" data-purpose="troubleshoot"><strong data-en="Troubleshoot" data-fa="رفع اشکال کنم">رفع اشکال کنم</strong></button>
+            <button class="decision-option" data-purpose="interpret"><strong data-en="Interpret" data-fa="تفسیر کنم">تفسیر کنم</strong></button>
+            <button class="decision-option" data-purpose="plan-experiment"><strong data-en="Plan an experiment" data-fa="آزمایش طراحی کنم">آزمایش طراحی کنم</strong></button>
+            <button class="decision-option" data-purpose="prepare-output"><strong data-en="Prepare a research output" data-fa="خروجی پژوهشی آماده کنم">خروجی پژوهشی آماده کنم</strong></button>
+          </div>
+        </div>
+
+
+        <!-- STEP 6 — Guidance depth -->
+
+        <div class="decision-step" id="decisionStep6" hidden>
+          <div class="decision-options depth-options">
+            <button class="decision-option" data-depth="quick">
+              <strong data-en="Quick Path" data-fa="مسیر سریع">مسیر سریع</strong>
+              <small data-en="Quick, first-look overview" data-fa="مرور سریع و اولیه">مرور سریع و اولیه</small>
+            </button>
+            <button class="decision-option" data-depth="practical">
+              <strong data-en="Step by step" data-fa="قدم‌به‌قدم">قدم‌به‌قدم</strong>
+              <small data-en="Every core step, in order" data-fa="همه‌ی مراحل اصلی، به‌ترتیب">همه‌ی مراحل اصلی، به‌ترتیب</small>
+            </button>
+            <button class="decision-option" data-depth="deep">
+              <strong data-en="Deep dive" data-fa="بررسی عمیق">بررسی عمیق</strong>
+              <small data-en="Core steps plus validation and limitations" data-fa="مراحل اصلی به‌علاوه‌ی اعتبارسنجی و محدودیت‌ها">مراحل اصلی به‌علاوه‌ی اعتبارسنجی و محدودیت‌ها</small>
+            </button>
+          </div>
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="decision-navigation">
+          <button id="decisionBack" class="button button-secondary" type="button" hidden>
+            ← بازگشت
+          </button>
+        </div>
+
+
+        <!-- RESULT (filled by script.js from the Knowledge Base) -->
+
+        <div class="decision-result" id="decisionResult" hidden>
+          <div id="decisionResultBody"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WORKFLOW PATHS -->
+
+  <section class="section section-soft">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="eyebrow">WORKFLOWS</span>
+
+        <h2 data-en="GeneBite core workflows" data-fa="مسیرهای اصلی GeneBite">مسیرهای اصلی GeneBite</h2>
+
+        <p data-en="Already know your path? Jump straight into a workflow." data-fa="اگر مسیرت را از قبل می‌دانی، مستقیماً وارد Workflow شو.">اگر مسیرت را از قبل می‌دانی، مستقیماً وارد Workflow شو.</p>
+      </div>
+
+
+      <div class="workflow-grid">
+
+        <a href="protein.html" class="workflow-card">
+          <span class="workflow-number">01</span>
+          <h3>Protein Analysis</h3>
+            <p class="workflow-flow-mini">
+            Sequence → UniProt → Structure → Interpretation
+          </p>
+        </a>
+
+        <a href="sequence.html" class="workflow-card">
+          <span class="workflow-number">02</span>
+          <h3>Sequence Analysis</h3>
+            <p class="workflow-flow-mini">
+            Sequence → BLAST → Domains → Interpretation
+          </p>
+        </a>
+
+        <a href="drug.html" class="workflow-card">
+          <span class="workflow-number">03</span>
+          <h3>Drug Research</h3>
+            <p class="workflow-flow-mini">
+            Drug → Properties → Targets → Structure
+          </p>
+        </a>
+
+        <a href="paper.html" class="workflow-card">
+          <span class="workflow-number">04</span>
+          <h3>Paper Analysis</h3>
+            <p class="workflow-flow-mini">
+            Question → Methods → Figures → Evidence
+          </p>
+        </a>
+
+        <a href="phylogenetics.html" class="workflow-card">
+          <span class="workflow-number">05</span>
+          <h3>Phylogenetics</h3>
+            <p class="workflow-flow-mini">
+            Sequences → Alignment → Model → Tree
+          </p>
+        </a>
+
+        <a href="unknown-sequence.html" class="workflow-card">
+          <span class="workflow-number">06</span>
+          <h3>Unknown Sequence</h3>
+            <p class="workflow-flow-mini">
+            Sequence → BLAST → Domains → Structure
+          </p>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+
+
+
+</body>
+</html>

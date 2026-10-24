@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="GeneBite Protein Analysis workflow — from identifying a protein to exploring its sequence, structure and biological context.">
+<meta name="keywords"
+      content="protein analysis, UniProt, PDB, GFP, VMD, PyMOL, protein structure, bioinformatics, GeneBite">
+
+<title>Protein Analysis | GeneBite</title>
+
+  <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- ========================================================= HEADER ========================================================= -->
+
+<header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+<main>
+
+<!-- ========================================================= PAGE HERO ========================================================= -->
+
+<section class="page-hero"> <div class="container">
+
+    <div class="page-hero-content">
+
+        <div class="page-hero-label"
+             data-en="PROTEIN & STRUCTURE"
+             data-fa="پروتئین و ساختار">
+            PROTEIN & STRUCTURE
+        </div>
+
+        <h1 class="page-hero-title"
+            data-en="From protein identity to structural insight."
+            data-fa="از شناسایی پروتئین تا درک ساختاری.">
+            From protein identity to structural insight.
+        </h1>
+
+        <p class="page-hero-text"
+           data-en="A protein name is only the start. Verify identity, read sequence and annotation, find a suitable structure, turn observations into questions."
+           data-fa="نام پروتئین فقط شروع است. هویتش را بررسی کن، sequence و annotation را ببین، ساختار مناسب پیدا کن و مشاهده‌ها را به سؤال زیستی تبدیل کن.">نام پروتئین فقط شروع است. هویتش را بررسی کن، sequence و annotation را ببین، ساختار مناسب پیدا کن و مشاهده‌ها را به سؤال زیستی تبدیل کن.</p>
+
+        <div class="page-hero-actions">
+
+            <a href="#workflow"
+               class="btn btn-primary"
+               data-en="Start the workflow"
+               data-fa="شروع ورک‌فلو">
+                Start the workflow
+            </a>
+
+            <a href="#gfp-case"
+               class="btn btn-secondary"
+               data-en="Explore GFP case study"
+               data-fa="مشاهده کیس GFP">
+                Explore GFP case study
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="workflow-flow">
+
+        <div class="flow-container">
+
+            <div class="flow-node">
+                <span class="flow-node-label">01</span>
+                <strong data-en="Identify"
+                        data-fa="شناسایی">
+                    Identify
+                </strong>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-node">
+                <span class="flow-node-label">02</span>
+                <strong data-en="Sequence"
+                        data-fa="توالی">
+                    Sequence
+                </strong>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-node">
+                <span class="flow-node-label">03</span>
+                <strong data-en="Structure"
+                        data-fa="ساختار">
+                    Structure
+                </strong>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-node">
+                <span class="flow-node-label">04</span>
+                <strong data-en="Inspect"
+                        data-fa="بررسی">
+                    Inspect
+                </strong>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-node">
+                <span class="flow-node-label">05</span>
+                <strong data-en="Interpret"
+                        data-fa="تفسیر">
+                    Interpret
+                </strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================================================= CORE IDEA ========================================================= -->
+
+<section class="section"> <div class="container">
+
+    <div class="section-heading">
+
+        <span class="section-label"
+              data-en="CORE IDEA"
+              data-fa="ایده اصلی">
+            CORE IDEA
+        </span>
+
+        <h2 data-en="Do not start with the picture. Start with the protein."
+            data-fa="از تصویر ساختار شروع نکن؛ از خود پروتئین شروع کن.">
+            Do not start with the picture. Start with the protein.
+        </h2>
+
+        <p data-en="A 3D structure becomes useful only when you know what protein it represents, how it was obtained, and what biological question you are asking."
+           data-fa="ساختار سه‌بعدی زمانی واقعاً مفید است که بدانی مربوط به چه پروتئینی است، چگونه به‌دست آمده و قرار است به چه سؤال زیستی پاسخ بدهد.">
+            A 3D structure becomes useful only when you know what protein
+            it represents, how it was obtained, and what biological question
+            you are asking.
+        </p>
+
+    </div>
+
+
+    <div class="evidence-grid">
+
+        <article class="evidence-card">
+
+            <span class="badge"
+                  data-en="IDENTITY"
+                  data-fa="هویت">
+                IDENTITY
+            </span>
+
+            <h3 data-en="Are you analyzing the correct protein?"
+                data-fa="آیا پروتئین درست را بررسی می‌کنی؟">
+                Are you analyzing the correct protein?
+            </h3>
+
+            <p data-en="Check accession, organism, isoform, sequence and relevant biological context before choosing a structure."
+               data-fa="قبل از انتخاب ساختار، accession، organism، isoform، sequence و context زیستی مرتبط را بررسی کن.">
+                Check accession, organism, isoform, sequence and relevant
+                biological context before choosing a structure.
+            </p>
+
+        </article>
+
+
+        <article class="evidence-card">
+
+            <span class="badge"
+                  data-en="STRUCTURE"
+                  data-fa="ساختار">
+                STRUCTURE
+            </span>
+
+            <h3 data-en="What kind of structure are you looking at?"
+                data-fa="با چه نوع ساختاری روبه‌رو هستی؟">
+                What kind of structure are you looking at?
+            </h3>
+
+            <p data-en="Experimental structures and computational predictions are different evidence types and should be reported separately."
+               data-fa="ساختارهای تجربی و پیش‌بینی‌های محاسباتی دو نوع شواهد متفاوت‌اند و باید جداگانه گزارش شوند.">
+                Experimental structures and computational predictions are
+                different evidence types and should be reported separately.
+            </p>
+
+        </article>
+
+
+        <article class="evidence-card">
+
+            <span class="badge"
+                  data-en="INTERPRETATION"
+                  data-fa="تفسیر">
+                INTERPRETATION
+            </span>
+
+            <h3 data-en="What does the structure actually tell you?"
+                data-fa="ساختار واقعاً چه چیزی به تو می‌گوید؟">
+                What does the structure actually tell you?
+            </h3>
+
+            <p data-en="A visual feature becomes meaningful only when connected to sequence, known biology, ligands, interfaces or other evidence."
+               data-fa="یک ویژگی بصری زمانی معنادار است که به sequence، زیست‌شناسی شناخته‌شده، ligand، interface یا شواهد دیگر متصل شود.">
+                A visual feature becomes meaningful only when connected to
+                sequence, known biology, ligands, interfaces or other evidence.
+            </p>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================================================= WORKFLOW ========================================================= -->
+
+<section class="section" id="workflow"> <div class="container">
+
+    <div class="section-heading">
+
+        <span class="section-label"
+              data-en="THE WORKFLOW"
+              data-fa="ورک‌فلو">
+            THE WORKFLOW
+        </span>
+
+        <h2 data-en="Five steps from protein identity to interpretation."
+            data-fa="پنج مرحله از شناسایی پروتئین تا تفسیر.">
+            Five steps from protein identity to interpretation.
+        </h2>
+
+        <p data-en="The structure is one layer of evidence, not the whole biological story."
+           data-fa="ساختار فقط یک لایه از شواهد است، نه کل داستان زیستی.">
+            The structure is one layer of evidence, not the whole biological story.
+        </p>
+
+    </div>
+
+
+    <div class="card-grid">
+
+
+        <!-- STEP 01 -->
+        <article class="workflow-card card">
+
+            <div class="workflow-card-top">
+
+                <span class="workflow-tag"
+                      data-en="01 · IDENTIFY"
+                      data-fa="۰۱ · شناسایی">
+                    01 · IDENTIFY
+                </span>
+
+                <span class="evidence-type"
+                      data-en="Database evidence"
+                      data-fa="شواهد پایگاه داده">
+                    Database evidence
+                </span>
+
+            </div>
+
+            <h3 data-en="Identify the correct protein"
+                data-fa="پروتئین درست را شناسایی کن">
+                Identify the correct protein
+            </h3>
+
+            <p data-en="Start with a stable identifier rather than relying only on a common protein name."
+               data-fa="به‌جای تکیه بر نام رایج پروتئین، کار را با یک شناسه پایدار شروع کن.">
+                Start with a stable identifier rather than relying only
+                on a common protein name.
+            </p>
+
+            <div class="content-block">
+
+                <h4 data-en="Check"
+                    data-fa="بررسی کن">
+                    Check
+                </h4>
+
+                <ul>
+                    <li data-en="UniProt accession"
+                        data-fa="UniProt accession">
+                        UniProt accession
+                    </li>
+
+                    <li data-en="Organism"
+                        data-fa="Organism">
+                        Organism
+                    </li>
+
+                    <li data-en="Protein length"
+                        data-fa="طول پروتئین">
+                        Protein length
+                    </li>
+
+                    <li data-en="Canonical sequence / isoform"
+                        data-fa="canonical sequence / isoform">
+                        Canonical sequence / isoform
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="tool-badge">
+                UniProt · NCBI
+            </div>
+
+        </article>
+
+
+        <!-- STEP 02 -->
+        <article class="workflow-card card">
+
+            <div class="workflow-card-top">
+
+                <span class="workflow-tag"
+                      data-en="02 · EXPLORE"
+                      data-fa="۰۲ · بررسی">
+                    02 · EXPLORE
+                </span>
+
+                <span class="evidence-type"
+                      data-en="Sequence context"
+                      data-fa="context توالی">
+                    Sequence context
+                </span>
+
+            </div>
+
+            <h3 data-en="Explore sequence and functional annotations"
+                data-fa="توالی و annotationهای عملکردی را بررسی کن">
+                Explore sequence and functional annotations
+            </h3>
+
+            <p data-en="Understand the sequence before moving into 3D structure."
+               data-fa="قبل از ورود به ساختار سه‌بعدی، خود sequence را بشناس.">
+                Understand the sequence before moving into 3D structure.
+            </p>
+
+            <div class="content-block">
+
+                <h4 data-en="Look for"
+                    data-fa="دنبال چه چیزی باشی">
+                    Look for
+                </h4>
+
+                <ul>
+                    <li data-en="Protein domains"
+                        data-fa="Protein domainها">
+                        Protein domains
+                    </li>
+
+                    <li data-en="Functional sites"
+                        data-fa="Functional siteها">
+                        Functional sites
+                    </li>
+
+                    <li data-en="Subcellular localization"
+                        data-fa="Subcellular localization">
+                        Subcellular localization
+                    </li>
+
+                    <li data-en="Known variants or isoforms"
+                        data-fa="variantها یا isoformهای شناخته‌شده">
+                        Known variants or isoforms
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="tool-badge">
+                UniProt · InterPro
+            </div>
+
+        </article>
+
+
+        <!-- STEP 03 -->
+        <article class="workflow-card card">
+
+            <div class="workflow-card-top">
+
+                <span class="workflow-tag"
+                      data-en="03 · STRUCTURE"
+                      data-fa="۰۳ · ساختار">
+                    03 · STRUCTURE
+                </span>
+
+                <span class="evidence-type"
+                      data-en="Structural evidence"
+                      data-fa="شواهد ساختاری">
+                    Structural evidence
+                </span>
+
+            </div>
+
+            <h3 data-en="Find an appropriate 3D structure"
+                data-fa="یک ساختار سه‌بعدی مناسب پیدا کن">
+                Find an appropriate 3D structure
+            </h3>
+
+            <p data-en="A PDB entry is not automatically the correct structure for your question. Compare the entry with the protein you actually want to study."
+               data-fa="هر PDB entry لزوماً ساختار مناسب سؤال تو نیست. entry را با پروتئینی که واقعاً می‌خواهی بررسی کنی مقایسه کن.">
+                A PDB entry is not automatically the correct structure
+                for your question. Compare the entry with the protein
+                you actually want to study.
+            </p>
+
+            <div class="content-block">
+
+                <h4 data-en="Compare"
+                    data-fa="مقایسه کن">
+                    Compare
+                </h4>
+
+                <ul>
+                    <li data-en="Sequence / construct"
+                        data-fa="Sequence / construct">
+                        Sequence / construct
+                    </li>
+
+                    <li data-en="Organism"
+                        data-fa="Organism">
+                        Organism
+                    </li>
+
+                    <li data-en="Chain and residue coverage"
+                        data-fa="Chain و residue coverage">
+                        Chain and residue coverage
+                    </li>
+
+                    <li data-en="Experimental method and resolution"
+                        data-fa="روش تجربی و resolution">
+                        Experimental method and resolution
+                    </li>
+
+                    <li data-en="Ligands or bound molecules"
+                        data-fa="Ligand یا مولکول‌های متصل">
+                        Ligands or bound molecules
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="tool-badge">
+                RCSB PDB
+            </div>
+
+        </article>
+
+
+        <!-- STEP 04 -->
+        <article class="workflow-card card">
+
+            <div class="workflow-card-top">
+
+                <span class="workflow-tag"
+                      data-en="04 · INSPECT"
+                      data-fa="۰۴ · بررسی ساختاری">
+                    04 · INSPECT
+                </span>
+
+                <span class="evidence-type"
+                      data-en="Visual analysis"
+                      data-fa="تحلیل بصری">
+                    Visual analysis
+                </span>
+
+            </div>
+
+            <h3 data-en="Inspect the structure with molecular visualization"
+                data-fa="ساختار را با visualization مولکولی بررسی کن">
+                Inspect the structure with molecular visualization
+            </h3>
+
+            <p data-en="Visualization is useful when it answers a question. Do not change colors or representations without a reason."
+               data-fa="Visualization زمانی مفید است که به یک سؤال پاسخ دهد. صرفاً برای زیبایی رنگ‌ها یا representationها را تغییر نده.">
+                Visualization is useful when it answers a question.
+                Do not change colors or representations without a reason.
+            </p>
+
+            <div class="content-block">
+
+                <h4 data-en="Useful actions"
+                    data-fa="کارهای کاربردی">
+                    Useful actions
+                </h4>
+
+                <ul>
+                    <li data-en="Highlight domains or chains"
+                        data-fa="نمایش domainها یا chainها">
+                        Highlight domains or chains
+                    </li>
+
+                    <li data-en="Inspect conserved residues"
+                        data-fa="بررسی residueهای conserved">
+                        Inspect conserved residues
+                    </li>
+
+                    <li data-en="Locate ligands"
+                        data-fa="پیدا کردن ligandها">
+                        Locate ligands
+                    </li>
+
+                    <li data-en="Inspect pockets and interfaces"
+                        data-fa="بررسی pocketها و interfaceها">
+                        Inspect pockets and interfaces
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="tool-badge">
+                VMD · PyMOL
+            </div>
+
+        </article>
+
+
+        <!-- STEP 05 -->
+        <article class="workflow-card card">
+
+            <div class="workflow-card-top">
+
+                <span class="workflow-tag"
+                      data-en="05 · INTERPRET"
+                      data-fa="۰۵ · تفسیر">
+                    05 · INTERPRET
+                </span>
+
+                <span class="evidence-type"
+                      data-en="Biological reasoning"
+                      data-fa="استدلال زیستی">
+                    Biological reasoning
+                </span>
+
+            </div>
+
+            <h3 data-en="Turn structural observations into biological questions"
+                data-fa="مشاهدات ساختاری را به سؤال زیستی تبدیل کن">
+                Turn structural observations into biological questions
+            </h3>
+
+            <p data-en="A structure becomes scientifically useful when you connect what you see to sequence, literature and biological context."
+               data-fa="ساختار زمانی از نظر علمی مفید می‌شود که چیزی که می‌بینی را به sequence، literature و context زیستی متصل کنی.">
+                A structure becomes scientifically useful when you connect
+                what you see to sequence, literature and biological context.
+            </p>
+
+            <div class="content-block">
+
+                <h4 data-en="Ask"
+                    data-fa="سؤال کن">
+                    Ask
+                </h4>
+
+                <ul>
+                    <li data-en="What is experimentally observed?"
+                        data-fa="چه چیزی به‌صورت تجربی مشاهده شده؟">
+                        What is experimentally observed?
+                    </li>
+
+                    <li data-en="Which features are predicted?"
+                        data-fa="کدام ویژگی‌ها predicted هستند؟">
+                        Which features are predicted?
+                    </li>
+
+                    <li data-en="Does the structure support known biology?"
+                        data-fa="آیا ساختار از زیست‌شناسی شناخته‌شده پشتیبانی می‌کند؟">
+                        Does the structure support known biology?
+                    </li>
+
+                    <li data-en="What should be tested next?"
+                        data-fa="مرحله بعدی چه چیزی باید باشد؟">
+                        What should be tested next?
+                    </li>
+                </ul>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================================================= GFP CASE STUDY ========================================================= -->
+
+<section class="section" id="gfp-case"> <div class="container">
+
+    <div class="section-heading">
+
+        <span class="section-label"
+              data-en="CASE STUDY · GFP"
+              data-fa="کیس استادی · GFP">
+            CASE STUDY · GFP
+        </span>
+
+        <h2 data-en="A real example: exploring GFP structure."
+            data-fa="یک مثال واقعی: بررسی ساختار GFP.">
+            A real example: exploring GFP structure.
+        </h2>
+
+        <p data-en="Use a known protein to see how sequence, structural information and visualization connect."
+           data-fa="با یک پروتئین شناخته‌شده ببین که sequence، اطلاعات ساختاری و visualization چگونه به هم متصل می‌شوند.">
+            Use a known protein to see how sequence, structural information
+            and visualization connect.
+        </p>
+
+    </div>
+
+
+    <div class="card-grid">
+
+
+        <article class="generic-card">
+
+            <span class="workflow-tag">PDB 1EMA</span>
+
+            <h3 data-en="Green Fluorescent Protein"
+                data-fa="Green Fluorescent Protein">
+                Green Fluorescent Protein
+            </h3>
+
+            <p data-en="PDB entry 1EMA contains an experimentally determined GFP structure and provides a useful starting point for structural exploration."
+               data-fa="PDB entry 1EMA شامل یک ساختار تجربی تعیین‌شده از GFP است و نقطه شروع مناسبی برای بررسی ساختاری محسوب می‌شود.">
+                PDB entry 1EMA contains an experimentally determined GFP
+                structure and provides a useful starting point for structural
+                exploration.
+            </p>
+
+            <div class="content-block">
+
+                <h4 data-en="Record"
+                    data-fa="اطلاعات مهم">
+                    Record
+                </h4>
+
+                <ul>
+                    <li data-en="PDB ID: 1EMA"
+                        data-fa="PDB ID: 1EMA">
+                        PDB ID: 1EMA
+                    </li>
+
+                    <li data-en="Protein: Green Fluorescent Protein"
+                        data-fa="Protein: Green Fluorescent Protein">
+                        Protein: Green Fluorescent Protein
+                    </li>
+
+                    <li data-en="Organism: Aequorea victoria"
+                        data-fa="Organism: Aequorea victoria">
+                        Organism: Aequorea victoria
+                    </li>
+
+                    <li data-en="Experimental structure"
+                        data-fa="ساختار تجربی">
+                        Experimental structure
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <a href="https://www.rcsb.org/structure/1EMA"
+               class="decision-link"
+               data-external="new-tab"
+               rel="noopener noreferrer"
+               data-en="Open 1EMA in RCSB PDB →"
+               data-fa="مشاهده 1EMA در RCSB PDB →">
+                Open 1EMA in RCSB PDB →
+            </a>
+
+        </article>
+
+
+        <article class="generic-card">
+
+            <span class="workflow-tag"
+                  data-en="STRUCTURE"
+                  data-fa="ساختار">
+                STRUCTURE
+            </span>
+
+            <h3 data-en="What should you inspect?"
+                data-fa="چه چیزی را باید بررسی کنی؟">
+                What should you inspect?
+            </h3>
+
+            <p data-en="The point is not simply to display GFP. Use the structure to connect known biological features with their three-dimensional context."
+               data-fa="هدف فقط نمایش GFP نیست. از ساختار برای اتصال ویژگی‌های زیستی شناخته‌شده به context سه‌بعدی آن‌ها استفاده کن.">
+                The point is not simply to display GFP. Use the structure
+                to connect known biological features with their
+                three-dimensional context.
+            </p>
+
+            <div class="content-block">
+
+                <h4 data-en="Useful observations"
+                    data-fa="مشاهدات کاربردی">
+                    Useful observations
+                </h4>
+
+                <ul>
+                    <li data-en="Overall fold"
+                        data-fa="Overall fold">
+                        Overall fold
+                    </li>
+
+                    <li data-en="β-barrel architecture"
+                        data-fa="ساختار β-barrel">
+                        β-barrel architecture
+                    </li>
+
+                    <li data-en="Chromophore location"
+                        data-fa="محل chromophore">
+                        Chromophore location
+                    </li>
+
+                    <li data-en="Residues surrounding the chromophore"
+                        data-fa="residueهای اطراف chromophore">
+                        Residues surrounding the chromophore
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </article>
+
+
+        <article class="generic-card">
+
+            <span class="workflow-tag"
+                  data-en="INTERPRETATION"
+                  data-fa="تفسیر">
+                INTERPRETATION
+            </span>
+
+            <h3 data-en="Connect the chromophore to the structure"
+                data-fa="chromophore را به ساختار متصل کن">
+                Connect the chromophore to the structure
+            </h3>
+
+            <p data-en="The GFP chromophore forms from Ser65, Tyr66 and Gly67. In a viewer you can see these residues in 3D."
+               data-fa="کروموفور GFP از Ser65، Tyr66 و Gly67 ساخته می‌شود. در viewer می‌توانی این residueها و محیط سه‌بعدی‌شان را ببینی.">کروموفور GFP از Ser65، Tyr66 و Gly67 ساخته می‌شود. در viewer می‌توانی این residueها و محیط سه‌بعدی‌شان را ببینی.</p>
+
+            <div class="content-block">
+
+                <h4 data-en="Important distinction"
+                    data-fa="تفاوت مهم">
+                    Important distinction
+                </h4>
+
+                <p data-en="Seeing a residue near a chromophore does not by itself prove that the residue determines fluorescence. Structural observation is the starting point for a biological question."
+                   data-fa="دیدن یک residue در نزدیکی chromophore به‌تنهایی ثابت نمی‌کند که آن residue تعیین‌کننده fluorescence است. مشاهده ساختاری نقطه شروع یک سؤال زیستی است.">
+                    Seeing a residue near a chromophore does not by itself
+                    prove that the residue determines fluorescence.
+                    Structural observation is the starting point for a
+                    biological question.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================================================= STRUCTURE EVIDENCE ========================================================= -->
+
+<section class="section"> <div class="container">
+
+    <div class="section-heading">
+
+        <span class="section-label"
+              data-en="STRUCTURE EVIDENCE"
+              data-fa="شواهد ساختاری">
+            STRUCTURE EVIDENCE
+        </span>
+
+        <h2 data-en="Before interpreting a structure, record where it came from."
+            data-fa="قبل از تفسیر ساختار، منبع آن را ثبت کن.">
+            Before interpreting a structure, record where it came from.
+        </h2>
+
+    </div>
+
+
+    <div class="evidence-grid">
+
+        <article class="evidence-card">
+
+            <span class="badge"
+                  data-en="EXPERIMENTAL"
+                  data-fa="تجربی">
+                EXPERIMENTAL
+            </span>
+
+            <h3 data-en="Experimental structure"
+                data-fa="ساختار تجربی">
+                Experimental structure
+            </h3>
+
+            <p data-en="Determine the experimental method, resolution and construct. These details affect what can reasonably be interpreted from the structure."
+               data-fa="روش تجربی، resolution و construct را بررسی کن. این جزئیات روی نوع تفسیری که می‌توان از ساختار داشت اثر می‌گذارند.">
+                Determine the experimental method, resolution and construct.
+                These details affect what can reasonably be interpreted
+                from the structure.
+            </p>
+
+        </article>
+
+
+        <article class="evidence-card">
+
+            <span class="badge"
+                  data-en="PREDICTED"
+                  data-fa="پیش‌بینی‌شده">
+                PREDICTED
+            </span>
+
+            <h3 data-en="Computational structure"
+                data-fa="ساختار محاسباتی">
+                Computational structure
+            </h3>
+
+            <p data-en="For predicted structures, report the prediction source and consider confidence measures rather than presenting the model as experimental observation."
+               data-fa="برای ساختارهای predicted، منبع prediction و معیارهای confidence را گزارش کن و مدل را به‌عنوان مشاهده تجربی ارائه نده.">
+                For predicted structures, report the prediction source and
+                consider confidence measures rather than presenting the
+                model as experimental observation.
+            </p>
+
+        </article>
+
+
+        <article class="evidence-card">
+
+            <span class="badge"
+                  data-en="BIOLOGICAL CONTEXT"
+                  data-fa="context زیستی">
+                BIOLOGICAL CONTEXT
+            </span>
+
+            <h3 data-en="Structure is not the whole answer"
+                data-fa="ساختار تمام پاسخ نیست">
+                Structure is not the whole answer
+            </h3>
+
+            <p data-en="Connect structural observations to sequence, biochemical data, literature, ligand information and the biological system."
+               data-fa="مشاهدات ساختاری را به sequence، داده‌های بیوشیمیایی، literature، اطلاعات ligand و سیستم زیستی متصل کن.">
+                Connect structural observations to sequence, biochemical
+                data, literature, ligand information and the biological system.
+            </p>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================================================= RESEARCH OUTPUT ========================================================= -->
+
+<section class="section" id="research-output"> <div class="container">
+
+    <div class="section-heading">
+
+        <span class="section-label"
+              data-en="RESEARCH OUTPUT"
+              data-fa="خروجی پژوهش">
+            RESEARCH OUTPUT
+        </span>
+
+        <h2 data-en="Turn structure exploration into a reusable record."
+            data-fa="بررسی ساختار را به یک رکورد پژوهشی قابل استفاده تبدیل کن.">
+            Turn structure exploration into a reusable record.
+        </h2>
+
+        <p data-en="A useful structural analysis should preserve the reasoning behind every important observation."
+           data-fa="یک تحلیل ساختاری مفید باید منطق پشت هر مشاهده مهم را نیز ثبت کند.">
+            A useful structural analysis should preserve the reasoning
+            behind every important observation.
+        </p>
+
+    </div>
+
+
+    <div class="research-output">
+
+        <div class="output-grid">
+
+            <div>
+                <span class="quality-pill">01</span>
+                <strong data-en="Protein identity"
+                        data-fa="هویت پروتئین">
+                    Protein identity
+                </strong>
+            </div>
+
+            <div>
+                <span class="quality-pill">02</span>
+                <strong data-en="UniProt accession"
+                        data-fa="UniProt accession">
+                    UniProt accession
+                </strong>
+            </div>
+
+            <div>
+                <span class="quality-pill">03</span>
+                <strong data-en="PDB ID / structure source"
+                        data-fa="PDB ID / منبع ساختار">
+                    PDB ID / structure source
+                </strong>
+            </div>
+
+            <div>
+                <span class="quality-pill">04</span>
+                <strong data-en="Experimental method / prediction source"
+                        data-fa="روش تجربی / منبع prediction">
+                    Experimental method / prediction source
+                </strong>
+            </div>
+
+            <div>
+                <span class="quality-pill">05</span>
+                <strong data-en="Resolution / confidence"
+                        data-fa="Resolution / confidence">
+                    Resolution / confidence
+                </strong>
+            </div>
+
+            <div>
+                <span class="quality-pill">06</span>
+                <strong data-en="Chains / construct"
+                        data-fa="Chain / construct">
+                    Chains / construct
+                </strong>
+            </div>
+
+            <div>
+                <span class="quality-pill">07</span>
+                <strong data-en="Domains / functional sites"
+                        data-fa="Domain / functional site">
+                    Domains / functional sites
+                </strong>
+            </div>
+
+            <div>
+                <span class="quality-pill">08</span>
+                <strong data-en="Ligands / interfaces"
+                        data-fa="Ligand / interface">
+                    Ligands / interfaces
+                </strong>
+            </div>
+
+            <div>
+                <span class="quality-pill">09</span>
+                <strong data-en="Structural observations"
+                        data-fa="مشاهدات ساختاری">
+                    Structural observations
+                </strong>
+            </div>
+
+            <div>
+                <span class="quality-pill">10</span>
+                <strong data-en="Biological interpretation"
+                        data-fa="تفسیر زیستی">
+                    Biological interpretation
+                </strong>
+            </div>
+
+            <div>
+                <span class="quality-pill">11</span>
+                <strong data-en="Limitations"
+                        data-fa="محدودیت‌ها">
+                    Limitations
+                </strong>
+            </div>
+
+            <div>
+                <span class="quality-pill">12</span>
+                <strong data-en="Next question"
+                        data-fa="سؤال بعدی">
+                    Next question
+                </strong>
+            </div>
+
+            <div>
+                <span class="quality-pill">13</span>
+                <strong data-en="References"
+                        data-fa="منابع">
+                    References
+                </strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================================================= COMMON MISTAKES ========================================================= -->
+
+<section class="section"> <div class="container">
+
+    <div class="section-heading">
+
+        <span class="section-label"
+              data-en="COMMON MISTAKES"
+              data-fa="اشتباهات رایج">
+            COMMON MISTAKES
+        </span>
+
+        <h2 data-en="What can make structural analysis misleading?"
+            data-fa="چه چیزهایی می‌توانند تحلیل ساختاری را گمراه‌کننده کنند؟">
+            What can make structural analysis misleading?
+        </h2>
+
+    </div>
+
+
+    <div class="quality-grid">
+
+        <article class="quality-item">
+
+            <span class="quality-pill">01</span>
+
+            <div>
+                <h3 data-en="Choosing a PDB entry by name alone"
+                    data-fa="انتخاب PDB فقط بر اساس نام">
+                    Choosing a PDB entry by name alone
+                </h3>
+
+                <p data-en="Check sequence, construct, organism, chain coverage, method and resolution before using an entry."
+                   data-fa="قبل از استفاده از یک entry، sequence، construct، organism، chain coverage، method و resolution را بررسی کن.">
+                    Check sequence, construct, organism, chain coverage,
+                    method and resolution before using an entry.
+                </p>
+            </div>
+
+        </article>
+
+
+        <article class="quality-item">
+
+            <span class="quality-pill">02</span>
+
+            <div>
+                <h3 data-en="Confusing a visualization with an analysis"
+                    data-fa="یکی دانستن visualization با analysis">
+                    Confusing a visualization with an analysis
+                </h3>
+
+                <p data-en="Changing colors or representations is not automatically a biological result. Every visualization should answer a question."
+                   data-fa="تغییر رنگ یا representation به‌تنهایی نتیجه زیستی نیست. هر visualization باید به یک سؤال پاسخ دهد.">
+                    Changing colors or representations is not automatically
+                    a biological result. Every visualization should answer a question.
+                </p>
+            </div>
+
+        </article>
+
+
+        <article class="quality-item">
+
+            <span class="quality-pill">03</span>
+
+            <div>
+                <h3 data-en="Treating structural proximity as proof"
+                    data-fa="در نظر گرفتن proximity ساختاری به‌عنوان اثبات">
+                    Treating structural proximity as proof
+                </h3>
+
+                <p data-en="Two residues being close in 3D space does not by itself establish a functional relationship."
+                   data-fa="نزدیک بودن دو residue در فضای سه‌بعدی به‌تنهایی رابطه عملکردی را اثبات نمی‌کند.">
+                    Two residues being close in 3D space does not by itself
+                    establish a functional relationship.
+                </p>
+            </div>
+
+        </article>
+
+
+        <article class="quality-item">
+
+            <span class="quality-pill">04</span>
+
+            <div>
+                <h3 data-en="Ignoring missing or engineered regions"
+                    data-fa="نادیده گرفتن نواحی حذف‌شده یا مهندسی‌شده">
+                    Ignoring missing or engineered regions
+                </h3>
+
+                <p data-en="Experimental constructs may contain mutations, truncations, tags or unresolved residues that differ from the native protein."
+                   data-fa="constructهای تجربی ممکن است mutation، truncation، tag یا residueهای unresolved داشته باشند که با پروتئین native متفاوت‌اند.">
+                    Experimental constructs may contain mutations, truncations,
+                    tags or unresolved residues that differ from the native protein.
+                </p>
+            </div>
+
+        </article>
+
+
+        <article class="quality-item">
+
+            <span class="quality-pill">05</span>
+
+            <div>
+                <h3 data-en="Ignoring the evidence source"
+                    data-fa="نادیده گرفتن منبع شواهد">
+                    Ignoring the evidence source
+                </h3>
+
+                <p data-en="Always distinguish experimental measurements from computational predictions."
+                   data-fa="همیشه اندازه‌گیری‌های تجربی را از predictionهای محاسباتی جدا کن.">
+                    Always distinguish experimental measurements from
+                    computational predictions.
+                </p>
+            </div>
+
+        </article>
+
+
+        <article class="quality-item">
+
+            <span class="quality-pill">06</span>
+
+            <div>
+                <h3 data-en="Stopping at structural description"
+                    data-fa="متوقف شدن در توصیف ساختار">
+                    Stopping at structural description
+                </h3>
+
+                <p data-en="The research value comes from connecting the structure to a biological question, evidence and a next step."
+                   data-fa="ارزش پژوهشی زمانی ایجاد می‌شود که ساختار را به یک سؤال زیستی، شواهد و مرحله بعدی متصل کنی.">
+                    The research value comes from connecting the structure
+                    to a biological question, evidence and a next step.
+                </p>
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================================================= FUTURE WORKSPACE ========================================================= -->
+
+<section class="section"> <div class="container">
+
+    <div class="generic-card">
+
+        <span class="section-label"
+              data-en="FUTURE WORKSPACE"
+              data-fa="فضای کار آینده">
+            FUTURE WORKSPACE
+        </span>
+
+        <h2 data-en="Connect sequence, structure and evidence."
+            data-fa="توالی، ساختار و شواهد را به هم متصل کن.">
+            Connect sequence, structure and evidence.
+        </h2>
+
+        <p data-en="Soon, Workspace can keep ID, sequence, structure, observations and outputs together for reuse."
+           data-fa="در آینده Workspace می‌تواند شناسه، sequence، ساختار، مشاهده‌ها و خروجی‌ها را برای استفاده‌ی دوباره کنار هم نگه دارد.">در آینده Workspace می‌تواند شناسه، sequence، ساختار، مشاهده‌ها و خروجی‌ها را برای استفاده‌ی دوباره کنار هم نگه دارد.</p>
+
+        <span class="status-badge"
+              data-en="FUTURE CAPABILITY"
+              data-fa="قابلیت آینده">
+            FUTURE CAPABILITY
+        </span>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================================================= NEXT PATHS ========================================================= -->
+
+<section class="section"> <div class="container">
+
+    <div class="section-heading">
+
+        <span class="section-label"
+              data-en="NEXT PATH"
+              data-fa="مسیر بعدی">
+            NEXT PATH
+        </span>
+
+        <h2 data-en="Choose the next question."
+            data-fa="سؤال بعدی را انتخاب کن.">
+            Choose the next question.
+        </h2>
+
+    </div>
+
+
+    <div class="card-grid">
+
+
+        <article class="generic-card">
+
+            <span class="workflow-tag"
+                  data-en="UNKNOWN PROTEIN"
+                  data-fa="پروتئین ناشناخته">
+                UNKNOWN PROTEIN
+            </span>
+
+            <h3 data-en="Start from an unknown sequence"
+                data-fa="از یک توالی ناشناخته شروع کن">
+                Start from an unknown sequence
+            </h3>
+
+            <p data-en="Move from sequence similarity to annotation, structure and a testable hypothesis."
+               data-fa="از similarity توالی به annotation، ساختار و یک فرضیه قابل آزمون برو.">
+                Move from sequence similarity to annotation, structure
+                and a testable hypothesis.
+            </p>
+
+            <a href="unknown-sequence.html"
+               class="decision-link"
+               data-en="Open Unknown Sequence →"
+               data-fa="بررسی Unknown Sequence →">
+                Open Unknown Sequence →
+            </a>
+
+        </article>
+
+
+        <article class="generic-card">
+
+            <span class="workflow-tag"
+                  data-en="SEQUENCE"
+                  data-fa="توالی">
+                SEQUENCE
+            </span>
+
+            <h3 data-en="Go deeper into sequence analysis"
+                data-fa="تحلیل توالی را عمیق‌تر کن">
+                Go deeper into sequence analysis
+            </h3>
+
+            <p data-en="Use BLAST, alignment, conservation and domain analysis to strengthen the structural interpretation."
+               data-fa="با BLAST، alignment، conservation و domain analysis تفسیر ساختاری را تقویت کن.">
+                Use BLAST, alignment, conservation and domain analysis
+                to strengthen the structural interpretation.
+            </p>
+
+            <a href="sequence.html"
+               class="decision-link"
+               data-en="Open Sequence Analysis →"
+               data-fa="رفتن به Sequence Analysis →">
+                Open Sequence Analysis →
+            </a>
+
+        </article>
+
+
+        <article class="generic-card">
+
+            <span class="workflow-tag"
+                  data-en="ALL WORKFLOWS"
+                  data-fa="همه ورک‌فلوها">
+                ALL WORKFLOWS
+            </span>
+
+            <h3 data-en="Explore more research workflows"
+                data-fa="workflowهای پژوهشی بیشتر را ببین">
+                Explore more research workflows
+            </h3>
+
+            <p data-en="Connect protein analysis with drug research, literature analysis, phylogenetics and other workflows."
+               data-fa="Protein Analysis را به drug research، تحلیل مقاله، phylogenetics و workflowهای دیگر متصل کن.">
+                Connect protein analysis with drug research,
+                literature analysis, phylogenetics and other workflows.
+            </p>
+
+            <a href="workflows.html"
+               class="decision-link"
+               data-en="Explore Workflows →"
+               data-fa="مشاهده Workflows →">
+                Explore Workflows →
+            </a>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================================================= FINAL CTA ========================================================= -->
+
+<section class="section"> <div class="container">
+
+    <div class="cta-card">
+
+        <div>
+
+            <span class="section-label"
+                  data-en="GENEBITE RESEARCH APPROACH"
+                  data-fa="رویکرد پژوهشی GeneBite">
+                GENEBITE RESEARCH APPROACH
+            </span>
+
+            <h2 data-en="Protein → Structure → Evidence → Biological question"
+                data-fa="پروتئین → ساختار → شواهد → سؤال زیستی">
+                Protein → Structure → Evidence → Biological question
+            </h2>
+
+            <p data-en="The goal is not simply to see a protein. The goal is to understand what the structure allows you to ask next."
+               data-fa="هدف فقط دیدن یک پروتئین نیست؛ هدف این است که بفهمی ساختار چه سؤال زیستی جدیدی برایت ایجاد می‌کند.">
+                The goal is not simply to see a protein.
+                The goal is to understand what the structure allows
+                you to ask next.
+            </p>
+
+        </div>
+
+        <div class="cta-actions">
+
+            <a href="research-decision.html"
+               class="btn btn-primary"
+               data-en="Start with a question"
+               data-fa="از یک سؤال شروع کن">
+                Start with a question
+            </a>
+
+            <a href="search.html"
+               class="btn btn-secondary"
+               data-en="Search GeneBite"
+               data-fa="جستجو در GeneBite">
+                Search GeneBite
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- ========================================================= FOOTER ========================================================= -->
+
+<footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body> </html>

@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Phylogenetic Analysis | GeneBite</title>
+
+  <meta
+    name="description"
+    content="A practical phylogenetic workflow for sequence selection, quality control, multiple sequence alignment, tree inference, support assessment, rooting, and biological interpretation."
+  >
+
+    <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         PAGE HERO
+    ========================== -->
+    <section class="page-hero">
+      <div class="container">
+
+        <div class="page-hero-content">
+
+          <span
+            class="page-hero-label"
+            data-en="PHYLOGENETIC ANALYSIS"
+            data-fa="تحلیل فیلوژنتیک"
+          >
+            PHYLOGENETIC ANALYSIS
+          </span>
+
+          <h1
+            data-en="From sequence comparison to evolutionary relationships."
+            data-fa="از مقایسه توالی‌ها تا بررسی روابط تکاملی."
+          >
+            From sequence comparison to evolutionary relationships.
+          </h1>
+
+          <p
+            data-en="Build a defensible phylogeny: from sequence choice and QC to alignment, method, support and tree interpretation."
+            data-fa="یک تحلیل فیلوژنتیک قابل‌دفاع بساز: از انتخاب توالی و کنترل کیفیت تا هم‌ترازی، روش، حمایت و تفسیر درخت."
+          >یک تحلیل فیلوژنتیک قابل‌دفاع بساز: از انتخاب توالی و کنترل کیفیت تا هم‌ترازی، روش، حمایت و تفسیر درخت.</p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#workflow"
+              class="btn btn-primary"
+              data-en="Start workflow"
+              data-fa="شروع Workflow"
+            >
+              Start workflow
+            </a>
+
+            <a
+              href="#research-output"
+              class="btn btn-secondary"
+              data-en="Research output"
+              data-fa="خروجی پژوهش"
+            >
+              Research output
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Workflow path -->
+        <div
+          class="workflow-flow"
+          aria-label="Phylogenetic workflow"
+        >
+
+          <div class="flow-container">
+
+            <div class="flow-node">
+              <span class="flow-node-icon">01</span>
+              <span
+                data-en="Sequences"
+                data-fa="توالی‌ها"
+              >
+                Sequences
+              </span>
+            </div>
+
+            <span class="flow-arrow">→</span>
+
+            <div class="flow-node">
+              <span class="flow-node-icon">02</span>
+              <span
+                data-en="QC"
+                data-fa="کنترل کیفیت"
+              >
+                QC
+              </span>
+            </div>
+
+            <span class="flow-arrow">→</span>
+
+            <div class="flow-node">
+              <span class="flow-node-icon">03</span>
+              <span
+                data-en="Alignment"
+                data-fa="هم‌ترازی"
+              >
+                Alignment
+              </span>
+            </div>
+
+            <span class="flow-arrow">→</span>
+
+            <div class="flow-node">
+              <span class="flow-node-icon">04</span>
+              <span
+                data-en="Inference"
+                data-fa="استنباط"
+              >
+                Inference
+              </span>
+            </div>
+
+            <span class="flow-arrow">→</span>
+
+            <div class="flow-node">
+              <span class="flow-node-icon">05</span>
+              <span
+                data-en="Support"
+                data-fa="حمایت"
+              >
+                Support
+              </span>
+            </div>
+
+            <span class="flow-arrow">→</span>
+
+            <div class="flow-node">
+              <span class="flow-node-icon">06</span>
+              <span
+                data-en="Interpret"
+                data-fa="تفسیر"
+              >
+                Interpret
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         CORE IDEA
+    ========================== -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-label"
+            data-en="CORE IDEA"
+            data-fa="ایده اصلی"
+          >
+            CORE IDEA
+          </span>
+
+          <h2
+            data-en="A phylogenetic tree is an inference, not a literal map of evolution."
+            data-fa="درخت فیلوژنتیک یک استنباط است، نه یک نقشه تحت‌اللفظی از تکامل."
+          >
+            A phylogenetic tree is an inference, not a literal map of evolution.
+          </h2>
+
+          <p
+            data-en="Results depend on sequences, alignment, model and method — include the uncertainty in your interpretation."
+            data-fa="نتیجه به توالی‌ها، هم‌ترازی، مدل و روش وابسته است؛ پس عدم‌قطعیت را هم در تفسیر بیاور."
+          >نتیجه به توالی‌ها، هم‌ترازی، مدل و روش وابسته است؛ پس عدم‌قطعیت را هم در تفسیر بیاور.</p>
+
+        </div>
+
+
+        <div class="evidence-grid">
+
+          <article class="generic-card">
+
+            <span
+              class="badge"
+              data-en="Input"
+              data-fa="ورودی"
+            >
+              Input
+            </span>
+
+            <h3
+              data-en="Comparable sequences"
+              data-fa="توالی‌های قابل‌مقایسه"
+            >
+              Comparable sequences
+            </h3>
+
+            <p
+              data-en="The biological question determines which sequences belong in the analysis. Distinguish carefully between orthologs, paralogs, and other homologous sequences."
+              data-fa="سؤال زیستی تعیین می‌کند چه توالی‌هایی باید وارد تحلیل شوند. بین Ortholog، Paralog و سایر توالی‌های Homolog تمایز قائل شو."
+            >
+              The biological question determines which sequences belong in
+              the analysis. Distinguish carefully between orthologs,
+              paralogs, and other homologous sequences.
+            </p>
+
+          </article>
+
+
+          <article class="generic-card">
+
+            <span
+              class="badge"
+              data-en="Model"
+              data-fa="مدل"
+            >
+              Model
+            </span>
+
+            <h3
+              data-en="Alignment + evolutionary assumptions"
+              data-fa="هم‌ترازی + فرض‌های تکاملی"
+            >
+              Alignment + evolutionary assumptions
+            </h3>
+
+            <p
+              data-en="Alignment quality and model assumptions affect the inferred topology, support values, and branch-length estimates."
+              data-fa="کیفیت هم‌ترازی و فرض‌های مدل بر توپولوژی، مقادیر حمایت و برآورد طول شاخه‌های درخت اثر می‌گذارند."
+            >
+              Alignment quality and model assumptions affect the inferred
+              topology, support values, and branch-length estimates.
+            </p>
+
+          </article>
+
+
+          <article class="generic-card">
+
+            <span
+              class="badge"
+              data-en="Interpretation"
+              data-fa="تفسیر"
+            >
+              Interpretation
+            </span>
+
+            <h3
+              data-en="Topology + support + context"
+              data-fa="توپولوژی + حمایت + زمینه زیستی"
+            >
+              Topology + support + context
+            </h3>
+
+            <p
+              data-en="Read topology, branch lengths, support values, rooting, taxonomic context, and biological knowledge together."
+              data-fa="توپولوژی، طول شاخه‌ها، مقادیر حمایت، Rooting، زمینه Taxonomic و دانش زیستی را در کنار هم بررسی کن."
+            >
+              Read topology, branch lengths, support values, rooting,
+              taxonomic context, and biological knowledge together.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         WORKFLOW
+    ========================== -->
+    <section class="section section-soft" id="workflow">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-label"
+            data-en="MAIN WORKFLOW"
+            data-fa="Workflow اصلی"
+          >
+            MAIN WORKFLOW
+          </span>
+
+          <h2
+            data-en="Build the analysis step by step."
+            data-fa="تحلیل را مرحله‌به‌مرحله بساز."
+          >
+            Build the analysis step by step.
+          </h2>
+
+          <p
+            data-en="Each stage answers a different research question. Tree construction should be treated as an analysis pipeline, not a one-click result."
+            data-fa="هر مرحله به یک سؤال پژوهشی متفاوت پاسخ می‌دهد. ساخت درخت را یک Pipeline تحلیلی بدان، نه یک نتیجه یک‌کلیکی."
+          >
+            Each stage answers a different research question. Tree construction
+            should be treated as an analysis pipeline, not a one-click result.
+          </p>
+
+        </div>
+
+
+        <div class="card-grid">
+
+
+          <!-- STEP 1 -->
+          <article class="workflow-card">
+
+            <div class="workflow-card-top">
+
+              <span class="process-number">01</span>
+
+              <span
+                class="workflow-tag"
+                data-en="Sequence selection"
+                data-fa="انتخاب توالی"
+              >
+                Sequence selection
+              </span>
+
+            </div>
+
+            <h3
+              data-en="Define the biological comparison"
+              data-fa="مقایسه زیستی را مشخص کن"
+            >
+              Define the biological comparison
+            </h3>
+
+            <p
+              data-en="Start with the biological question, not with tree-building software. Decide which organisms, genes, proteins, or homologous groups should be compared."
+              data-fa="از سؤال زیستی شروع کن، نه از نرم‌افزار ساخت درخت. مشخص کن کدام ارگانیسم‌ها، ژن‌ها، پروتئین‌ها یا گروه‌های Homolog باید مقایسه شوند."
+            >
+              Start with the biological question, not with tree-building
+              software. Decide which organisms, genes, proteins, or
+              homologous groups should be compared.
+            </p>
+
+            <div class="tool-list">
+              <span class="tool-badge">NCBI</span>
+              <span class="tool-badge">UniProt</span>
+              <span class="tool-badge">BLAST</span>
+            </div>
+
+            <div class="quality-note">
+
+              <strong
+                data-en="Check:"
+                data-fa="بررسی کن:"
+              >
+                Check:
+              </strong>
+
+              <span
+                data-en="accession IDs, organism, sequence type, homology, orthology/paralogy, redundancy"
+                data-fa="Accession ID، ارگانیسم، نوع توالی، Homology، Orthology/Paralogy و Redundancy"
+              >
+                accession IDs, organism, sequence type, homology,
+                orthology/paralogy, redundancy
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <!-- STEP 2 -->
+          <article class="workflow-card">
+
+            <div class="workflow-card-top">
+
+              <span class="process-number">02</span>
+
+              <span
+                class="workflow-tag"
+                data-en="Quality control"
+                data-fa="کنترل کیفیت"
+              >
+                Quality control
+              </span>
+
+            </div>
+
+            <h3
+              data-en="Check whether the sequence set is suitable"
+              data-fa="بررسی کن که مجموعه توالی‌ها مناسب است یا نه"
+            >
+              Check whether the sequence set is suitable
+            </h3>
+
+            <p
+              data-en="Inspect sequence length, ambiguity, missing regions, redundancy, unusual sequences, and biological comparability before alignment."
+              data-fa="قبل از هم‌ترازی، طول توالی، حروف مبهم، نواحی ناقص، Redundancy، توالی‌های غیرعادی و قابل‌مقایسه‌بودن زیستی را بررسی کن."
+            >
+              Inspect sequence length, ambiguity, missing regions, redundancy,
+              unusual sequences, and biological comparability before alignment.
+            </p>
+
+            <div class="quality-grid">
+
+              <div>
+                <strong
+                  data-en="Length"
+                  data-fa="طول"
+                >
+                  Length
+                </strong>
+
+                <span
+                  data-en="Comparable?"
+                  data-fa="قابل‌مقایسه؟"
+                >
+                  Comparable?
+                </span>
+              </div>
+
+              <div>
+                <strong
+                  data-en="Quality"
+                  data-fa="کیفیت"
+                >
+                  Quality
+                </strong>
+
+                <span
+                  data-en="Ambiguities?"
+                  data-fa="حروف مبهم؟"
+                >
+                  Ambiguities?
+                </span>
+              </div>
+
+              <div>
+                <strong
+                  data-en="Redundancy"
+                  data-fa="Redundancy"
+                >
+                  Redundancy
+                </strong>
+
+                <span
+                  data-en="Overrepresented?"
+                  data-fa="بیش‌ازحد تکراری؟"
+                >
+                  Overrepresented?
+                </span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- STEP 3 -->
+          <article class="workflow-card">
+
+            <div class="workflow-card-top">
+
+              <span class="process-number">03</span>
+
+              <span
+                class="workflow-tag"
+                data-en="Alignment"
+                data-fa="هم‌ترازی"
+              >
+                Alignment
+              </span>
+
+            </div>
+
+            <h3
+              data-en="Build a multiple sequence alignment"
+              data-fa="یک Multiple Sequence Alignment بساز"
+            >
+              Build a multiple sequence alignment
+            </h3>
+
+            <p
+              data-en="Align homologous sequences so that biologically comparable positions can be evaluated across the dataset."
+              data-fa="توالی‌های Homolog را طوری هم‌تراز کن که موقعیت‌های زیستی قابل‌مقایسه در کل مجموعه بررسی شوند."
+            >
+              Align homologous sequences so that biologically comparable
+              positions can be evaluated across the dataset.
+            </p>
+
+            <div class="tool-list">
+
+              <span class="tool-badge">MAFFT</span>
+              <span class="tool-badge">Clustal Omega</span>
+
+            </div>
+
+            <div class="quality-note">
+
+              <strong
+                data-en="Important:"
+                data-fa="مهم:"
+              >
+                Important:
+              </strong>
+
+              <span
+                data-en="Poor alignment can propagate uncertainty or error into tree inference."
+                data-fa="هم‌ترازی ضعیف می‌تواند عدم‌قطعیت یا خطا را به مرحله استنباط درخت منتقل کند."
+              >
+                Poor alignment can propagate uncertainty or error into
+                tree inference.
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <!-- STEP 4 -->
+          <article class="workflow-card">
+
+            <div class="workflow-card-top">
+
+              <span class="process-number">04</span>
+
+              <span
+                class="workflow-tag"
+                data-en="Tree inference"
+                data-fa="استنباط درخت"
+              >
+                Tree inference
+              </span>
+
+            </div>
+
+            <h3
+              data-en="Choose an inference method and model"
+              data-fa="روش و مدل استنباط را انتخاب کن"
+            >
+              Choose an inference method and model
+            </h3>
+
+            <p
+              data-en="Different methods use different assumptions. The method and evolutionary model should match the research question, sequence type, and dataset."
+              data-fa="روش‌های مختلف فرض‌های متفاوتی دارند. روش و مدل تکاملی باید با سؤال پژوهش، نوع توالی و Dataset سازگار باشد."
+            >
+              Different methods use different assumptions. The method and
+              evolutionary model should match the research question,
+              sequence type, and dataset.
+            </p>
+
+            <div class="method-grid">
+
+              <div class="mini-card">
+
+                <strong
+                  data-en="Neighbor-Joining"
+                  data-fa="Neighbor-Joining"
+                >
+                  Neighbor-Joining
+                </strong>
+
+                <span
+                  data-en="Distance-based"
+                  data-fa="مبتنی بر فاصله"
+                >
+                  Distance-based
+                </span>
+
+              </div>
+
+              <div class="mini-card">
+
+                <strong
+                  data-en="Maximum Likelihood"
+                  data-fa="Maximum Likelihood"
+                >
+                  Maximum Likelihood
+                </strong>
+
+                <span
+                  data-en="Model-based"
+                  data-fa="مبتنی بر مدل"
+                >
+                  Model-based
+                </span>
+
+              </div>
+
+              <div class="mini-card">
+
+                <strong
+                  data-en="Bayesian"
+                  data-fa="Bayesian"
+                >
+                  Bayesian
+                </strong>
+
+                <span
+                  data-en="Posterior inference"
+                  data-fa="استنباط Posterior"
+                >
+                  Posterior inference
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- STEP 5 -->
+          <article class="workflow-card">
+
+            <div class="workflow-card-top">
+
+              <span class="process-number">05</span>
+
+              <span
+                class="workflow-tag"
+                data-en="Support"
+                data-fa="ارزیابی حمایت"
+              >
+                Support
+              </span>
+
+            </div>
+
+            <h3
+              data-en="Evaluate support and uncertainty"
+              data-fa="حمایت و عدم‌قطعیت را ارزیابی کن"
+            >
+              Evaluate support and uncertainty
+            </h3>
+
+            <p
+              data-en="Use an appropriate support procedure and report exactly what the reported value represents."
+              data-fa="از روش مناسب ارزیابی حمایت استفاده کن و دقیقاً مشخص کن مقدار گزارش‌شده چه چیزی را نشان می‌دهد."
+            >
+              Use an appropriate support procedure and report exactly what
+              the reported value represents.
+            </p>
+
+            <div class="evidence-grid compact-grid">
+
+              <div class="generic-card">
+
+                <span
+                  class="status-badge"
+                  data-en="Bootstrap"
+                  data-fa="Bootstrap"
+                >
+                  Bootstrap
+                </span>
+
+                <p
+                  data-en="Assesses how consistently a grouping is recovered under the chosen resampling procedure."
+                  data-fa="بررسی می‌کند یک گروه‌بندی با روش بازنمونه‌گیری انتخاب‌شده تا چه حد به‌طور پایدار بازیابی می‌شود."
+                >
+                  Assesses how consistently a grouping is recovered under
+                  the chosen resampling procedure.
+                </p>
+
+              </div>
+
+              <div class="generic-card">
+
+                <span
+                  class="status-badge"
+                  data-en="Posterior probability"
+                  data-fa="Posterior probability"
+                >
+                  Posterior probability
+                </span>
+
+                <p
+                  data-en="A model-based posterior quantity. It has a different interpretation from bootstrap support."
+                  data-fa="یک کمیت Posterior مبتنی بر مدل است و تفسیر آن با Bootstrap Support متفاوت است."
+                >
+                  A model-based posterior quantity. It has a different
+                  interpretation from bootstrap support.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- STEP 6 -->
+          <article class="workflow-card">
+
+            <div class="workflow-card-top">
+
+              <span class="process-number">06</span>
+
+              <span
+                class="workflow-tag"
+                data-en="Interpretation"
+                data-fa="تفسیر"
+              >
+                Interpretation
+              </span>
+
+            </div>
+
+            <h3
+              data-en="Interpret the tree in biological context"
+              data-fa="درخت را در زمینه زیستی تفسیر کن"
+            >
+              Interpret the tree in biological context
+            </h3>
+
+            <p
+              data-en="Separate what the tree directly shows from the biological explanation you infer from it."
+              data-fa="چیزی را که درخت مستقیماً نشان می‌دهد از توضیح زیستی که از آن استنباط می‌کنی جدا کن."
+            >
+              Separate what the tree directly shows from the biological
+              explanation you infer from it.
+            </p>
+
+            <div class="interpretation-list">
+
+              <div>
+
+                <strong
+                  data-en="Topology"
+                  data-fa="Topology"
+                >
+                  Topology
+                </strong>
+
+                <span
+                  data-en="Which sequences cluster?"
+                  data-fa="کدام توالی‌ها در یک گروه قرار می‌گیرند؟"
+                >
+                  Which sequences cluster?
+                </span>
+
+              </div>
+
+              <div>
+
+                <strong
+                  data-en="Support"
+                  data-fa="Support"
+                >
+                  Support
+                </strong>
+
+                <span
+                  data-en="How stable is the inferred grouping?"
+                  data-fa="گروه‌بندی استنباط‌شده چقدر پایدار است؟"
+                >
+                  How stable is the inferred grouping?
+                </span>
+
+              </div>
+
+              <div>
+
+                <strong
+                  data-en="Branch length"
+                  data-fa="Branch length"
+                >
+                  Branch length
+                </strong>
+
+                <span
+                  data-en="What quantity does it represent?"
+                  data-fa="چه کمیتی را نشان می‌دهد؟"
+                >
+                  What quantity does it represent?
+                </span>
+
+              </div>
+
+              <div>
+
+                <strong
+                  data-en="Rooting"
+                  data-fa="Rooting"
+                >
+                  Rooting
+                </strong>
+
+                <span
+                  data-en="How was evolutionary direction assigned?"
+                  data-fa="جهت تکاملی چگونه تعیین شده است؟"
+                >
+                  How was evolutionary direction assigned?
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         HOW TO READ
+    ========================== -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-label"
+            data-en="HOW TO READ THE TREE"
+            data-fa="چطور درخت را بخوانیم"
+          >
+            HOW TO READ THE TREE
+          </span>
+
+          <h2
+            data-en="Read the topology, branches, root, and support separately."
+            data-fa="Topology، شاخه‌ها، Root و Support را جداگانه بخوان."
+          >
+            Read the topology, branches, root, and support separately.
+          </h2>
+
+          <p
+            data-en="These elements answer different questions and should not be treated as interchangeable."
+            data-fa="این اجزا به سؤال‌های متفاوتی پاسخ می‌دهند و نباید با یکدیگر اشتباه گرفته شوند."
+          >
+            These elements answer different questions and should not be
+            treated as interchangeable.
+          </p>
+
+        </div>
+
+
+        <div class="interpretation-grid">
+
+
+          <!-- 01 -->
+          <article class="interpretation-card">
+
+            <div class="interpretation-number">01</div>
+
+            <h3
+              data-en="Topology"
+              data-fa="Topology"
+            >
+              Topology
+            </h3>
+
+            <p
+              data-en="The branching pattern describes the inferred pattern of relatedness among the included taxa or sequences. Rotating branches around a node does not change the topology."
+              data-fa="الگوی شاخه‌زایی الگوی استنباط‌شده روابط میان Taxa یا توالی‌های موجود را نشان می‌دهد. چرخاندن شاخه‌ها حول یک Node معنی توپولوژیک درخت را تغییر نمی‌دهد."
+            >
+              The branching pattern describes the inferred pattern of
+              relatedness among the included taxa or sequences. Rotating
+              branches around a node does not change the topology.
+            </p>
+
+          </article>
+
+
+          <!-- 02 -->
+          <article class="interpretation-card">
+
+            <div class="interpretation-number">02</div>
+
+            <h3
+              data-en="Branch length"
+              data-fa="طول شاخه"
+            >
+              Branch length
+            </h3>
+
+            <p
+              data-en="Branch length usually means estimated genetic change (substitutions per site), not necessarily time."
+              data-fa="طول شاخه معمولاً تغییر ژنتیکی تخمینی (substitution به ازای هر site) است، نه الزاماً زمان."
+            >طول شاخه معمولاً تغییر ژنتیکی تخمینی (substitution به ازای هر site) است، نه الزاماً زمان.</p>
+
+          </article>
+
+
+          <!-- 03 -->
+          <article class="interpretation-card">
+
+            <div class="interpretation-number">03</div>
+
+            <h3
+              data-en="Rooting"
+              data-fa="Rooting"
+            >
+              Rooting
+            </h3>
+
+            <p
+              data-en="Rooting adds direction to an otherwise unrooted topology. Outgroup rooting is a common approach, while midpoint rooting relies on additional assumptions."
+              data-fa="Rooting به یک توپولوژی بدون ریشه جهت می‌دهد. استفاده از Outgroup رایج است، درحالی‌که Midpoint Rooting به فرض‌های اضافی وابسته است."
+            >
+              Rooting adds direction to an otherwise unrooted topology.
+              Outgroup rooting is a common approach, while midpoint rooting
+              relies on additional assumptions.
+            </p>
+
+          </article>
+
+
+          <!-- 04 -->
+          <article class="interpretation-card">
+
+            <div class="interpretation-number">04</div>
+
+            <h3
+              data-en="Support"
+              data-fa="Support"
+            >
+              Support
+            </h3>
+
+            <p
+              data-en="Support values describe how strongly a particular relationship is supported under the selected procedure. Their meaning depends on the support method."
+              data-fa="مقادیر Support نشان می‌دهند یک رابطه مشخص تحت روش ارزیابی انتخاب‌شده تا چه حد حمایت می‌شود. تفسیر آن‌ها به روش Support وابسته است."
+            >
+              Support values describe how strongly a particular relationship
+              is supported under the selected procedure. Their meaning
+              depends on the support method.
+            </p>
+
+          </article>
+
+
+          <!-- 05 -->
+          <article class="interpretation-card">
+
+            <div class="interpretation-number">05</div>
+
+            <h3
+              data-en="MRCA"
+              data-fa="جد مشترک"
+            >
+              MRCA
+            </h3>
+
+            <p
+              data-en="For a rooted tree, the most recent common ancestor helps describe relative patterns of relatedness. This interpretation depends on the quality and rooting of the inferred tree."
+              data-fa="در یک درخت Rooted، جد مشترک اخیر یا MRCA به توصیف الگوهای نسبی خویشاوندی کمک می‌کند. این تفسیر به کیفیت و Rooting درخت وابسته است."
+            >
+              For a rooted tree, the most recent common ancestor helps
+              describe relative patterns of relatedness. This interpretation
+              depends on the quality and rooting of the inferred tree.
+            </p>
+
+          </article>
+
+
+          <!-- 06 -->
+          <article class="interpretation-card">
+
+            <div class="interpretation-number">06</div>
+
+            <h3
+              data-en="Biological meaning"
+              data-fa="معنای زیستی"
+            >
+              Biological meaning
+            </h3>
+
+            <p
+              data-en="A tree can support a relationship hypothesis under specific assumptions, but it does not independently establish every biological explanation."
+              data-fa="یک درخت می‌تواند تحت فرض‌های مشخص از یک فرضیه درباره روابط حمایت کند، اما به‌تنهایی هر توضیح زیستی را اثبات نمی‌کند."
+            >
+              A tree can support a relationship hypothesis under specific
+              assumptions, but it does not independently establish every
+              biological explanation.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         EVIDENCE
+    ========================== -->
+    <section class="section section-soft">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-label"
+            data-en="EVIDENCE CHECK"
+            data-fa="بررسی شواهد"
+          >
+            EVIDENCE CHECK
+          </span>
+
+          <h2
+            data-en="Keep the inference chain visible."
+            data-fa="زنجیره استنباط را شفاف نگه دار."
+          >
+            Keep the inference chain visible.
+          </h2>
+
+          <p
+            data-en="A strong phylogenetic workflow makes it clear which information comes from the sequence records, which result is computationally inferred, and which conclusion is biological interpretation."
+            data-fa="یک Workflow فیلوژنتیک خوب مشخص می‌کند کدام اطلاعات از رکوردهای توالی آمده، کدام نتیجه محاسباتی است و کدام بخش تفسیر زیستی است."
+          >
+            A strong phylogenetic workflow makes it clear which information
+            comes from the sequence records, which result is computationally
+            inferred, and which conclusion is biological interpretation.
+          </p>
+
+        </div>
+
+
+        <div class="evidence-grid">
+
+
+          <article class="evidence-card">
+
+            <span
+              class="evidence-type"
+              data-en="Curated / Database"
+              data-fa="Curated / Database"
+            >
+              Curated / Database
+            </span>
+
+            <h3
+              data-en="Sequence identity and metadata"
+              data-fa="هویت توالی و Metadata"
+            >
+              Sequence identity and metadata
+            </h3>
+
+            <p
+              data-en="Accession records, organism information, annotations, sequence provenance, and other metadata define the input dataset."
+              data-fa="رکوردهای Accession، اطلاعات ارگانیسم، Annotation، منشأ توالی و سایر Metadata مجموعه داده ورودی را مشخص می‌کنند."
+            >
+              Accession records, organism information, annotations,
+              sequence provenance, and other metadata define the input dataset.
+            </p>
+
+          </article>
+
+
+          <article class="evidence-card">
+
+            <span
+              class="evidence-type"
+              data-en="Computational"
+              data-fa="محاسباتی"
+            >
+              Computational
+            </span>
+
+            <h3
+              data-en="Alignment and tree inference"
+              data-fa="هم‌ترازی و استنباط درخت"
+            >
+              Alignment and tree inference
+            </h3>
+
+            <p
+              data-en="The alignment, evolutionary model, inference method, and support procedure determine the computational result."
+              data-fa="هم‌ترازی، مدل تکاملی، روش استنباط و روش ارزیابی حمایت نتیجه محاسباتی را شکل می‌دهند."
+            >
+              The alignment, evolutionary model, inference method,
+              and support procedure determine the computational result.
+            </p>
+
+          </article>
+
+
+          <article class="evidence-card">
+
+            <span
+              class="evidence-type"
+              data-en="Biological interpretation"
+              data-fa="تفسیر زیستی"
+            >
+              Biological interpretation
+            </span>
+
+            <h3
+              data-en="Evolutionary hypothesis"
+              data-fa="فرضیه تکاملی"
+            >
+              Evolutionary hypothesis
+            </h3>
+
+            <p
+              data-en="The biological explanation should be interpreted in light of the dataset, model, support, rooting, taxonomy, and existing biological knowledge."
+              data-fa="توضیح زیستی باید با توجه به Dataset، مدل، Support، Rooting، Taxonomy و دانش زیستی موجود تفسیر شود."
+            >
+              The biological explanation should be interpreted in light of
+              the dataset, model, support, rooting, taxonomy, and existing
+              biological knowledge.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         RESEARCH OUTPUT
+    ========================== -->
+    <section class="section" id="research-output">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-label"
+            data-en="RESEARCH OUTPUT"
+            data-fa="خروجی پژوهش"
+          >
+            RESEARCH OUTPUT
+          </span>
+
+          <h2
+            data-en="Turn the tree into a reproducible research record."
+            data-fa="درخت را به یک Research Record قابل‌ردگیری تبدیل کن."
+          >
+            Turn the tree into a reproducible research record.
+          </h2>
+
+          <p
+            data-en="Do not save only the final tree image. Save the decisions, parameters, sequence set, software, and evidence that produced it."
+            data-fa="فقط تصویر نهایی درخت را ذخیره نکن؛ تصمیم‌ها، پارامترها، مجموعه توالی‌ها، نرم‌افزار و شواهدی را که به آن نتیجه منجر شده‌اند ثبت کن."
+          >
+            Do not save only the final tree image. Save the decisions,
+            parameters, sequence set, software, and evidence that produced it.
+          </p>
+
+        </div>
+
+
+        <div class="research-output">
+
+          <div class="research-output-header">
+
+            <span
+              class="status-badge"
+              data-en="Phylogenetic Analysis Record"
+              data-fa="رکورد تحلیل فیلوژنتیک"
+            >
+              Phylogenetic Analysis Record
+            </span>
+
+            <span
+              class="quality-pill"
+              data-en="Reproducibility"
+              data-fa="Reproducibility"
+            >
+              Reproducibility
+            </span>
+
+          </div>
+
+
+          <div class="output-grid">
+
+            <div class="output-item">
+              <span>01</span>
+              <strong
+                data-en="Research question"
+                data-fa="سؤال پژوهش"
+              >
+                Research question
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>02</span>
+              <strong
+                data-en="Sequence set"
+                data-fa="مجموعه توالی‌ها"
+              >
+                Sequence set
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>03</span>
+              <strong
+                data-en="Accession IDs"
+                data-fa="Accession IDها"
+              >
+                Accession IDs
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>04</span>
+              <strong
+                data-en="Selection criteria"
+                data-fa="معیارهای انتخاب"
+              >
+                Selection criteria
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>05</span>
+              <strong
+                data-en="Alignment method & settings"
+                data-fa="روش و تنظیمات Alignment"
+              >
+                Alignment method & settings
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>06</span>
+              <strong
+                data-en="Trimming / filtering"
+                data-fa="Trimming / Filtering"
+              >
+                Trimming / filtering
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>07</span>
+              <strong
+                data-en="Tree method & model"
+                data-fa="روش و مدل درخت"
+              >
+                Tree method & model
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>08</span>
+              <strong
+                data-en="Support method"
+                data-fa="روش Support"
+              >
+                Support method
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>09</span>
+              <strong
+                data-en="Rooting strategy"
+                data-fa="روش Rooting"
+              >
+                Rooting strategy
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>10</span>
+              <strong
+                data-en="Software & version"
+                data-fa="نرم‌افزار و Version"
+              >
+                Software & version
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>11</span>
+              <strong
+                data-en="Key observation"
+                data-fa="مشاهده کلیدی"
+              >
+                Key observation
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>12</span>
+              <strong
+                data-en="Biological interpretation"
+                data-fa="تفسیر زیستی"
+              >
+                Biological interpretation
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>13</span>
+              <strong
+                data-en="Limitations"
+                data-fa="محدودیت‌ها"
+              >
+                Limitations
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>14</span>
+              <strong
+                data-en="Next question"
+                data-fa="سؤال بعدی"
+              >
+                Next question
+              </strong>
+            </div>
+
+            <div class="output-item">
+              <span>15</span>
+              <strong
+                data-en="References"
+                data-fa="منابع"
+              >
+                References
+              </strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         COMMON MISTAKES
+    ========================== -->
+    <section class="section section-soft">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-label"
+            data-en="COMMON MISTAKES"
+            data-fa="اشتباهات رایج"
+          >
+            COMMON MISTAKES
+          </span>
+
+          <h2
+            data-en="Where phylogenetic analyses commonly go wrong."
+            data-fa="تحلیل‌های فیلوژنتیک معمولاً کجا دچار خطا می‌شوند؟"
+          >
+            Where phylogenetic analyses commonly go wrong.
+          </h2>
+
+          <p
+            data-en="Most interpretation errors happen before or after the tree is built."
+            data-fa="بخش مهمی از خطاهای تفسیری قبل یا بعد از ساخت درخت اتفاق می‌افتند."
+          >
+            Most interpretation errors happen before or after the tree is built.
+          </p>
+
+        </div>
+
+
+        <div class="card-grid">
+
+
+          <!-- 01 -->
+          <article class="generic-card">
+
+            <span class="quality-pill">01</span>
+
+            <h3
+              data-en="Choosing sequences by name alone"
+              data-fa="انتخاب توالی فقط بر اساس نام"
+            >
+              Choosing sequences by name alone
+            </h3>
+
+            <p
+              data-en="Similar names do not guarantee the correct biological comparison. Verify accession, organism, gene/protein identity, and homology."
+              data-fa="نام مشابه تضمین نمی‌کند که مقایسه زیستی درستی انجام می‌دهی. Accession، ارگانیسم، هویت ژن/پروتئین و Homology را بررسی کن."
+            >
+              Similar names do not guarantee the correct biological comparison.
+              Verify accession, organism, gene/protein identity, and homology.
+            </p>
+
+          </article>
+
+
+          <!-- 02 -->
+          <article class="generic-card">
+
+            <span class="quality-pill">02</span>
+
+            <h3
+              data-en="Mixing orthologs and paralogs without a question"
+              data-fa="ترکیب Ortholog و Paralog بدون تعریف سؤال"
+            >
+              Mixing orthologs and paralogs without a question
+            </h3>
+
+            <p
+              data-en="Different homolog relationships can answer different biological questions. Sequence selection should follow the intended comparison."
+              data-fa="روابط مختلف بین Homologها می‌توانند به سؤال‌های متفاوتی پاسخ دهند. انتخاب توالی باید بر اساس سؤال موردنظر انجام شود."
+            >
+              Different homolog relationships can answer different biological
+              questions. Sequence selection should follow the intended comparison.
+            </p>
+
+          </article>
+
+
+          <!-- 03 -->
+          <article class="generic-card">
+
+            <span class="quality-pill">03</span>
+
+            <h3
+              data-en="Ignoring alignment quality"
+              data-fa="نادیده‌گرفتن کیفیت Alignment"
+            >
+              Ignoring alignment quality
+            </h3>
+
+            <p
+              data-en="Poorly aligned or biologically non-comparable regions can affect downstream tree inference."
+              data-fa="نواحی بدهم‌تراز یا از نظر زیستی غیرقابل‌مقایسه می‌توانند بر استنباط درخت اثر بگذارند."
+            >
+              Poorly aligned or biologically non-comparable regions can
+              affect downstream tree inference.
+            </p>
+
+          </article>
+
+
+          <!-- 04 -->
+          <article class="generic-card">
+
+            <span class="quality-pill">04</span>
+
+            <h3
+              data-en="Treating bootstrap as probability"
+              data-fa="درنظرگرفتن Bootstrap به‌عنوان Probability"
+            >
+              Treating bootstrap as probability
+            </h3>
+
+            <p
+              data-en="Bootstrap support reflects stability under a chosen resampling procedure. It is not simply the probability that a clade is true."
+              data-fa="Bootstrap Support پایداری تحت یک روش بازنمونه‌گیری مشخص را نشان می‌دهد؛ صرفاً احتمال درست‌بودن یک Clade نیست."
+            >
+              Bootstrap support reflects stability under a chosen resampling
+              procedure. It is not simply the probability that a clade is true.
+            </p>
+
+          </article>
+
+
+          <!-- 05 -->
+          <article class="generic-card">
+
+            <span class="quality-pill">05</span>
+
+            <h3
+              data-en="Confusing branch length with time"
+              data-fa="اشتباه گرفتن Branch Length با زمان"
+            >
+              Confusing branch length with time
+            </h3>
+
+            <p
+              data-en="Branch lengths often represent estimated genetic change, such as substitutions per site, rather than elapsed evolutionary time."
+              data-fa="طول شاخه‌ها اغلب تغییر ژنتیکی تخمینی، مانند Substitution به ازای هر Site، را نشان می‌دهند نه زمان سپری‌شده تکاملی."
+            >
+              Branch lengths often represent estimated genetic change,
+              such as substitutions per site, rather than elapsed
+              evolutionary time.
+            </p>
+
+          </article>
+
+
+          <!-- 06 -->
+          <article class="generic-card">
+
+            <span class="quality-pill">06</span>
+
+            <h3
+              data-en="Ignoring rooting"
+              data-fa="نادیده‌گرفتن Rooting"
+            >
+              Ignoring rooting
+            </h3>
+
+            <p
+              data-en="An unrooted topology does not automatically provide a direction of evolutionary history. Rooting should be justified."
+              data-fa="یک توپولوژی بدون ریشه به‌طور خودکار جهت تاریخ تکاملی را نشان نمی‌دهد. Rooting باید توجیه شود."
+            >
+              An unrooted topology does not automatically provide a
+              direction of evolutionary history. Rooting should be justified.
+            </p>
+
+          </article>
+
+
+          <!-- 07 -->
+          <article class="generic-card">
+
+            <span class="quality-pill">07</span>
+
+            <h3
+              data-en="Overinterpreting support values"
+              data-fa="تفسیر بیش‌ازحد مقادیر Support"
+            >
+              Overinterpreting support values
+            </h3>
+
+            <p
+              data-en="Support values must be interpreted according to the method that generated them. Bootstrap and posterior probability are not interchangeable."
+              data-fa="مقادیر Support باید بر اساس روش تولیدشان تفسیر شوند. Bootstrap و Posterior Probability قابل‌جایگزینی با یکدیگر نیستند."
+            >
+              Support values must be interpreted according to the method
+              that generated them. Bootstrap and posterior probability
+              are not interchangeable.
+            </p>
+
+          </article>
+
+
+          <!-- 08 -->
+          <article class="generic-card">
+
+            <span class="quality-pill">08</span>
+
+            <h3
+              data-en="Overinterpreting the tree"
+              data-fa="تفسیر بیش‌ازحد درخت"
+            >
+              Overinterpreting the tree
+            </h3>
+
+            <p
+              data-en="A tree supports specific relationship hypotheses under specific assumptions. It does not independently establish every biological explanation."
+              data-fa="درخت تحت فرض‌های مشخص از برخی فرضیه‌های رابطه‌ای حمایت می‌کند؛ اما به‌تنهایی هر توضیح زیستی را اثبات نمی‌کند."
+            >
+              A tree supports specific relationship hypotheses under
+              specific assumptions. It does not independently establish
+              every biological explanation.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         FUTURE WORKSPACE
+    ========================== -->
+    <section class="section">
+      <div class="container">
+
+        <div class="generic-card workspace-card">
+
+          <div class="workspace-card-content">
+
+            <span
+              class="section-label"
+              data-en="FUTURE WORKSPACE"
+              data-fa="Workspace آینده"
+            >
+              FUTURE WORKSPACE
+            </span>
+
+            <h2
+              data-en="Keep your phylogenetic analyses connected."
+              data-fa="تحلیل‌های فیلوژنتیکت را به‌هم متصل نگه دار."
+            >
+              Keep your phylogenetic analyses connected.
+            </h2>
+
+            <p
+              data-en="Soon, Workspace can link sequences, alignments, trees, support values and sources in one Research Record."
+              data-fa="در آینده Workspace می‌تواند توالی‌ها، alignment، درخت‌ها، مقادیر support و منابع را در یک Research Record وصل کند."
+            >در آینده Workspace می‌تواند توالی‌ها، alignment، درخت‌ها، مقادیر support و منابع را در یک Research Record وصل کند.</p>
+
+            <span
+              class="status-badge"
+              data-en="Future capability"
+              data-fa="قابلیت آینده"
+            >
+              Future capability
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         NEXT PATHS
+    ========================== -->
+    <section class="section section-soft">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-label"
+            data-en="CONTINUE RESEARCH"
+            data-fa="ادامه مسیر پژوهش"
+          >
+            CONTINUE RESEARCH
+          </span>
+
+          <h2
+            data-en="Choose the next question."
+            data-fa="سؤال بعدی را انتخاب کن."
+          >
+            Choose the next question.
+          </h2>
+
+          <p
+            data-en="Phylogenetic analysis is one part of a larger evidence workflow."
+            data-fa="تحلیل فیلوژنتیک فقط یکی از بخش‌های یک Workflow بزرگ‌تر برای ساخت شواهد است."
+          >
+            Phylogenetic analysis is one part of a larger evidence workflow.
+          </p>
+
+        </div>
+
+
+        <div class="card-grid">
+
+
+          <a
+            href="sequence.html"
+            class="workflow-card card-link"
+          >
+
+            <span
+              class="workflow-tag"
+              data-en="Sequence"
+              data-fa="توالی"
+            >
+              Sequence
+            </span>
+
+            <h3
+              data-en="Analyze sequence evidence"
+              data-fa="شواهد توالی را تحلیل کن"
+            >
+              Analyze sequence evidence
+            </h3>
+
+            <p
+              data-en="Move from sequence similarity and conservation toward functional clues."
+              data-fa="از شباهت و Conservation توالی به سمت سرنخ‌های عملکردی حرکت کن."
+            >
+              Move from sequence similarity and conservation toward
+              functional clues.
+            </p>
+
+          </a>
+
+
+          <a
+            href="unknown-sequence.html"
+            class="workflow-card card-link"
+          >
+
+            <span
+              class="workflow-tag"
+              data-en="Unknown protein"
+              data-fa="پروتئین ناشناخته"
+            >
+              Unknown protein
+            </span>
+
+            <h3
+              data-en="Investigate an unknown sequence"
+              data-fa="یک توالی ناشناخته را بررسی کن"
+            >
+              Investigate an unknown sequence
+            </h3>
+
+            <p
+              data-en="Combine BLAST, domain evidence, structure prediction, and biological context."
+              data-fa="BLAST، شواهد Domain، پیش‌بینی ساختار و زمینه زیستی را ترکیب کن."
+            >
+              Combine BLAST, domain evidence, structure prediction,
+              and biological context.
+            </p>
+
+          </a>
+
+
+          <a
+            href="workflows.html"
+            class="workflow-card card-link"
+          >
+
+            <span
+              class="workflow-tag"
+              data-en="All workflows"
+              data-fa="همه Workflowها"
+            >
+              All workflows
+            </span>
+
+            <h3
+              data-en="Explore the full research workflow library"
+              data-fa="کل کتابخانه Workflowهای پژوهشی را ببین"
+            >
+              Explore the full research workflow library
+            </h3>
+
+            <p
+              data-en="Find the workflow that matches your current research question."
+              data-fa="Workflow متناسب با سؤال پژوهشی فعلی‌ات را پیدا کن."
+            >
+              Find the workflow that matches your current research question.
+            </p>
+
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+    <section class="section">
+      <div class="container">
+
+        <div class="cta-card">
+
+          <div>
+
+            <span
+              class="section-label"
+              data-en="GENEBITE RESEARCH"
+              data-fa="پژوهش با GeneBite"
+            >
+              GENEBITE RESEARCH
+            </span>
+
+            <h2
+              data-en="Don't just build a tree. Build an evidence trail."
+              data-fa="فقط یک درخت نساز؛ یک زنجیره شواهد بساز."
+            >
+              Don't just build a tree. Build an evidence trail.
+            </h2>
+
+            <p
+              data-en="The goal is not simply to obtain a tree. The goal is to understand how sequence choice, alignment, assumptions, methods, support, and biological context shape the conclusion."
+              data-fa="هدف فقط به‌دست‌آوردن یک درخت نیست؛ هدف این است که بفهمی انتخاب توالی، Alignment، فرض‌ها، روش‌ها، Support و زمینه زیستی چگونه بر نتیجه اثر می‌گذارند."
+            >
+              The goal is not simply to obtain a tree. The goal is to
+              understand how sequence choice, alignment, assumptions,
+              methods, support, and biological context shape the conclusion.
+            </p>
+
+          </div>
+
+
+          <div class="cta-actions">
+
+            <a
+              href="research-decision.html"
+              class="btn btn-primary"
+              data-en="Start with a question"
+              data-fa="با یک سؤال شروع کن"
+            >
+              Start with a question
+            </a>
+
+            <a
+              href="research-outputs.html"
+              class="btn btn-secondary"
+              data-en="Explore research outputs"
+              data-fa="خروجی‌های پژوهش را ببین"
+            >
+              Explore research outputs
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+</html>

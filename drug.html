@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-title-en="Drug Research | GeneBite" data-title-fa="تحقیق روی دارو | GeneBite">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Drug research workflow: PubChem, ChEMBL, targets and structure, using Imatinib as an example.">
+  <title>تحقیق روی دارو | GeneBite</title>
+  <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" class="active" aria-current="page" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-glow"></div>
+      <div class="container">
+        <div class="page-hero-content">
+          <div class="page-hero-label" data-en="DRUG RESEARCH" data-fa="تحقیق روی دارو">تحقیق روی دارو</div>
+          <h1 class="page-hero-title" data-en="From a drug name to a target-level hypothesis." data-fa="از نام یک دارو تا فرضیه‌ای در سطح Target.">از نام یک دارو تا فرضیه‌ای در سطح Target.</h1>
+          <p class="page-hero-text" data-en="A drug name is only the start. Confirm the compound, find its targets, link them to a structure — using Imatinib." data-fa="نام دارو فقط شروع است. ترکیب را تأیید کن، targetها را بشناس و به ساختار وصل کن — با مثال Imatinib.">نام دارو فقط شروع است. ترکیب را تأیید کن، targetها را بشناس و به ساختار وصل کن — با مثال Imatinib.</p>
+          <div class="page-hero-actions">
+            <a class="btn btn-primary" href="#workflow" data-en="Start the workflow" data-fa="شروع Workflow">شروع Workflow</a>
+            <a class="btn btn-secondary" href="research-decision.html" data-en="Choose another workflow" data-fa="انتخاب Workflow دیگر">انتخاب Workflow دیگر</a>
+          </div>
+        </div>
+        <div class="workflow-flow">
+          <div class="flow-container">
+          <div class="flow-node"><span class="flow-node-label">01</span><strong data-en="Drug" data-fa="دارو">دارو</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">02</span><strong data-en="Properties" data-fa="ویژگی‌ها">ویژگی‌ها</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">03</span><strong data-en="Bioactivity" data-fa="Bioactivity">Bioactivity</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">04</span><strong data-en="Targets" data-fa="Targets">Targets</strong></div>
+          <div class="flow-arrow">→</div>
+<div class="flow-node"><span class="flow-node-label">05</span><strong data-en="Structure" data-fa="ساختار">ساختار</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="container narrow">
+        <div class="section-heading">
+        <span class="section-label" data-en="WORKFLOW" data-fa="ورک‌فلو">ورک‌فلو</span>
+        <h2 data-en="Step by step" data-fa="قدم‌به‌قدم">قدم‌به‌قدم</h2>
+        <p data-en="Open each step to see what to do, what to check and what can go wrong." data-fa="هر مرحله را باز کن تا ببینی چه کار باید کرد، چه چیزی را چک کنی و کجا ممکن است اشتباه شود.">هر مرحله را باز کن تا ببینی چه کار باید کرد، چه چیزی را چک کنی و کجا ممکن است اشتباه شود.</p>
+      </div>
+        <div class="workflow-interactive">
+        <button class="workflow-step" type="button" data-step="s1" aria-expanded="true">
+          <span class="workflow-number">01</span>
+          <span class="workflow-step-content">
+            <strong data-en="Identify the compound" data-fa="شناسایی ترکیب">شناسایی ترکیب</strong>
+            <small data-en="PubChem: confirm identity and read basic properties." data-fa="PubChem: هویت را تأیید کن و ویژگی‌های پایه را بخوان.">PubChem: هویت را تأیید کن و ویژگی‌های پایه را بخوان.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">−</span>
+        </button>
+        <div class="workflow-panel" id="panel-s1">
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Confirm identity" data-fa="تأیید هویت">تأیید هویت</h3>
+              <p data-en="Search by name, then match two identifiers (CID, InChIKey, SMILES). Imatinib is CID 5291 in PubChem — verify it there." data-fa="با نام جست‌وجو کن و دو شناسه (CID، InChIKey، SMILES) را تطبیق بده. Imatinib در PubChem برابر CID 5291 است — در خود دیتابیس تأیید کن.">با نام جست‌وجو کن و دو شناسه (CID، InChIKey، SMILES) را تطبیق بده. Imatinib در PubChem برابر CID 5291 است — در خود دیتابیس تأیید کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Read the properties" data-fa="خواندن ویژگی‌ها">خواندن ویژگی‌ها</h3>
+              <p data-en="Check formula, weight, XLogP, H-bond donors/acceptors and TPSA. Lipinski&#x27;s rules are a guide, not a law." data-fa="فرمول، وزن مولکولی، XLogP، donor/acceptor و TPSA را ببین. قوانین Lipinski راهنما هستند، نه قانون.">فرمول، وزن مولکولی، XLogP، donor/acceptor و TPSA را ببین. قوانین Lipinski راهنما هستند، نه قانون.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Watch for" data-fa="مراقب باش">مراقب باش</h3>
+              <p data-en="Salt forms (imatinib vs imatinib mesylate), stereochemistry and look-alike names can send you to the wrong record." data-fa="شکل نمکی (imatinib در برابر imatinib mesylate)، استریوشیمی و نام‌های مشابه می‌توانند تو را به رکورد اشتباه ببرند.">شکل نمکی (imatinib در برابر imatinib mesylate)، استریوشیمی و نام‌های مشابه می‌توانند تو را به رکورد اشتباه ببرند.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s2" aria-expanded="false">
+          <span class="workflow-number">02</span>
+          <span class="workflow-step-content">
+            <strong data-en="Explore bioactivity" data-fa="بررسی Bioactivity">بررسی Bioactivity</strong>
+            <small data-en="ChEMBL: what has this compound been tested against?" data-fa="ChEMBL: این ترکیب روی چه چیزهایی آزمایش شده؟">ChEMBL: این ترکیب روی چه چیزهایی آزمایش شده؟</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s2" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Find the molecule" data-fa="پیدا کردن مولکول">پیدا کردن مولکول</h3>
+              <p data-en="Locate the ChEMBL record (Imatinib is CHEMBL941) and match it with the InChIKey from PubChem." data-fa="رکورد ChEMBL را پیدا کن (Imatinib برابر CHEMBL941 است) و با InChIKey در PubChem تطبیق بده.">رکورد ChEMBL را پیدا کن (Imatinib برابر CHEMBL941 است) و با InChIKey در PubChem تطبیق بده.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Read the assays" data-fa="خواندن Assayها">خواندن Assayها</h3>
+              <p data-en="For each activity note the type (IC50, Ki, Kd), value, unit, assay format (binding, functional, cell-based), target and organism." data-fa="برای هر فعالیت نوع (IC50، Ki، Kd)، مقدار، واحد، فرمت assay (binding، functional، cell-based)، target و ارگانیسم را ثبت کن.">برای هر فعالیت نوع (IC50، Ki، Kd)، مقدار، واحد، فرمت assay (binding، functional، cell-based)، target و ارگانیسم را ثبت کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Filter for quality" data-fa="فیلتر کیفیت">فیلتر کیفیت</h3>
+              <p data-en="Prefer single-protein assays with high confidence scores. Do not mix assay types or units in one comparison." data-fa="assayهای تک‌پروتئینی با confidence score بالا را ترجیح بده. انواع assay یا واحدها را در یک مقایسه مخلوط نکن.">assayهای تک‌پروتئینی با confidence score بالا را ترجیح بده. انواع assay یا واحدها را در یک مقایسه مخلوط نکن.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s3" aria-expanded="false">
+          <span class="workflow-number">03</span>
+          <span class="workflow-step-content">
+            <strong data-en="Understand the targets" data-fa="شناخت Targets">شناخت Targets</strong>
+            <small data-en="Separate primary targets from off-targets." data-fa="Target اصلی را از off-targetها جدا کن.">Target اصلی را از off-targetها جدا کن.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s3" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Primary vs off-target" data-fa="Target اصلی و off-target">Target اصلی و off-target</h3>
+              <p data-en="Imatinib mainly inhibits BCR-ABL, and also acts on KIT and PDGFR. Rank targets by potency and note the assay type." data-fa="Imatinib بیشتر مهارکننده‌ی BCR-ABL است و روی KIT و PDGFR هم اثر دارد. targetها را با potency و نوع assay یادداشت کن.">Imatinib بیشتر مهارکننده‌ی BCR-ABL است و روی KIT و PDGFR هم اثر دارد. targetها را با potency و نوع assay یادداشت کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Target to disease" data-fa="از Target تا بیماری">از Target تا بیماری</h3>
+              <p data-en="Connect targets to clinical use: BCR-ABL–positive chronic myeloid leukemia and KIT-positive GIST." data-fa="Targetها را به کاربرد بالینی وصل کن: لوسمی میلوئید مزمن BCR-ABL مثبت و GIST مثبت از نظر KIT.">Targetها را به کاربرد بالینی وصل کن: لوسمی میلوئید مزمن BCR-ABL مثبت و GIST مثبت از نظر KIT.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Selectivity" data-fa="Selectivity">Selectivity</h3>
+              <p data-en="A compound active on many kinases is not automatically selective. Look for selectivity panels before claiming specificity." data-fa="ترکیبی که روی کینازهای زیادی فعال است لزوماً selective نیست. قبل از ادعای اختصاصی بودن، selectivity panel را ببین.">ترکیبی که روی کینازهای زیادی فعال است لزوماً selective نیست. قبل از ادعای اختصاصی بودن، selectivity panel را ببین.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s4" aria-expanded="false">
+          <span class="workflow-number">04</span>
+          <span class="workflow-step-content">
+            <strong data-en="Connect to structure" data-fa="اتصال به ساختار">اتصال به ساختار</strong>
+            <small data-en="PDB: see how the drug binds its target." data-fa="PDB: ببین دارو چگونه به Target متصل می‌شود.">PDB: ببین دارو چگونه به Target متصل می‌شود.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s4" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Find a complex" data-fa="پیدا کردن کمپلکس">پیدا کردن کمپلکس</h3>
+              <p data-en="Search the PDB for the target together with the ligand — for example Abl kinase bound to imatinib (PDB 1IEP is a classic entry; verify it)." data-fa="در PDB دنبال target همراه با لیگاند بگرد — مثلاً کیناز Abl متصل به imatinib (PDB 1IEP یک ورودی کلاسیک است؛ تأیید کن).">در PDB دنبال target همراه با لیگاند بگرد — مثلاً کیناز Abl متصل به imatinib (PDB 1IEP یک ورودی کلاسیک است؛ تأیید کن).</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Read the binding mode" data-fa="خواندن Binding mode">خواندن Binding mode</h3>
+              <p data-en="Note the binding site, key hydrogen bonds and conformation. Imatinib binds inactive (DFG-out) Abl. Check resolution and ligand density." data-fa="جایگاه اتصال، پیوندهای هیدروژنی و کونفورماسیون را ثبت کن. Imatinib به حالت غیرفعال (DFG-out) Abl متصل می‌شود. رزولوشن و density لیگاند را چک کن.">جایگاه اتصال، پیوندهای هیدروژنی و کونفورماسیون را ثبت کن. Imatinib به حالت غیرفعال (DFG-out) Abl متصل می‌شود. رزولوشن و density لیگاند را چک کن.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Visualise" data-fa="دیدن ساختار">دیدن ساختار</h3>
+              <p data-en="In PyMOL or ChimeraX show the ligand with residues within about 4 Å and label the ones that matter." data-fa="در PyMOL یا ChimeraX لیگاند را با residueهای در فاصله‌ی حدود ۴ آنگستروم نشان بده و residueهای مهم را برچسب بزن.">در PyMOL یا ChimeraX لیگاند را با residueهای در فاصله‌ی حدود ۴ آنگستروم نشان بده و residueهای مهم را برچسب بزن.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="workflow-step" type="button" data-step="s5" aria-expanded="false">
+          <span class="workflow-number">05</span>
+          <span class="workflow-step-content">
+            <strong data-en="Interpret and state limits" data-fa="تفسیر و محدودیت‌ها">تفسیر و محدودیت‌ها</strong>
+            <small data-en="Turn the evidence into a careful conclusion." data-fa="شواهد را به یک نتیجه‌ی محتاطانه تبدیل کن.">شواهد را به یک نتیجه‌ی محتاطانه تبدیل کن.</small>
+          </span>
+          <span class="workflow-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="workflow-panel" id="panel-s5" hidden>
+          <div class="workflow-panel-grid">
+            <article class="workflow-info-card">
+              <h3 data-en="Combine the evidence" data-fa="ترکیب شواهد">ترکیب شواهد</h3>
+              <p data-en="Identity + potency + target + structure gives a hypothesis, for example: imatinib inhibits Abl by stabilising an inactive conformation." data-fa="هویت + potency + target + ساختار یک فرضیه می‌دهد؛ مثلاً: imatinib با تثبیت کونفورماسیون غیرفعال، Abl را مهار می‌کند.">هویت + potency + target + ساختار یک فرضیه می‌دهد؛ مثلاً: imatinib با تثبیت کونفورماسیون غیرفعال، Abl را مهار می‌کند.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="State the limits" data-fa="بیان محدودیت‌ها">بیان محدودیت‌ها</h3>
+              <p data-en="In-vitro potency is not clinical efficacy, and resistance mutations (such as T315I in ABL) can change the picture." data-fa="potency آزمایشگاهی برابر اثربخشی بالینی نیست و جهش‌های مقاومت (مثل T315I در ABL) تصویر را تغییر می‌دهند.">potency آزمایشگاهی برابر اثربخشی بالینی نیست و جهش‌های مقاومت (مثل T315I در ABL) تصویر را تغییر می‌دهند.</p>
+            </article>
+<article class="workflow-info-card">
+              <h3 data-en="Next steps" data-fa="قدم بعدی">قدم بعدی</h3>
+              <p data-en="Check the literature in PubMed and clinical information before drawing conclusions beyond the database records." data-fa="قبل از نتیجه‌گیری فراتر از رکوردهای دیتابیس، ادبیات را در PubMed و اطلاعات بالینی را بررسی کن.">قبل از نتیجه‌گیری فراتر از رکوردهای دیتابیس، ادبیات را در PubMed و اطلاعات بالینی را بررسی کن.</p>
+            </article>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+        <span class="section-label" data-en="COMMON MISTAKES" data-fa="اشتباهات رایج">اشتباهات رایج</span>
+        <h2 data-en="Where results go wrong" data-fa="نتیجه معمولاً کجا خراب می‌شود">نتیجه معمولاً کجا خراب می‌شود</h2>
+        
+      </div>
+        <div class="mistakes-grid">
+          <article class="mistake-card">
+            <h3 data-en="Mixing salts and parent compounds" data-fa="مخلوط کردن نمک و ترکیب اصلی">مخلوط کردن نمک و ترکیب اصلی</h3>
+            <p data-en="Activity recorded for a salt form may be listed under a different record than the parent compound." data-fa="فعالیت ثبت‌شده برای شکل نمکی ممکن است در رکوردی جدا از ترکیب اصلی باشد.">فعالیت ثبت‌شده برای شکل نمکی ممکن است در رکوردی جدا از ترکیب اصلی باشد.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Comparing IC50 across assays" data-fa="مقایسه‌ی IC50 بین assayهای مختلف">مقایسه‌ی IC50 بین assayهای مختلف</h3>
+            <p data-en="Different conditions, substrates and formats make values not directly comparable." data-fa="شرایط، substrate و فرمت متفاوت باعث می‌شود مقادیر مستقیماً قابل مقایسه نباشند.">شرایط، substrate و فرمت متفاوت باعث می‌شود مقادیر مستقیماً قابل مقایسه نباشند.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Structure as proof of efficacy" data-fa="ساختار به‌عنوان اثبات اثربخشی">ساختار به‌عنوان اثبات اثربخشی</h3>
+            <p data-en="A crystal structure shows how a drug can bind, not that it works in patients." data-fa="ساختار کریستالی نشان می‌دهد دارو چگونه می‌تواند متصل شود، نه اینکه در بیمار اثر می‌کند.">ساختار کریستالی نشان می‌دهد دارو چگونه می‌تواند متصل شود، نه اینکه در بیمار اثر می‌کند.</p>
+          </article>
+<article class="mistake-card">
+            <h3 data-en="Trusting one database" data-fa="اعتماد به یک دیتابیس">اعتماد به یک دیتابیس</h3>
+            <p data-en="Cross-check identity and activity across PubChem, ChEMBL and the literature." data-fa="هویت و فعالیت را بین PubChem، ChEMBL و مقالات تطبیق بده.">هویت و فعالیت را بین PubChem، ChEMBL و مقالات تطبیق بده.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-heading">
+        <span class="section-label" data-en="FINAL OUTPUT" data-fa="خروجی نهایی">خروجی نهایی</span>
+        <h2 data-en="A one-page drug dossier" data-fa="پرونده‌ی یک‌صفحه‌ای دارو">پرونده‌ی یک‌صفحه‌ای دارو</h2>
+        
+      </div>
+        <div class="generic-card">
+          <ul class="interpretation-list">
+            <li><span data-en="Identity: name, PubChem CID, ChEMBL ID, InChIKey" data-fa="هویت: نام، PubChem CID، ChEMBL ID، InChIKey">هویت: نام، PubChem CID، ChEMBL ID، InChIKey</span></li>
+<li><span data-en="Key properties and drug-likeness notes" data-fa="ویژگی‌های کلیدی و نکات drug-likeness">ویژگی‌های کلیدی و نکات drug-likeness</span></li>
+<li><span data-en="Top targets with assay type, value and unit" data-fa="Targetهای اصلی همراه با نوع assay، مقدار و واحد">Targetهای اصلی همراه با نوع assay، مقدار و واحد</span></li>
+<li><span data-en="Best structure: PDB ID, resolution, binding mode" data-fa="بهترین ساختار: PDB ID، رزولوشن، Binding mode">بهترین ساختار: PDB ID، رزولوشن، Binding mode</span></li>
+<li><span data-en="Conclusion with explicit limitations" data-fa="نتیجه‌گیری همراه با محدودیت‌های صریح">نتیجه‌گیری همراه با محدودیت‌های صریح</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="cta-card">
+          <h2 data-en="See it applied to a real drug" data-fa="کاربرد آن را روی یک دارو ببین">کاربرد آن را روی یک دارو ببین</h2>
+          <p data-en="Follow the Imatinib case study, or continue into protein analysis for the target." data-fa="کیس Imatinib را دنبال کن یا برای Target وارد تحلیل پروتئین شو.">کیس Imatinib را دنبال کن یا برای Target وارد تحلیل پروتئین شو.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="case-studies.html" data-en="Open case studies" data-fa="مشاهده‌ی Case Studyها">مشاهده‌ی Case Studyها</a>
+            <a class="btn btn-secondary" href="protein.html" data-en="Protein Analysis" data-fa="تحلیل پروتئین">تحلیل پروتئین</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+</html>

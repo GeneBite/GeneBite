@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-title-en="Troubleshooting Library | GeneBite" data-title-fa="کتابخانه‌ی رفع اشکال | GeneBite">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GeneBite troubleshooting library: causes, checks and next steps for common lab and bioinformatics problems.">
+  <title>کتابخانه‌ی رفع اشکال | GeneBite</title>
+  <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" class="active" aria-current="page" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-glow"></div>
+      <div class="container">
+        <div class="page-hero-content">
+          <div class="page-hero-label"  data-en="TROUBLESHOOTING LIBRARY" data-fa="کتابخانه‌ی رفع اشکال">کتابخانه‌ی رفع اشکال</div>
+          <h1 class="page-hero-title"  data-en="Your experiment didn&#x27;t work. Start here, not from scratch." data-fa="آزمایشت جواب نداد؟ از اینجا شروع کن، نه از صفر.">آزمایشت جواب نداد؟ از اینجا شروع کن، نه از صفر.</h1>
+          <p class="page-hero-text"  data-en="Every problem below lists the likely causes, what to actually check, and the next concrete step — organised by technique and by bioinformatics analysis." data-fa="هر مشکل زیر شامل علت‌های محتمل، آنچه واقعاً باید چک کنی و قدم بعدی مشخص است — دسته‌بندی‌شده بر اساس تکنیک و تحلیل بیوانفورماتیک.">هر مشکل زیر شامل علت‌های محتمل، آنچه واقعاً باید چک کنی و قدم بعدی مشخص است — دسته‌بندی‌شده بر اساس تکنیک و تحلیل بیوانفورماتیک.</p>
+          <div class="page-hero-actions">
+            <a class="btn btn-primary" href="search.html" data-en="Search all problems" data-fa="جست‌وجوی همه‌ی مشکلات">جست‌وجوی همه‌ی مشکلات</a>
+            <a class="btn btn-secondary" href="research-decision.html" data-en="Use the Research Finder instead" data-fa="به‌جای آن از Research Finder استفاده کن">به‌جای آن از Research Finder استفاده کن</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div id="troubleshootingApp">
+          <div id="tsCategoryChips"></div>
+          <div id="tsList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container narrow">
+        <div class="cta-card">
+          <h2  data-en="Still stuck?" data-fa="هنوز گیر کردی؟">هنوز گیر کردی؟</h2>
+          <p  data-en="Search by symptom, or let the Research Finder connect your problem to a full workflow." data-fa="بر اساس علامت جست‌وجو کن، یا بگذار Research Finder مشکلت را به یک Workflow کامل وصل کند.">بر اساس علامت جست‌وجو کن، یا بگذار Research Finder مشکلت را به یک Workflow کامل وصل کند.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="search.html" data-en="Problem search" data-fa="جست‌وجوی مشکل">جست‌وجوی مشکل</a>
+            <a class="btn btn-secondary" href="research-decision.html" data-en="Research Finder" data-fa="Research Finder">Research Finder</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+</html>

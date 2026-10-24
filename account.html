@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-title-en="My Account | GeneBite" data-title-fa="حساب کاربری | GeneBite">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GeneBite account: sign up, activate a premium code, and manage your subscription.">
+  <title>حساب کاربری | GeneBite</title>
+  <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-glow"></div>
+      <div class="container">
+        <div class="page-hero-columns">
+        <div class="page-hero-content" style="max-width:640px">
+          <div class="page-hero-label" data-en="ACCOUNT" data-fa="حساب کاربری">حساب کاربری</div>
+          <h1 class="page-hero-title" data-en="One account. Every workflow, template and case study." data-fa="یک حساب. همه‌ی Workflowها، قالب‌ها و مطالعات موردی.">یک حساب. همه‌ی Workflowها، قالب‌ها و مطالعات موردی.</h1>
+          <p class="page-hero-text" data-en="Create a free account to track your progress, or activate a premium code to unlock every case study and the deep-dive content across the site." data-fa="یک حساب رایگان بساز تا پیشرفتت را دنبال کنی، یا یک کد پرمیوم فعال کن تا همه‌ی مطالعات موردی و محتوای عمیق سایت باز شود.">یک حساب رایگان بساز تا پیشرفتت را دنبال کنی، یا یک کد پرمیوم فعال کن تا همه‌ی مطالعات موردی و محتوای عمیق سایت باز شود.</p>
+        </div>
+        <div class="page-hero-art"><svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g stroke="#5B7278" stroke-width="3">
+    <line x1="150" y1="60" x2="90" y2="100"/><line x1="150" y1="60" x2="210" y2="100"/>
+    <line x1="90" y1="100" x2="90" y2="170"/><line x1="210" y1="100" x2="210" y2="170"/>
+    <line x1="90" y1="170" x2="150" y2="210"/><line x1="210" y1="170" x2="150" y2="210"/>
+    <line x1="150" y1="210" x2="150" y2="260"/><line x1="90" y1="100" x2="40" y2="80"/>
+    <line x1="210" y1="100" x2="260" y2="80"/>
+  </g>
+  <g>
+    <circle cx="150" cy="60" r="12" fill="#167C8C"/>
+    <circle cx="90" cy="100" r="10" fill="#55A996"/>
+    <circle cx="210" cy="100" r="10" fill="#55A996"/>
+    <circle cx="90" cy="170" r="10" fill="#F2A65A"/>
+    <circle cx="210" cy="170" r="10" fill="#F2A65A"/>
+    <circle cx="150" cy="210" r="12" fill="#167C8C"/>
+    <circle cx="150" cy="260" r="9" fill="#0F3B44"/>
+    <circle cx="40" cy="80" r="8" fill="#0F3B44"/>
+    <circle cx="260" cy="80" r="8" fill="#0F3B44"/>
+  </g>
+</svg>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+
+        <div class="account-status-card" id="accountStatusCard" hidden>
+          <div class="account-status-row">
+            <div>
+              <strong id="accountStatusName" style="font-size:1.05rem"></strong>
+              <div id="accountStatusEmail" style="color:var(--text-soft);font-size:.85rem"></div>
+            </div>
+            <div id="accountStatusPlan" style="text-align:end"></div>
+          </div>
+        </div>
+
+        <div class="account-panels">
+
+          <div class="account-panel">
+            <h3 data-en="Create / update your account" data-fa="ساخت یا به‌روزرسانی حساب">ساخت یا به‌روزرسانی حساب</h3>
+            <p class="hint" data-en="Stored only in this browser — no password, no server yet. See the note below." data-fa="فقط در همین مرورگر ذخیره می‌شود — بدون رمز عبور، هنوز بدون سرور. توضیح پایین صفحه را بخوان.">Stored only in this browser.</p>
+            <form id="signupForm">
+              <div class="gb-field">
+                <label data-en="Name" data-fa="نام">Name</label>
+                <input type="text" id="suName" required autocomplete="name">
+              </div>
+              <div class="gb-field">
+                <label data-en="Email" data-fa="ایمیل">Email</label>
+                <input type="email" id="suEmail" required autocomplete="email">
+              </div>
+              <button type="submit" class="button button-primary" style="width:100%" data-en="Save account" data-fa="ذخیره‌ی حساب">Save account</button>
+              <div class="gb-form-msg" id="signupMsg"></div>
+            </form>
+          </div>
+
+          <div class="account-panel">
+            <h3 data-en="Activate a premium code" data-fa="فعال‌سازی کد پرمیوم">فعال‌سازی کد پرمیوم</h3>
+            <p class="hint" data-en="Got a code after payment? Enter it here to unlock premium content on this browser." data-fa="بعد از پرداخت کد گرفتی؟ اینجا واردش کن تا محتوای پرمیوم در همین مرورگر باز شود.">Enter your code below.</p>
+            <form id="codeForm">
+              <div class="gb-field">
+                <label data-en="Premium code" data-fa="کد پرمیوم">Premium code</label>
+                <input type="text" id="codeInput" placeholder="GB-XXXX-XXXX-XXXX" autocomplete="off" style="text-transform:uppercase;letter-spacing:.04em">
+              </div>
+              <button type="submit" class="button button-primary" style="width:100%" data-en="Activate" data-fa="فعال‌سازی">Activate</button>
+              <div class="gb-form-msg" id="codeMsg"></div>
+            </form>
+            <button type="button" id="logoutBtn" class="text-link" style="margin-top:14px;background:none;border:none;cursor:pointer;padding:0" data-en="Log out of this browser" data-fa="خروج از این مرورگر">Log out</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <span class="section-label" data-en="PREMIUM" data-fa="پرمیوم">پرمیوم</span>
+        <h2 style="margin:6px 0 8px"><span data-en="Get every case study and the full depth of the site" data-fa="همه‌ی مطالعات موردی و کل عمق سایت را بگیر">همه‌ی مطالعات موردی و کل عمق سایت را بگیر</span></h2>
+        <p style="color:var(--text-soft);margin:0 0 8px;max-width:640px"><span data-en="Pay with Zarinpal, then paste the code you receive into the box above. Codes are issued manually right now — you&#x27;ll get yours within a few hours." data-fa="با زرین‌پال پرداخت کن، بعد کدی که می‌گیری را در باکس بالا وارد کن. کدها فعلاً دستی صادر می‌شوند — ظرف چند ساعت کدت را می‌گیری.">با زرین‌پال پرداخت کن، بعد کدی که می‌گیری را در باکس بالا وارد کن. کدها فعلاً دستی صادر می‌شوند — ظرف چند ساعت کدت را می‌گیری.</span></p>
+
+        <div class="pricing-grid">
+
+          <div class="price-card">
+            <h3 data-en="Test access" data-fa="دسترسی آزمایشی">Test access</h3>
+            <div class="price-amount">۷۹,۰۰۰<small> تومان</small></div>
+            <ul>
+              <li data-en="14 days of premium access" data-fa="۱۴ روز دسترسی پرمیوم">14 days</li>
+              <li data-en="All 16 case studies unlocked" data-fa="هر ۱۶ مطالعه‌ی موردی باز می‌شود">All case studies</li>
+            </ul>
+            <a href="#" class="button button-secondary zarinpal-link" data-plan="test" data-en="Pay with Zarinpal" data-fa="پرداخت با زرین‌پال">Pay with Zarinpal</a>
+          </div>
+
+          <div class="price-card highlight">
+            <span class="price-badge" data-en="MOST POPULAR" data-fa="محبوب‌ترین">MOST POPULAR</span>
+            <h3 data-en="Monthly" data-fa="ماهانه">Monthly</h3>
+            <div class="price-amount">۱۹۹,۰۰۰<small> تومان / ماه</small></div>
+            <ul>
+              <li data-en="Everything, billed monthly" data-fa="همه‌چیز، ماهانه">Everything monthly</li>
+              <li data-en="Cancel any time" data-fa="هر زمان لغو کن">Cancel any time</li>
+            </ul>
+            <a href="#" class="button button-primary zarinpal-link" data-plan="monthly" data-en="Pay with Zarinpal" data-fa="پرداخت با زرین‌پال">Pay with Zarinpal</a>
+          </div>
+
+          <div class="price-card">
+            <h3 data-en="Yearly" data-fa="سالانه">Yearly</h3>
+            <div class="price-amount">۱,۴۹۰,۰۰۰<small> تومان / سال</small></div>
+            <ul>
+              <li data-en="About 4 months free vs. monthly" data-fa="حدود ۴ ماه رایگان نسبت به ماهانه">About 4 months free</li>
+              <li data-en="Best for a full research project" data-fa="بهترین برای یک پروژه‌ی کامل پژوهشی">Best value</li>
+            </ul>
+            <a href="#" class="button button-secondary zarinpal-link" data-plan="yearly" data-en="Pay with Zarinpal" data-fa="پرداخت با زرین‌پال">Pay with Zarinpal</a>
+          </div>
+
+        </div>
+
+        <p style="font-size:.78rem;color:var(--text-muted);max-width:640px"><span data-en="Note for the site owner: replace the # links above with your real Zarinpal payment links (zarinpal.com → quick payment link), one per plan." data-fa="یادداشت برای مالک سایت: لینک‌های # بالا را با لینک‌های واقعی پرداخت زرین‌پال خودت (زرین‌پال ← لینک پرداخت سریع) جایگزین کن، یکی برای هر پلن.">یادداشت برای مالک سایت: لینک‌های # بالا را با لینک‌های واقعی پرداخت زرین‌پال خودت (زرین‌پال ← لینک پرداخت سریع) جایگزین کن، یکی برای هر پلن.</span></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <h2 data-en="Honest note about security" data-fa="یادداشت صادقانه درباره‌ی امنیت">یادداشت صادقانه درباره‌ی امنیت</h2>
+        <p style="color:var(--text-soft)"><span data-en="The site is static, so the premium lock runs in your browser. It is enough to start, but a technical user could bypass it. A server-verified login will come as the site grows." data-fa="این سایت فعلاً static است و قفل پرمیوم داخل مرورگر کار می‌کند. برای شروع کافی است، ولی کاربر فنی می‌تواند دورش بزند. با رشد سایت، ورود واقعی با سرور می‌آید.">این سایت فعلاً static است و قفل پرمیوم داخل مرورگر کار می‌کند. برای شروع کافی است، ولی کاربر فنی می‌تواند دورش بزند. با رشد سایت، ورود واقعی با سرور می‌آید.</span></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+</html>

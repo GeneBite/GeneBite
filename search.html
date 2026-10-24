@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search | GeneBite</title>
+
+      <script>try{var l=localStorage.getItem("genebite-language")==="en"?"en":"fa";document.documentElement.lang=l;document.documentElement.dir=l==="fa"?"rtl":"ltr"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="kb.js" defer></script>
+  <script src="cases.js" defer></script>
+  <script src="premium-codes.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo" aria-label="GeneBite Home">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GeneBite</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="research-outputs.html" data-en="Templates" data-fa="قالب‌ها">Templates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="nav-search" aria-label="جست‌وجو">⌕</a>
+        <span id="accountNavSlot" class="account-nav-slot"></span>
+        <button class="language-switcher" id="languageSwitcher" type="button" aria-label="Switch language">
+          <span class="language-option active">EN</span>
+          <span class="language-divider">/</span>
+          <span class="language-option">FA</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="page-hero-glow"></div>
+
+        <div class="container page-hero-content">
+
+            <span class="page-hero-label"
+                  data-en="SEARCH GENE BITE"
+                  data-fa="جستجو در GENEBITE">
+                SEARCH GENE BITE
+            </span>
+
+            <h1 data-en="Find the workflow, tool, or research resource you need."
+                data-fa="Workflow، ابزار یا منبع پژوهشی موردنیازت را پیدا کن.">
+                Find the workflow, tool, or research resource you need.
+            </h1>
+
+            <p data-en="Search across GeneBite's practical research workflows, case studies, tools, and research skills."
+               data-fa="در Workflowها، مطالعات موردی، ابزارها و مهارت‌های پژوهشی کاربردی GeneBite جستجو کن.">
+                Search across GeneBite's practical research workflows, case studies,
+                tools, and research skills.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- SEARCH -->
+    <section class="section">
+        <div class="container">
+
+            <div class="search-panel">
+
+                <div class="search-input-wrapper">
+
+                    <input
+                        type="search"
+                        id="globalSearch"
+                        class="search-input"
+                        data-placeholder-en="Try: protein, BLAST, drug, PCR, statistics, paper..."
+                        data-placeholder-fa="مثلاً: protein، BLAST، drug، PCR، statistics، paper..."
+                        placeholder="Try: protein, BLAST, drug, PCR, statistics, paper..."
+                        aria-label="Search GeneBite">
+
+                    <button id="searchButton"
+                            class="primary-button"
+                            type="button"
+                            data-en="Search"
+                            data-fa="جستجو">
+                        Search
+                    </button>
+
+                </div>
+
+
+                <div class="search-filters">
+
+                    <button class="search-filter active"
+                            type="button"
+                            data-filter="all"
+                            data-en="All"
+                            data-fa="همه">
+                        All
+                    </button>
+
+                    <button class="search-filter"
+                            type="button"
+                            data-filter="workflow"
+                            data-en="Workflows"
+                            data-fa="Workflowها">
+                        Workflows
+                    </button>
+
+                    <button class="search-filter"
+                            type="button"
+                            data-filter="case-study"
+                            data-en="Case Studies"
+                            data-fa="مطالعات موردی">
+                        Case Studies
+                    </button>
+
+                    <button class="search-filter"
+                            type="button"
+                            data-filter="resource"
+                            data-en="Tools & Resources"
+                            data-fa="ابزارها و منابع">
+                        Tools & Resources
+                    </button>
+
+                    <button class="search-filter"
+                            type="button"
+                            data-filter="research-skill"
+                            data-en="Research Skills"
+                            data-fa="مهارت‌های پژوهشی">
+                        Research Skills
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="search-meta">
+
+                <span id="searchResultCount"
+                      data-en="Showing all GeneBite resources"
+                      data-fa="نمایش همه منابع GeneBite">
+                    Showing all GeneBite resources
+                </span>
+
+            </div>
+
+
+            <!-- RESULTS -->
+            <div class="search-results-grid" id="searchResults">
+
+
+                <!-- WORKFLOWS -->
+
+                <article class="search-result-card"
+                         data-category="workflow protein structure"
+                         data-search-text="protein analysis protein structure uniprot pdb vmd pymol sequence structure function protein">
+
+                    <span class="result-type"
+                          data-en="WORKFLOW · PROTEIN & STRUCTURE"
+                          data-fa="WORKFLOW · پروتئین و ساختار">
+                        WORKFLOW · PROTEIN & STRUCTURE
+                    </span>
+
+                    <h2 data-en="Protein Analysis"
+                        data-fa="تحلیل پروتئین">
+                        Protein Analysis
+                    </h2>
+
+                    <p data-en="Identify a protein, inspect its sequence and function, find suitable structures, visualize them, and build an evidence-based interpretation."
+                       data-fa="پروتئین را شناسایی کن، توالی و عملکردش را بررسی کن، ساختار مناسب پیدا کن، آن را visualize کن و یک تفسیر مبتنی بر شواهد بساز.">
+                        Identify a protein, inspect its sequence and function,
+                        find suitable structures, visualize them, and build
+                        an evidence-based interpretation.
+                    </p>
+
+                    <div class="result-tags">
+                        <span>UniProt</span>
+                        <span>PDB</span>
+                        <span>VMD</span>
+                        <span>PyMOL</span>
+                    </div>
+
+                    <a href="protein.html"
+                       class="text-link"
+                       data-en="Open workflow →"
+                       data-fa="مشاهده Workflow →">
+                        Open workflow →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="workflow sequence bioinformatics"
+                         data-search-text="sequence analysis bioinformatics fasta blast blastp blastn multiple sequence alignment msa clustal mafft motifs domains interpro pfam">
+
+                    <span class="result-type"
+                          data-en="WORKFLOW · SEQUENCE & BIOINFORMATICS"
+                          data-fa="WORKFLOW · توالی و بیوانفورماتیک">
+                        WORKFLOW · SEQUENCE & BIOINFORMATICS
+                    </span>
+
+                    <h2 data-en="Sequence Analysis"
+                        data-fa="تحلیل توالی">
+                        Sequence Analysis
+                    </h2>
+
+                    <p data-en="Move from a raw sequence to similarity, alignment, conserved regions, motifs, domains, and biological interpretation."
+                       data-fa="از یک توالی خام به Similarity، Alignment، نواحی محافظت‌شده، Motifها، Domainها و تفسیر زیستی برس.">
+                        Move from a raw sequence to similarity, alignment,
+                        conserved regions, motifs, domains, and biological interpretation.
+                    </p>
+
+                    <div class="result-tags">
+                        <span>BLAST</span>
+                        <span>MSA</span>
+                        <span>InterPro</span>
+                        <span>Pfam</span>
+                    </div>
+
+                    <a href="sequence.html"
+                       class="text-link"
+                       data-en="Open workflow →"
+                       data-fa="مشاهده Workflow →">
+                        Open workflow →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="workflow drug"
+                         data-search-text="drug research drug discovery imatinib gleevec pubchem chembl drug target bioactivity chemical structure molecular properties">
+
+                    <span class="result-type"
+                          data-en="WORKFLOW · DRUG DISCOVERY"
+                          data-fa="WORKFLOW · کشف و تحقیق دارو">
+                        WORKFLOW · DRUG DISCOVERY
+                    </span>
+
+                    <h2 data-en="Drug Research"
+                        data-fa="تحقیق روی دارو">
+                        Drug Research
+                    </h2>
+
+                    <p data-en="Investigate a drug from chemical identity and bioactivity to target, protein structure, evidence, and interpretation."
+                       data-fa="یک دارو را از هویت شیمیایی و Bioactivity تا Target، ساختار پروتئین، شواهد و تفسیر بررسی کن.">
+                        Investigate a drug from chemical identity and bioactivity
+                        to target, protein structure, evidence, and interpretation.
+                    </p>
+
+                    <div class="result-tags">
+                        <span>PubChem</span>
+                        <span>ChEMBL</span>
+                        <span>Target</span>
+                        <span>Imatinib</span>
+                    </div>
+
+                    <a href="drug.html"
+                       class="text-link"
+                       data-en="Open workflow →"
+                       data-fa="مشاهده Workflow →">
+                        Open workflow →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="workflow molecular-biology"
+                         data-search-text="molecular biology pcr qpcr rt-pcr gel electrophoresis western blot elisa immunofluorescence flow cytometry crispr cloning cell culture">
+
+                    <span class="result-type"
+                          data-en="WORKFLOW · MOLECULAR BIOLOGY"
+                          data-fa="WORKFLOW · زیست‌شناسی مولکولی">
+                        WORKFLOW · MOLECULAR BIOLOGY
+                    </span>
+
+                    <h2 data-en="Molecular Biology"
+                        data-fa="زیست‌شناسی مولکولی">
+                        Molecular Biology
+                    </h2>
+
+                    <p data-en="Choose and interpret molecular biology techniques through the biological question, controls, replicates, and evidence."
+                       data-fa="تکنیک‌های زیست‌شناسی مولکولی را بر اساس سؤال زیستی، کنترل‌ها، تکرارها و شواهد انتخاب و تفسیر کن.">
+                        Choose and interpret molecular biology techniques
+                        through the biological question, controls, replicates, and evidence.
+                    </p>
+
+                    <div class="result-tags">
+                        <span>PCR</span>
+                        <span>Western Blot</span>
+                        <span>ELISA</span>
+                        <span>CRISPR</span>
+                    </div>
+
+                    <a href="molecular-biology.html"
+                       class="text-link"
+                       data-en="Explore category →"
+                       data-fa="مشاهده دسته‌بندی →">
+                        Explore category →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="workflow data-analysis"
+                         data-search-text="data analysis statistics t test anova correlation regression p value confidence interval effect size graphpad prism r python visualization pca volcano plot">
+
+                    <span class="result-type"
+                          data-en="WORKFLOW · DATA ANALYSIS"
+                          data-fa="WORKFLOW · تحلیل داده">
+                        WORKFLOW · DATA ANALYSIS
+                    </span>
+
+                    <h2 data-en="Data Analysis & Statistics"
+                        data-fa="تحلیل داده و آمار">
+                        Data Analysis & Statistics
+                    </h2>
+
+                    <p data-en="Start with the experimental question, choose an appropriate analysis, visualize the data, and interpret statistical evidence."
+                       data-fa="از سؤال آزمایش شروع کن، تحلیل مناسب را انتخاب کن، داده را visualize کن و شواهد آماری را تفسیر کن.">
+                        Start with the experimental question, choose an appropriate
+                        analysis, visualize the data, and interpret statistical evidence.
+                    </p>
+
+                    <div class="result-tags">
+                        <span>Statistics</span>
+                        <span>GraphPad</span>
+                        <span>R</span>
+                        <span>Python</span>
+                    </div>
+
+                    <a href="data-analysis.html"
+                       class="text-link"
+                       data-en="Explore category →"
+                       data-fa="مشاهده دسته‌بندی →">
+                        Explore category →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="workflow experimental-design"
+                         data-search-text="experimental design controls replicates biological technical randomization blinding sample size variables confounders rigor reproducibility">
+
+                    <span class="result-type"
+                          data-en="WORKFLOW · EXPERIMENTAL DESIGN"
+                          data-fa="WORKFLOW · طراحی آزمایش">
+                        WORKFLOW · EXPERIMENTAL DESIGN
+                    </span>
+
+                    <h2 data-en="Experimental Design & Research Rigor"
+                        data-fa="طراحی آزمایش و دقت پژوهش">
+                        Experimental Design & Research Rigor
+                    </h2>
+
+                    <p data-en="Build experiments around controls, variables, replicates, sample size, reproducibility, and clear interpretation."
+                       data-fa="آزمایش را بر اساس کنترل‌ها، متغیرها، تکرارها، حجم نمونه، بازتولیدپذیری و تفسیر درست طراحی کن.">
+                        Build experiments around controls, variables, replicates,
+                        sample size, reproducibility, and clear interpretation.
+                    </p>
+
+                    <div class="result-tags">
+                        <span>Controls</span>
+                        <span>Replicates</span>
+                        <span>Rigor</span>
+                    </div>
+
+                    <a href="experimental-design.html"
+                       class="text-link"
+                       data-en="Explore category →"
+                       data-fa="مشاهده دسته‌بندی →">
+                        Explore category →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="workflow research-skills"
+                         data-search-text="research skills literature search pubmed paper reading research gap hypothesis scientific writing figure poster presentation citation">
+
+                    <span class="result-type"
+                          data-en="WORKFLOW · RESEARCH SKILLS"
+                          data-fa="WORKFLOW · مهارت‌های پژوهشی">
+                        WORKFLOW · RESEARCH SKILLS
+                    </span>
+
+                    <h2 data-en="Scientific Literature & Research Skills"
+                        data-fa="ادبیات علمی و مهارت‌های پژوهشی">
+                        Scientific Literature & Research Skills
+                    </h2>
+
+                    <p data-en="Find papers, evaluate evidence, identify research gaps, formulate questions, and communicate scientific findings."
+                       data-fa="مقاله پیدا کن، شواهد را ارزیابی کن، Research Gap را پیدا کن، سؤال پژوهشی بساز و یافته‌ها را علمی ارائه کن.">
+                        Find papers, evaluate evidence, identify research gaps,
+                        formulate questions, and communicate scientific findings.
+                    </p>
+
+                    <div class="result-tags">
+                        <span>PubMed</span>
+                        <span>Literature</span>
+                        <span>Writing</span>
+                    </div>
+
+                    <a href="research-skills.html"
+                       class="text-link"
+                       data-en="Explore category →"
+                       data-fa="مشاهده دسته‌بندی →">
+                        Explore category →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="workflow phylogenetics"
+                         data-search-text="phylogenetics evolution homolog ortholog paralog multiple sequence alignment maximum likelihood neighbor joining bayesian bootstrap tree">
+
+                    <span class="result-type"
+                          data-en="WORKFLOW · PHYLOGENETICS"
+                          data-fa="WORKFLOW · فیلوژنتیک">
+                        WORKFLOW · PHYLOGENETICS
+                    </span>
+
+                    <h2 data-en="Evolution & Phylogenetics"
+                        data-fa="تکامل و فیلوژنتیک">
+                        Evolution & Phylogenetics
+                    </h2>
+
+                    <p data-en="Compare sequences, build alignments and phylogenetic trees, evaluate support, and interpret evolutionary relationships."
+                       data-fa="توالی‌ها را مقایسه کن، Alignment و Tree بساز، Support را بررسی و روابط تکاملی را تفسیر کن.">
+                        Compare sequences, build alignments and phylogenetic trees,
+                        evaluate support, and interpret evolutionary relationships.
+                    </p>
+
+                    <div class="result-tags">
+                        <span>MSA</span>
+                        <span>Tree</span>
+                        <span>Bootstrap</span>
+                    </div>
+
+                    <a href="phylogenetics.html"
+                       class="text-link"
+                       data-en="Open workflow →"
+                       data-fa="مشاهده Workflow →">
+                        Open workflow →
+                    </a>
+
+                </article>
+
+
+                <!-- CASE STUDIES -->
+
+                <article class="search-result-card"
+                         data-category="case-study protein structure"
+                         data-search-text="gfp green fluorescent protein protein structure 1ema pdb chromophore">
+
+                    <span class="result-type"
+                          data-en="CASE STUDY · PROTEIN"
+                          data-fa="مطالعه موردی · پروتئین">
+                        CASE STUDY · PROTEIN
+                    </span>
+
+                    <h2 data-en="Exploring GFP Structure"
+                        data-fa="بررسی ساختار GFP">
+                        Exploring GFP Structure
+                    </h2>
+
+                    <p data-en="A practical protein-structure example using GFP, PDB 1EMA, and molecular visualization."
+                       data-fa="یک مثال کاربردی از تحلیل ساختار پروتئین با GFP، ساختار PDB 1EMA و visualization مولکولی.">
+                        A practical protein-structure example using GFP,
+                        PDB 1EMA, and molecular visualization.
+                    </p>
+
+                    <a href="protein.html"
+                       class="text-link"
+                       data-en="View workflow →"
+                       data-fa="مشاهده Workflow →">
+                        View workflow →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="case-study drug"
+                         data-search-text="imatinib gleevec drug research bcr abl abl1 pubchem chembl target">
+
+                    <span class="result-type"
+                          data-en="CASE STUDY · DRUG"
+                          data-fa="مطالعه موردی · دارو">
+                        CASE STUDY · DRUG
+                    </span>
+
+                    <h2 data-en="Investigating Imatinib"
+                        data-fa="بررسی Imatinib">
+                        Investigating Imatinib
+                    </h2>
+
+                    <p data-en="Follow a drug-research workflow around Imatinib, from chemical identity and bioactivity toward target-focused analysis."
+                       data-fa="مسیر تحقیق روی Imatinib را از هویت شیمیایی و Bioactivity تا تحلیل Target محور دنبال کن.">
+                        Follow a drug-research workflow around Imatinib,
+                        from chemical identity and bioactivity toward target-focused analysis.
+                    </p>
+
+                    <a href="drug.html"
+                       class="text-link"
+                       data-en="View case →"
+                       data-fa="مشاهده Case →">
+                        View case →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="case-study sequence"
+                         data-search-text="unknown sequence protein function sequence analysis blast annotation">
+
+                    <span class="result-type"
+                          data-en="CASE STUDY · SEQUENCE"
+                          data-fa="مطالعه موردی · توالی">
+                        CASE STUDY · SEQUENCE
+                    </span>
+
+                    <h2 data-en="From Sequence to Protein Function"
+                        data-fa="از توالی تا عملکرد پروتئین">
+                        From Sequence to Protein Function
+                    </h2>
+
+                    <p data-en="Explore how sequence similarity, domains, motifs, and structural evidence can support a function hypothesis."
+                       data-fa="ببین چگونه Similarity، Domainها، Motifها و شواهد ساختاری می‌توانند از یک فرضیه عملکردی پشتیبانی کنند.">
+                        Explore how sequence similarity, domains, motifs,
+                        and structural evidence can support a function hypothesis.
+                    </p>
+
+                    <a href="sequence.html"
+                       class="text-link"
+                       data-en="View workflow →"
+                       data-fa="مشاهده Workflow →">
+                        View workflow →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="case-study literature"
+                         data-search-text="scientific paper reading literature methods figures results discussion critical evaluation evidence">
+
+                    <span class="result-type"
+                          data-en="CASE STUDY · LITERATURE"
+                          data-fa="مطالعه موردی · مقاله">
+                        CASE STUDY · LITERATURE
+                    </span>
+
+                    <h2 data-en="Dissecting a Scientific Paper"
+                        data-fa="تحلیل یک مقاله علمی">
+                        Dissecting a Scientific Paper
+                    </h2>
+
+                    <p data-en="A structured way to move from the research question to methods, figures, results, evidence, and limitations."
+                       data-fa="یک روش ساختاریافته برای حرکت از سؤال پژوهش به Methods، Figures، Results، شواهد و محدودیت‌ها.">
+                        A structured way to move from the research question
+                        to methods, figures, results, evidence, and limitations.
+                    </p>
+
+                    <a href="paper.html"
+                       class="text-link"
+                       data-en="Open workflow →"
+                       data-fa="مشاهده Workflow →">
+                        Open workflow →
+                    </a>
+
+                </article>
+
+
+                <!-- TOOLS -->
+
+                <article class="search-result-card"
+                         data-category="resource tool"
+                         data-search-text="ncbi biological databases literature sequence protein gene pubmed">
+
+                    <span class="result-type"
+                          data-en="TOOL · DATABASE"
+                          data-fa="ابزار · پایگاه داده">
+                        TOOL · DATABASE
+                    </span>
+
+                    <h2>NCBI</h2>
+
+                    <p data-en="A major starting point for biological sequence databases, genes, proteins, genomes, and literature."
+                       data-fa="یکی از مهم‌ترین نقاط شروع برای جستجوی توالی‌های زیستی، ژن‌ها، پروتئین‌ها، ژنوم‌ها و مقالات.">
+                        A major starting point for biological sequence databases,
+                        genes, proteins, genomes, and literature.
+                    </p>
+
+                    <a href="https://www.ncbi.nlm.nih.gov/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-link"
+                       data-en="Visit NCBI →"
+                       data-fa="ورود به NCBI →">
+                        Visit NCBI →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="resource tool"
+                         data-search-text="blast sequence similarity blastp blastn protein dna">
+
+                    <span class="result-type"
+                          data-en="TOOL · SEQUENCE"
+                          data-fa="ابزار · توالی">
+                        TOOL · SEQUENCE
+                    </span>
+
+                    <h2>BLAST</h2>
+
+                    <p data-en="Compare a biological sequence against sequence databases to identify similar sequences and evaluate alignment evidence."
+                       data-fa="یک توالی زیستی را با پایگاه‌های داده مقایسه کن تا توالی‌های مشابه و شواهد Alignment را بررسی کنی.">
+                        Compare a biological sequence against sequence databases
+                        to identify similar sequences and evaluate alignment evidence.
+                    </p>
+
+                    <a href="https://blast.ncbi.nlm.nih.gov/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-link"
+                       data-en="Open BLAST →"
+                       data-fa="ورود به BLAST →">
+                        Open BLAST →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="resource tool"
+                         data-search-text="uniprot protein sequence annotation function domains active sites">
+
+                    <span class="result-type"
+                          data-en="TOOL · PROTEIN"
+                          data-fa="ابزار · پروتئین">
+                        TOOL · PROTEIN
+                    </span>
+
+                    <h2>UniProt</h2>
+
+                    <p data-en="Explore protein sequences, functional annotation, domains, regions, sites, and biological context."
+                       data-fa="Sequence، Functional Annotation، Domainها، Regionها، Siteها و زمینه زیستی پروتئین را بررسی کن.">
+                        Explore protein sequences, functional annotation,
+                        domains, regions, sites, and biological context.
+                    </p>
+
+                    <a href="https://www.uniprot.org/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-link"
+                       data-en="Open UniProt →"
+                       data-fa="ورود به UniProt →">
+                        Open UniProt →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="resource tool"
+                         data-search-text="rcsb pdb protein structure experimental structure ligand resolution chain">
+
+                    <span class="result-type"
+                          data-en="TOOL · STRUCTURE"
+                          data-fa="ابزار · ساختار">
+                        TOOL · STRUCTURE
+                    </span>
+
+                    <h2>RCSB PDB</h2>
+
+                    <p data-en="Find experimentally determined 3D structures of proteins, nucleic acids, complexes, and ligands."
+                       data-fa="ساختارهای سه‌بعدی تجربی پروتئین‌ها، اسیدهای نوکلئیک، Complexها و Ligandها را پیدا کن.">
+                        Find experimentally determined 3D structures
+                        of proteins, nucleic acids, complexes, and ligands.
+                    </p>
+
+                    <a href="https://www.rcsb.org/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-link"
+                       data-en="Open RCSB PDB →"
+                       data-fa="ورود به RCSB PDB →">
+                        Open RCSB PDB →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="resource tool"
+                         data-search-text="alphafold database predicted protein structure computational prediction">
+
+                    <span class="result-type"
+                          data-en="TOOL · STRUCTURE PREDICTION"
+                          data-fa="ابزار · پیش‌بینی ساختار">
+                        TOOL · STRUCTURE PREDICTION
+                    </span>
+
+                    <h2>AlphaFold DB</h2>
+
+                    <p data-en="Access predicted protein structures and use them as computational structural evidence, not experimental measurements."
+                       data-fa="به ساختارهای پیش‌بینی‌شده پروتئین دسترسی داشته باش و آن‌ها را به‌عنوان شواهد محاسباتی، نه داده تجربی، استفاده کن.">
+                        Access predicted protein structures and use them
+                        as computational structural evidence, not experimental measurements.
+                    </p>
+
+                    <a href="https://alphafold.ebi.ac.uk/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-link"
+                       data-en="Open AlphaFold DB →"
+                       data-fa="ورود به AlphaFold DB →">
+                        Open AlphaFold DB →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="resource tool"
+                         data-search-text="pubchem chemical structure molecular properties compound drug">
+
+                    <span class="result-type"
+                          data-en="TOOL · CHEMISTRY"
+                          data-fa="ابزار · شیمی">
+                        TOOL · CHEMISTRY
+                    </span>
+
+                    <h2>PubChem</h2>
+
+                    <p data-en="Explore chemical structures, molecular properties, identifiers, and compound information."
+                       data-fa="ساختارهای شیمیایی، ویژگی‌های مولکولی، شناسه‌ها و اطلاعات مربوط به ترکیبات را بررسی کن.">
+                        Explore chemical structures, molecular properties,
+                        identifiers, and compound information.
+                    </p>
+
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-link"
+                       data-en="Open PubChem →"
+                       data-fa="ورود به PubChem →">
+                        Open PubChem →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="resource tool"
+                         data-search-text="chembl drug bioactivity target compounds medicinal chemistry">
+
+                    <span class="result-type"
+                          data-en="TOOL · DRUG DISCOVERY"
+                          data-fa="ابزار · کشف دارو">
+                        TOOL · DRUG DISCOVERY
+                    </span>
+
+                    <h2>ChEMBL</h2>
+
+                    <p data-en="Explore drug-like molecules, targets, bioactivity measurements, and medicinal chemistry data."
+                       data-fa="مولکول‌های دارومانند، Targetها، داده‌های Bioactivity و اطلاعات Medicinal Chemistry را بررسی کن.">
+                        Explore drug-like molecules, targets, bioactivity measurements,
+                        and medicinal chemistry data.
+                    </p>
+
+                    <a href="https://www.ebi.ac.uk/chembl/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-link"
+                       data-en="Open ChEMBL →"
+                       data-fa="ورود به ChEMBL →">
+                        Open ChEMBL →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="resource tool"
+                         data-search-text="pubmed scientific literature biomedical papers research">
+
+                    <span class="result-type"
+                          data-en="TOOL · LITERATURE"
+                          data-fa="ابزار · ادبیات علمی">
+                        TOOL · LITERATURE
+                    </span>
+
+                    <h2>PubMed</h2>
+
+                    <p data-en="Search biomedical and life-science literature and move from a research question toward relevant evidence."
+                       data-fa="در ادبیات Biomedical و Life Science جستجو کن و از سؤال پژوهشی به شواهد مرتبط برس.">
+                        Search biomedical and life-science literature
+                        and move from a research question toward relevant evidence.
+                    </p>
+
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-link"
+                       data-en="Open PubMed →"
+                       data-fa="ورود به PubMed →">
+                        Open PubMed →
+                    </a>
+
+                </article>
+
+
+                <!-- RESEARCH SKILLS -->
+
+                <article class="search-result-card"
+                         data-category="research-skill"
+                         data-search-text="read scientific paper methods figures results discussion critical evaluation evidence">
+
+                    <span class="result-type"
+                          data-en="RESEARCH SKILL"
+                          data-fa="مهارت پژوهشی">
+                        RESEARCH SKILL
+                    </span>
+
+                    <h2 data-en="How to Read a Scientific Paper"
+                        data-fa="چطور یک مقاله علمی را بخوانیم؟">
+                        How to Read a Scientific Paper
+                    </h2>
+
+                    <p data-en="Read strategically by moving from the research question to methods, figures, results, evidence, and limitations."
+                       data-fa="به‌صورت هدفمند از سؤال پژوهش به Methods، Figures، Results، شواهد و محدودیت‌ها حرکت کن.">
+                        Read strategically by moving from the research question
+                        to methods, figures, results, evidence, and limitations.
+                    </p>
+
+                    <a href="paper.html"
+                       class="text-link"
+                       data-en="Learn the workflow →"
+                       data-fa="مشاهده Workflow →">
+                        Learn the workflow →
+                    </a>
+
+                </article>
+
+
+                <article class="search-result-card"
+                         data-category="research-skill"
+                         data-search-text="research output observation evidence interpretation limitation next question scientific documentation">
+
+                    <span class="result-type"
+                          data-en="RESEARCH SKILL"
+                          data-fa="مهارت پژوهشی">
+                        RESEARCH SKILL
+                    </span>
+
+                    <h2 data-en="Turn Analysis into a Research Output"
+                        data-fa="تحلیل را به خروجی پژوهشی تبدیل کن">
+                        Turn Analysis into a Research Output
+                    </h2>
+
+                    <p data-en="Record what you observed, what evidence supports it, what you interpret, what remains uncertain, and what to do next."
+                       data-fa="ثبت کن چه چیزی مشاهده کردی، چه شواهدی داری، چه تفسیری می‌کنی، چه چیزی نامطمئن است و قدم بعدی چیست.">
+                        Record what you observed, what evidence supports it,
+                        what you interpret, what remains uncertain, and what to do next.
+                    </p>
+
+                    <a href="research-outputs.html"
+                       class="text-link"
+                       data-en="Explore templates →"
+                       data-fa="مشاهده Templateها →">
+                        Explore templates →
+                    </a>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+            <div class="search-empty-state" id="searchEmptyState">
+
+                <div class="empty-state-icon">⌕</div>
+
+                <h2 data-en="No matching resources found"
+                    data-fa="منبع مرتبطی پیدا نشد">
+                    No matching resources found
+                </h2>
+
+                <p data-en="Try a broader keyword such as protein, sequence, drug, paper, statistics, or tool."
+                   data-fa="یک کلمه عمومی‌تر مثل protein، sequence، drug، paper، statistics یا tool را امتحان کن.">
+                    Try a broader keyword such as protein, sequence, drug,
+                    paper, statistics, or tool.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SEARCH STRATEGY -->
+    <section class="section section-soft">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label"
+                      data-en="SEARCH SMARTER"
+                      data-fa="هوشمندانه‌تر جستجو کن">
+                    SEARCH SMARTER
+                </span>
+
+                <h2 data-en="Search by the question, not only the tool."
+                    data-fa="فقط اسم ابزار را جستجو نکن؛ سؤال پژوهشی را هم جستجو کن.">
+                    Search by the question, not only the tool.
+                </h2>
+
+                <p data-en="GeneBite is organized around research workflows. A broader research question can lead you to the right tool, evidence, and next step."
+                   data-fa="GeneBite بر اساس Workflowهای پژوهشی ساخته شده است. یک سؤال پژوهشی گسترده‌تر می‌تواند تو را به ابزار، شواهد و قدم بعدی مناسب برساند.">
+                    GeneBite is organized around research workflows.
+                    A broader research question can lead you to the right tool,
+                    evidence, and next step.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <span class="feature-number">01</span>
+
+                    <h3 data-en="Start with what you have"
+                        data-fa="از چیزی که داری شروع کن">
+                        Start with what you have
+                    </h3>
+
+                    <p data-en="Sequence? Protein ID? Structure? Compound? Dataset? Paper?"
+                       data-fa="Sequence داری؟ Protein ID؟ Structure؟ Compound؟ Dataset؟ Paper؟">
+                        Sequence? Protein ID? Structure? Compound? Dataset? Paper?
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <span class="feature-number">02</span>
+
+                    <h3 data-en="Define what you want to know"
+                        data-fa="مشخص کن چه چیزی می‌خواهی بدانی">
+                        Define what you want to know
+                    </h3>
+
+                    <p data-en="Identity, function, structure, interaction, statistics, or evidence?"
+                       data-fa="Identity، Function، Structure، Interaction، Statistics یا Evidence؟">
+                        Identity, function, structure, interaction,
+                        statistics, or evidence?
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <span class="feature-number">03</span>
+
+                    <h3 data-en="Follow the evidence"
+                        data-fa="شواهد را دنبال کن">
+                        Follow the evidence
+                    </h3>
+
+                    <p data-en="A tool gives you an output. Your job is to understand what that output actually supports."
+                       data-fa="ابزار یک Output به تو می‌دهد؛ کار تو این است که بفهمی آن Output واقعاً از چه چیزی پشتیبانی می‌کند.">
+                        A tool gives you an output.
+                        Your job is to understand what that output actually supports.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="section">
+
+        <div class="container">
+
+            <div class="cta-card">
+
+                <div>
+
+                    <span class="section-label"
+                          data-en="NOT SURE WHERE TO START?"
+                          data-fa="نمی‌دانی از کجا شروع کنی؟">
+                        NOT SURE WHERE TO START?
+                    </span>
+
+                    <h2 data-en="Let the Research Decision Tool guide your first step."
+                        data-fa="بگذار Research Decision Tool قدم اولت را مشخص کند.">
+                        Let the Research Decision Tool guide your first step.
+                    </h2>
+
+                    <p data-en="Choose your research goal, what you have, and the type of answer you need."
+                       data-fa="هدف پژوهش، چیزی که در اختیار داری و نوع پاسخی که می‌خواهی را مشخص کن.">
+                        Choose your research goal, what you have,
+                        and the type of answer you need.
+                    </p>
+
+                </div>
+
+                <div class="cta-actions">
+
+                    <a href="research-decision.html"
+                       class="primary-button"
+                       data-en="Open Decision Tool"
+                       data-fa="باز کردن Decision Tool">
+                        Open Decision Tool
+                    </a>
+
+                    <a href="workflows.html"
+                       class="secondary-button"
+                       data-en="Explore Workflows"
+                       data-fa="مشاهده Workflowها">
+                        Explore Workflows
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span><span class="logo-text">GeneBite</span>
+        </a>
+        <p data-en="Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself."
+           data-fa="زیست‌شناسی و پژوهش کاربردی. مسیر پژوهش را یاد بگیر، مثال واقعی ببین و خودت تحلیل کن.">
+          Practical Biology &amp; Research. Learn the workflow, explore real cases, apply it yourself.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Explore" data-fa="کاوش">Explore</h3>
+        <a href="workflows.html" data-en="Workflows" data-fa="ورک‌فلوها">Workflows</a>
+        <a href="case-studies.html" data-en="Case Studies" data-fa="مطالعات موردی">Case Studies</a>
+        <a href="tools.html" data-en="Tools" data-fa="ابزارها">Tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Research" data-fa="پژوهش">Research</h3>
+        <a href="research-decision.html" data-en="Choose your path" data-fa="انتخاب مسیر پژوهش">Choose your path</a>
+        <a href="research-outputs.html" data-en="Research Outputs" data-fa="خروجی پژوهش">Research Outputs</a>
+        <a href="troubleshooting.html" data-en="Troubleshooting" data-fa="رفع اشکال">Troubleshooting</a>
+        <a href="workspace.html" data-en="Workspace" data-fa="فضای کار">Workspace</a>
+        <a href="search.html" data-en="Search" data-fa="جست‌وجو">Search</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="GeneBite" data-fa="GeneBite">GeneBite</h3>
+        <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
+        <a href="research-skills.html" data-en="Research Skills" data-fa="مهارت‌های پژوهشی">Research Skills</a>
+        <a href="about.html" data-en="About" data-fa="درباره GeneBite">About</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="currentYear"></span> GeneBite. Practical Biology &amp; Research.</div>
+    </div>
+  </footer>
+
+
+
+
+  <a href="research-decision.html" class="fab-finder" data-en="Find my path" data-fa="مسیرم را پیدا کن">مسیرم را پیدا کن</a>
+</body>
+</html>
